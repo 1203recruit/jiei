@@ -7,28 +7,28 @@ const About = () => {
         <div className="main">
           <h1 className="head-line1">About</h1>
           <div className="contents normal-text">
-            <div className="table">
+            <div className="item-table">
 
-              <div className="items">
-                <div className="item">
+              <div className="item-wrapper">
+                <div className="item-list">
                   <div className="item-L">Name：</div>
                   <div>Jiei</div>
                 </div>
-                <div className="item">
+                <div className="item-list">
                   <div className="item-L">Address：</div>
                   <div>Tokyo</div>
                 </div>
-                <div className="item">
+                <div className="item-list">
                   <div className="item-L">E-mail：</div>
                   <div>sample@sample.com</div>
                 </div>
-              </div> {/* items */}
+              </div> {/* item-list */}
 
-              <div className="items">
-                <div className="item">
+              <div className="item-wrapper">
+                <div className="item-list">
                   <div className="item-L">Bio：</div>
-                  <div className="items">
-                    <div className="item">
+                  <div className="item-wrapper">
+                    <div className="item-list">
                       <div className="item-L">2017年4月</div>
                       <div>
                         <p>
@@ -38,19 +38,19 @@ const About = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="item">
+                    <div className="item-list">
                       <div className="item-L">2021年8月</div>
                       <div>
                         <p>アニメ制作会社を退職</p>
                       </div>
                     </div>
-                    <div className="item">
+                    <div className="item-list">
                       <div className="item-L">2021年9月</div>
                       <div>
                         <p>SES事業の会社に就職し、IT業界に足を踏み入れる</p>
                       </div>
                     </div>
-                    <div className="item">
+                    <div className="item-list">
                       <div className="item-L">2022年1月</div>
                       <div>
                         <p>SES事業の会社を退職し、フリーランスへ転身（予定）</p>
@@ -58,12 +58,12 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </div> {/* items */}
+              </div> {/* item-list */}
 
-              <div className="items">
-                <div className="item">
+              <div className="item-wrapper">
+                <div className="item-list">
                   <div className="item-L">Tools：</div>
-                  <div className="items">
+                  <div className="item-wrapper">
                     <div className="item-x">
                         <p>Adobe Photoshop/Illustrator/After Effects/XD</p>
                         <p>
@@ -77,9 +77,9 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </div> {/* items */}
+              </div> {/* item-list */}
 
-            </div> {/* table */}
+            </div> {/* item-table */}
           </div>
         </div>
       </div>

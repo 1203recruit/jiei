@@ -156,9 +156,7 @@ body {
 }
 
 
-/* ******************** */
 /* under line Animation */
-/* ******************** */
 .list-wrapper .underline::after {
   position: absolute;
   width: 120px;
@@ -175,13 +173,9 @@ body {
   transform: scale(1, 1);
 }
 /* ******************** */
-/* ******************** */
-/* ******************** */
 
 
-/* ************* */
 /* Dropdown menu */
-/* ************* */
 .dropdown-list {
   display: none;
   position: absolute;
@@ -238,8 +232,6 @@ body {
   margin: 8px 0 8px 0;
 }
 /* ************* */
-/* ************* */
-/* ************* */
 
 
 .active li,
@@ -260,9 +252,9 @@ body {
 /* ****** */
 
 
-/* ************* */
-/* main contents */
-/* ************* */
+/* **** */
+/* main */
+/* **** */
 .wrapper {
   width: 100vw;
   height: 85vh;
@@ -306,19 +298,16 @@ h1 {
 /* ***** */
 /* About */
 /* ***** */
-.table {
-  display:table; 
-}
-.item {
+.item-list {
   display:table-row;
 }
-.item>div {
+.item-list>div {
   display:table-cell;
 }
 .item-L {
   width: 88px;
 }
-.items:nth-child(2n) {
+.item-wrapper:nth-child(2n) {
   margin: 32px 0 32px 0;
 }
 .item-x:nth-child(2n) {
