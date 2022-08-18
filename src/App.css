@@ -1,6 +1,6 @@
-/************/
+/* ******** */
 /* variable */
-/************/
+/* ******** */
 :root {
   --TestBorder: 1px solid #000;
 
@@ -12,14 +12,14 @@
   --ActiveOrange: #faae0b;
   --ErrorColor: #FD6060;
 }
-/************/
-/************/
-/************/
+/* ******** */
+/* ******** */
+/* ******** */
 
 
-/*******/
+/* *** */
 /* env */
-/*******/
+/* *** */
 * {
   margin: 0;
   padding: 0;
@@ -68,14 +68,18 @@ body {
 .error-text {
   color: var(--ErrorColor);
 }
-/*******/
-/*******/
-/*******/
+
+.non-select {
+  user-select:none
+}
+/* *** */
+/* *** */
+/* *** */
 
 
-/**********/
+/* ****** */
 /* header */
-/**********/
+/* ****** */
 .header {
   /* border: 1px solid #0F0; */
   background: var(--HeaderWhiteColor);
@@ -113,12 +117,16 @@ body {
   font-size: 48px;
   font-family: Zen Dots;
   letter-spacing: 32px;
+  text-indent: 32px;
+  transition-duration: .4s;
+}
+.logo:hover {
+  transform: scale(1.2);
 }
 
-
-
-
-
+.active.logo-wrapper {
+  pointer-events:none;
+}
 
 .header nav {
   /* border: var(--TestBorder); */
@@ -148,7 +156,9 @@ body {
 }
 
 
-/* ホバー時の下線アニメーション */
+/* ******************** */
+/* under line Animation */
+/* ******************** */
 .list-wrapper .underline::after {
   position: absolute;
   width: 120px;
@@ -158,17 +168,20 @@ body {
   background: var(--ActiveOrange);
   transform: scale(0, 1);
   transform-origin: center top;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease-in-out;
 }
 
 .list-wrapper .underline:hover::after {
   transform: scale(1, 1);
 }
+/* ******************** */
+/* ******************** */
+/* ******************** */
 
 
-/*****************/
+/* ************* */
 /* Dropdown menu */
-/*****************/
+/* ************* */
 .dropdown-list {
   display: none;
   position: absolute;
@@ -224,12 +237,9 @@ body {
 .dropdown-item:nth-child(3) {
   margin: 8px 0 8px 0;
 }
-/*****************/
-/*****************/
-/*****************/
-
-
-
+/* ************* */
+/* ************* */
+/* ************* */
 
 
 .active li,
@@ -245,14 +255,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-/**********/
-/**********/
-/**********/
+/* ****** */
+/* ****** */
+/* ****** */
 
 
-/*****************/
+/* ************* */
 /* main contents */
-/*****************/
+/* ************* */
 .wrapper {
   width: 100vw;
   height: 85vh;
@@ -288,14 +298,14 @@ h1 {
   display: flex;
   justify-content: start;
 }
-/*****************/
-/*****************/
-/*****************/
+/* ************* */
+/* ************* */
+/* ************* */
 
 
-/*********/
+/* ***** */
 /* About */
-/*********/
+/* ***** */
 .table {
   display:table; 
 }
@@ -315,14 +325,14 @@ h1 {
   padding: 16px 0 0 0;
 }
 
-/*********/
-/*********/
-/*********/
+/* ***** */
+/* ***** */
+/* ***** */
 
 
-/***********/
+/* ******* */
 /* Contact */
-/***********/
+/* ******* */
 input,
 select {
   width: 360px;
@@ -369,14 +379,14 @@ textarea:focus {
   text-align: right;
 }
 
-/***********/
-/***********/
-/***********/
+/* ******* */
+/* ******* */
+/* ******* */
 
 
-/**********/
+/* ****** */
 /* footer */
-/**********/
+/* ****** */
 .footer {
   background: var(--DefaultColor);
   width: 100%;
@@ -390,6 +400,6 @@ textarea:focus {
   max-width: 800px;
   padding: 10px;
 }
-/**********/
-/**********/
-/**********/
+/* ****** */
+/* ****** */
+/* ****** */
