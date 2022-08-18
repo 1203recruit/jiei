@@ -9,7 +9,7 @@ const Header = () => {
         <div className="header-wrapper">
           <div className="logo-wrap">
             <NavLink activeClassNAme="active" to="/">
-              <div className="logo">
+              <div className="logo neon">
                 <j>J</j>iei
               </div>
             </NavLink>
@@ -29,20 +29,22 @@ const Header = () => {
                 className="underline"
               >
                 <li className="li-item button-text dropdown-menu">Works
-                  <ul class="dropdown-list">
-                    <li class="dropdown-item">
-                      <NavLink to={"/"} className="button-text">Web site</NavLink>
+                <div className="dropdown-list">
+                  <ul>
+                    <li className="dropdown-item">
+                      <NavLink to={"/Works/"} className="button-text">Web site</NavLink>
                     </li>
-                    <li class="dropdown-item">
-                      <NavLink to={"/"} className="button-text">Logo</NavLink>
+                    <li className="dropdown-item">
+                      <NavLink to={"/Works/"} className="button-text">Logo</NavLink>
                     </li>
-                    <li class="dropdown-item">
-                      <NavLink to={"/"} className="button-text">Illust</NavLink>
+                    <li className="dropdown-item">
+                      <NavLink to={"/Works/"} className="button-text">Illust</NavLink>
                     </li>
-                    <li class="dropdown-item">
-                      <NavLink to={"/"} className="button-text">Other</NavLink>
+                    <li className="dropdown-item">
+                      <NavLink to={"/Works/"} className="button-text">Other</NavLink>
                     </li>
                   </ul>
+                  </div>
                 </li>
               </NavLink>
               <NavLink

@@ -17,7 +17,6 @@
 /************/
 
 
-
 /*******/
 /* env */
 /*******/
@@ -85,6 +84,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   z-index: 900;
 }
 
@@ -96,7 +96,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  z-index: 800;
 }
 
 .logo-wrap {
@@ -115,6 +114,11 @@ body {
   font-family: Zen Dots;
   letter-spacing: 32px;
 }
+
+
+
+
+
 
 .header nav {
   /* border: var(--TestBorder); */
@@ -144,52 +148,6 @@ body {
 }
 
 
-/*****************/
-/* Dropdown menu */
-/*****************/
-.dropdown-list {
-  display: block;
-  position: absolute;
-  color: var(--DefaultColor);
-  top: -200px;
-  width: 120px;
-  opacity: 0;
-  margin: 0 auto;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s all;
-}
-.dropdown-menu:hover .dropdown-list,
-.dropdown-list:hover .dropdown-list {
-  display: block;
-  top: 10vh;
-  opacity: 1;
-}
-
-.dropdown-item:hover {
-  color: var(--ActiveOrange);
-}
-
-.dropdown-item a{
-  display: block;
-  padding: 8px 0 8px 0;
-}
-.dropdown-item a:hover{
-color: var(--ActiveOrange);
-}
-
-.dropdown-item:nth-child(2) {
-  margin: 8px 0 8px 0;
-}
-.dropdown-item:nth-child(3) {
-  margin: 8px 0 8px 0;
-}
-/*****************/
-/*****************/
-/*****************/
-
-
 /* ホバー時の下線アニメーション */
 .list-wrapper .underline::after {
   position: absolute;
@@ -207,9 +165,73 @@ color: var(--ActiveOrange);
   transform: scale(1, 1);
 }
 
-.active {
+
+/*****************/
+/* Dropdown menu */
+/*****************/
+.dropdown-list {
+  display: none;
+  position: absolute;
   pointer-events: none;
+  color: var(--DefaultColor);
+  top: -200px;
+  width: 120px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
+
+.list-wrapper .underline:hover .dropdown-list,
+.dropdown-menu:hover .dropdown-list,
+.dropdown-list:hover .dropdown-list {
+  display: block;
+  pointer-events: auto;
+  top: 10vh;
+  animation: fadeIn 0.4s ease-in 0s forwards;
+}
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.dropdown-item {
+  z-index: 500;
+}
+
+.dropdown-item a{
+  display: block;
+  padding: 8px 0 8px 0;
+}
+.dropdown-item a:hover{
+  color: var(--WhiteColor);
+  background: var(--ActiveOrange);
+  border-radius: 45px;
+}
+
+.dropdown-item:nth-child(1) {
+  margin: 8px 0 0 0;
+}
+.dropdown-item:nth-child(2) {
+  margin: 8px 0 8px 0;
+}
+.dropdown-item:nth-child(3) {
+  margin: 8px 0 8px 0;
+}
+/*****************/
+/*****************/
+/*****************/
+
+
+
+
+
 .active li,
 .active j {
   color: var(--ActiveOrange);
@@ -234,7 +256,6 @@ color: var(--ActiveOrange);
 .wrapper {
   width: 100vw;
   height: 85vh;
-  z-index: 500;
 }
 
 .container {
