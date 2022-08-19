@@ -1,6 +1,7 @@
 import React from "react";
 import GithubIcon from "./img/GitHub-Mark-64px.png";
 import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 const Header = () => {
   return (
@@ -9,8 +10,9 @@ const Header = () => {
         <div className="header-wrapper">
           <div className="logo-wrap">
             <NavLink
+              smooth
               activeClassName="active"
-              to="/"
+              to={"/"}
               className="logo-wrapper non-select"
             >
               <div className="logo">
@@ -21,6 +23,7 @@ const Header = () => {
           <nav className="nav">
             <ul className="list-wrapper">
               <NavLink
+                smooth
                 activeClassName="active"
                 to={"/About/"}
                 className="underline non-select"
@@ -28,6 +31,7 @@ const Header = () => {
                 <li className="li-item button-text">About</li>
               </NavLink>
               <NavLink
+                smooth
                 activeClassName="active"
                 to={"/Works/"}
                 className="underline non-select"
@@ -37,42 +41,48 @@ const Header = () => {
                   <div className="dropdown-list">
                     <ul>
                       <li className="dropdown-item">
-                        <NavLink
-                          to="/Works/#webSite"
+                        <NavHashLink
+                          smooth
+                          to={"/Works/#webSite"}
                           className="button-text non-select"
                         >
                           Web site
-                        </NavLink>
+                        </NavHashLink>
                       </li>
                       <li className="dropdown-item">
-                        <NavLink
-                          to="/Works/#logo"
+                        <NavHashLink
+                          smooth
+                          
+                          to={"/Works/#logo"}
                           className="button-text non-select"
                         >
                           Logo
-                        </NavLink>
+                        </NavHashLink>
                       </li>
                       <li className="dropdown-item">
-                        <NavLink
-                          to="/Works/#illust"
+                        <NavHashLink
+                          smooth
+                          to={"/Works/#illust"}
                           className="button-text non-select"
                         >
                           Illust
-                        </NavLink>
+                        </NavHashLink>
                       </li>
                       <li className="dropdown-item">
-                        <NavLink
-                          to="/Works/#lottie"
+                        <NavHashLink
+                          smooth
+                          to={"/Works/#lottie"}
                           className="button-text non-select"
                         >
                           Lottie
-                        </NavLink>
+                        </NavHashLink>
                       </li>
                     </ul>
                   </div>
                 </li>
               </NavLink>
               <NavLink
+                smooth
                 activeClassName="active"
                 to={"/Contact/"}
                 className="underline non-select"

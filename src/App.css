@@ -246,11 +246,11 @@ body {
 /* Common Layout */
 /* ************* */
 .wrapper {
-  width: 100vw;
+  width: 100%;
   height: 85vh;
 }
 .wrapper2 {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   margin: 0 0 128px 0;
 }
