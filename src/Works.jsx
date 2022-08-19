@@ -32,7 +32,7 @@ const Works = () => {
             <div className="border-box normal-text">
               <div className="works-item-1">
                 <div className="works-title-1">
-                  <p>ちくわ専門店（架空のECサイト）</p>
+                  <p>Title</p>
                 </div>
                 <div className="works-image">
                   <img src={PCImage} className="pc-image" />
@@ -41,7 +41,7 @@ const Works = () => {
                 <div className="works-comment">
                   <p>Comment:</p>
                   <p>
-                    ちくわの購買欲をあげるためにちくわにはミスマッチな暖色を刺し色として採用
+                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
                   </p>
                 </div>
               </div>
@@ -49,7 +49,7 @@ const Works = () => {
             <div className="border-box normal-text">
               <div className="works-item-1">
                 <div className="works-title-1">
-                  <p>KINOKO FESTIVAL（架空のLP）</p>
+                  <p>Title</p>
                 </div>
                 <div className="works-image">
                   <img src={PCImage} className="pc-image" />
@@ -58,7 +58,7 @@ const Works = () => {
                 <div className="works-comment">
                   <p>Comment:</p>
                   <p>
-                    自然をイメージの緑系ときのこの毒々しいカラフルな色を添えてキャンペーン感を
+                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
                   </p>
                 </div>
               </div>
@@ -76,11 +76,11 @@ const Works = () => {
                 </div>
                 <div className="works-flex-2">
                   <div className="works-title-2">
-                    <p>炎</p>
+                    <p>Title</p>
                   </div>
                   <div className="works-comment">
                     <p>Comment:</p>
-                    <p>ポップで動きのある感じに</p>
+                    <p>TextTextTextTextTextTextTextTextTextTextTex</p>
                   </div>
                 </div>
               </div>
@@ -126,42 +126,42 @@ const Works = () => {
             <div className="border-box normal-text">
               <div className="works-item-1">
                 <div className="works-title-1">
-                  <p>Sky</p>
+                  <p>Title</p>
                 </div>
                 <div className="works-image">
                   <img src={IllustImage} className="pc-image" />
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>入道雲はエモい</p>
+                  <p>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</p>
                 </div>
               </div>
             </div>
             <div className="border-box normal-text">
               <div className="works-item-1">
                 <div className="works-title-1">
-                  <p>Chocolate</p>
+                  <p>Title</p>
                 </div>
                 <div className="works-image">
                   <img src={IllustImage} className="pc-image" />
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>カートゥーンを意識</p>
+                  <p>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</p>
                 </div>
               </div>
             </div>
             <div className="border-box normal-text">
               <div className="works-item-1">
                 <div className="works-title-1">
-                  <p>Original_Girls</p>
+                  <p>Title</p>
                 </div>
                 <div className="works-image">
                   <img src={IllustImage} className="pc-image" />
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>Kawaii</p>
+                  <p>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</p>
                 </div>
               </div>
             </div>
@@ -178,11 +178,11 @@ const Works = () => {
                 </div>
                 <div className="works-flex-2">
                   <div className="works-title-2">
-                    <p>☆　⇒　★</p>
+                    <p>Title</p>
                   </div>
                   <div className="works-comment">
-                    <p>Comment:（要クリック）</p>
-                    <p>星に色がつくアニメーション</p>
+                    <p>Comment:</p>
+                    <p>TextTextTextTextTextTextTextTextTextTextTex</p>
                   </div>
                 </div>
               </div>
@@ -194,11 +194,11 @@ const Works = () => {
                 </div>
                 <div className="works-flex-2">
                   <div className="works-title-2">
-                    <p>！</p>
+                    <p>Title</p>
                   </div>
                   <div className="works-comment">
-                    <p>Comment:（自動再生）</p>
-                    <p>注意喚起を促すモーダル画面での使用を想定</p>
+                    <p>Comment:</p>
+                    <p>TextTextTextTextTextTextTextTextTextTextTex</p>
                   </div>
                 </div>
               </div>
