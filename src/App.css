@@ -264,8 +264,8 @@ body {
 }
 
 .capibara {
-  height: 825px;
-  min-height: 500px;
+  height: 800px;
+  min-height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
