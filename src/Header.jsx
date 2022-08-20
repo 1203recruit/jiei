@@ -3,6 +3,13 @@ import GithubIcon from "./img/GitHub-Mark-64px.png";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
+const scrollWithOffset = (el) => {
+  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  const yOffset = -100; 
+  window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+}
+
+
 const Header = () => {
   return (
     <>
@@ -22,14 +29,15 @@ const Header = () => {
           </div>
           <nav className="nav">
             <ul className="list-wrapper">
-              <NavLink
+              <NavHashLink
                 smooth
                 activeClassName="active"
-                to={"/About/"}
+                to={"/About/#about"}
                 className="underline non-select"
+                scroll={el => scrollWithOffset(el)}
               >
                 <li className="li-item button-text">About</li>
-              </NavLink>
+              </NavHashLink>
               <NavLink
                 smooth
                 activeClassName="active"
@@ -45,6 +53,7 @@ const Header = () => {
                           smooth
                           to={"/Works/#webSite"}
                           className="button-text non-select"
+                          scroll={el => scrollWithOffset(el)}
                         >
                           Web site
                         </NavHashLink>
@@ -52,9 +61,9 @@ const Header = () => {
                       <li className="dropdown-item">
                         <NavHashLink
                           smooth
-                          
                           to={"/Works/#logo"}
                           className="button-text non-select"
+                          scroll={el => scrollWithOffset(el)}
                         >
                           Logo
                         </NavHashLink>
@@ -64,6 +73,7 @@ const Header = () => {
                           smooth
                           to={"/Works/#illust"}
                           className="button-text non-select"
+                          scroll={el => scrollWithOffset(el)}
                         >
                           Illust
                         </NavHashLink>
@@ -73,6 +83,7 @@ const Header = () => {
                           smooth
                           to={"/Works/#lottie"}
                           className="button-text non-select"
+                          scroll={el => scrollWithOffset(el)}
                         >
                           Lottie
                         </NavHashLink>
@@ -81,19 +92,20 @@ const Header = () => {
                   </div>
                 </li>
               </NavLink>
-              <NavLink
+              <NavHashLink
                 smooth
                 activeClassName="active"
-                to={"/Contact/"}
+                to={"/Contact/#contact"}
                 className="underline non-select"
+                scroll={el => scrollWithOffset(el)}
               >
                 <li className="li-item button-text">Contact</li>
-              </NavLink>
+              </NavHashLink>
             </ul>
           </nav>
           <div className="github-icon non-select">
-            <a to="https://github.com/1203recruit" target={"blank"}>
-              <img src={GithubIcon} />
+            <a href="https://github.com/1203recruit" target={"blank"}>
+              <img src={GithubIcon} alt="github-icon" />
             </a>
           </div>
         </div>

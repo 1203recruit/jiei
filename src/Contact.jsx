@@ -56,78 +56,76 @@ const Contact = () => {
     setLength(e.target.value.replace(/\n/g, "").length);
 
   return (
-    <div className="wrapper">
-      <div className="container">
-        <div className="main">
-          <h1 className="head-line1">Contact</h1>
-          <div className="contents imitation-text">
-            <form>
-              <div className="input-field form-child">
-                <input
-                  className="input-form normal-text"
-                  value={nameOrCompanyName}
-                  type="text"
-                  placeholder="Name or Company Name"
-                  onChange={(e) => setNameOrCompanyName(e.target.value)}
-                />
-              </div>
-              <div className="input-field form-child">
-                <input
-                  className="input-form normal-text"
-                  value={email}
-                  type="email"
-                  placeholder="Email"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              <div className="select-field form-child">
-                <select
-                  className="select-form normal-text"
-                  value={category}
-                  onChange={(e) => setCategory(e.target.value)}
-                >
-                  <option
-                    className="imitation-text"
-                    value="PleaseSelectACategory"
-                    disabled
-                  >
-                    Please select a category
-                  </option>
-                  <option className="normal-text" value="JobRequest">
-                    Job Request
-                  </option>
-                  <option className="normal-text" value="ContactUs">
-                    Contact Us
-                  </option>
-                  <option className="normal-text" value="OtherQuestions">
-                    Other questions
-                  </option>
-                </select>
-              </div>
-              <div className="textarea-field form-child imitation-text">
-                <textarea
-                  className="textarea-form normal-text"
-                  value={message}
-                  rows="4"
-                  placeholder="Please enter content"
-                  onChange={(e) => {
-                    setMessage(e.target.value);
-                    checkTextArea(e);
-                  }}
-                  maxLength="1000"
-                />
-                <p className="counter normal-text">{length} / 1000</p>
-              </div>
-              <button
-                className="submit-button form-child"
-                type="submit"
-                onClick={handleClick}
-                disabled={disableSend}
+    <div className="container" id="contact">
+      <div className="main">
+        <h1 className="head-line1">Contact</h1>
+        <div className="contents imitation-text">
+          <form>
+            <div className="input-field form-child">
+              <input
+                className="input-form normal-text"
+                value={nameOrCompanyName}
+                type="text"
+                placeholder="Name or Company Name"
+                onChange={(e) => setNameOrCompanyName(e.target.value)}
+              />
+            </div>
+            <div className="input-field form-child">
+              <input
+                className="input-form normal-text"
+                value={email}
+                type="email"
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="select-field form-child">
+              <select
+                className="select-form normal-text"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
               >
-                Submit
-              </button>
-            </form>
-          </div>
+                <option
+                  className="imitation-text"
+                  value="PleaseSelectACategory"
+                  disabled
+                >
+                  Please select a category
+                </option>
+                <option className="normal-text" value="JobRequest">
+                  Job Request
+                </option>
+                <option className="normal-text" value="ContactUs">
+                  Contact Us
+                </option>
+                <option className="normal-text" value="OtherQuestions">
+                  Other questions
+                </option>
+              </select>
+            </div>
+            <div className="textarea-field form-child imitation-text">
+              <textarea
+                className="textarea-form normal-text"
+                value={message}
+                rows="4"
+                placeholder="Please enter content"
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                  checkTextArea(e);
+                }}
+                maxLength="1000"
+              />
+              <p className="counter normal-text">{length} / 1000</p>
+            </div>
+            <button
+              className="submit-button form-child"
+              type="submit"
+              onClick={handleClick}
+              disabled={disableSend}
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>
