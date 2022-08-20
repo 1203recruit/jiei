@@ -74,6 +74,16 @@ const About = () => {
                 </div>
               </div>
             </div>
+            <div className="about-item-wrapper">
+              <div className="about-item-list">
+                <div className="about-item-L">I want to：</div>
+                <div className="about-item-wrapper">
+                  <div className="about-item-x">
+                    <p>Web Designer & Front End Engineer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
