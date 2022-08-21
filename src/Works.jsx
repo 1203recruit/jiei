@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ScrollToTop from "react-scroll-to-top";
 import ModalImage from "./component/ModalImage";
-import Modal from "./Modal";
+import Modal from "./component/Modal";
 import LogoImage from "./img/LogoImage.png";
 import IllustImage from "./img/IllustImage.png";
 import { disableBodyScroll } from "body-scroll-lock";
@@ -39,7 +39,7 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>できるだけシンプルになるよう色は極力減らした</p>
+                <p>できるだけシンプルになるよう使用色を減らした（Reactで作成）</p>
               </div>
             </div>
           </div>
