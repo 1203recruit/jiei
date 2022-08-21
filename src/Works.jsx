@@ -4,6 +4,7 @@ import ModalImage from "./component/ModalImage";
 import Modal from "./Modal";
 import LogoImage from "./img/LogoImage.png";
 import IllustImage from "./img/IllustImage.png";
+import { disableBodyScroll } from "body-scroll-lock";
 
 const Works = () => {
   // Modal
@@ -14,11 +15,11 @@ const Works = () => {
 
   return (
     <div className="container" id="top">
-        <Modal
-          showFlag={showModal}
-          setShowModal={setShowModal}
-          element={<ModalImage />}
-        />
+      <Modal
+        showFlag={showModal}
+        setShowModal={setShowModal}
+        element={<ModalImage />}
+      />
       <div className="main">
         <h1 className="head-line1">Works</h1>
         <div className="contents" id="webSite">
@@ -28,7 +29,12 @@ const Works = () => {
               <div className="works-title-1">
                 <p>Jiei（当サイト）</p>
               </div>
-              <div onClick={ShowModal}>
+              <div
+                onClick={() => {
+                  ShowModal();
+                  disableBodyScroll("ModalImag");
+                }}
+              >
                 <ModalImage />
               </div>
               <div className="works-comment">
@@ -42,7 +48,12 @@ const Works = () => {
               <div className="works-title-1">
                 <p>Title</p>
               </div>
-              <div onClick={ShowModal}>
+              <div
+                onClick={() => {
+                  ShowModal();
+                  disableBodyScroll("ModalImag");
+                }}
+              >
                 <ModalImage />
               </div>
               <div className="works-comment">
@@ -58,7 +69,12 @@ const Works = () => {
               <div className="works-title-1">
                 <p>Title</p>
               </div>
-              <div onClick={ShowModal}>
+              <div
+                onClick={() => {
+                  ShowModal();
+                  disableBodyScroll("ModalImag");
+                }}
+              >
                 <ModalImage />
               </div>
               <div className="works-comment">

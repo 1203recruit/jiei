@@ -1,4 +1,5 @@
 import React from "react";
+import { enableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 const Modal = (props) => {
   const closeModal = () => {
@@ -8,7 +9,14 @@ const Modal = (props) => {
   return (
     <>
       {props.showFlag ? (
-        <div className="modal-overlay" onClick={closeModal}>
+        <div
+          className="modal-overlay"
+          onClick={() => {
+            closeModal();
+            enableBodyScroll("ModalImag");
+            clearAllBodyScrollLocks("ModalImag");
+          }}
+        >
           <div className="modal-content">
             <>{props.element}</>
           </div>
