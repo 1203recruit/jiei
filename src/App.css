@@ -45,7 +45,7 @@ body {
   background: var(--WhiteColor);
   margin: 0;
   text-size-adjust: 100%;
-  overflow-y: overlay;
+  overflow: overlay;
 }
 .body {
   display: flex;
@@ -118,6 +118,13 @@ body {
   justify-content: space-between;
   align-items: flex-end;
 }
+@media screen and (max-width: 900px) {
+  .header-wrapper {
+    border: 1px solid #000;
+    width: 100%;
+  }
+}
+
 
 .logo-wrap {
   width: 320px;
@@ -144,13 +151,18 @@ body {
   pointer-events: none;
 }
 
-.header nav {
+.header .nav {
   width: 480px;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin: 0 0 0 auto;
+}
+@media screen and (max-width: 900px) {
+  .header .nav {
+    display: none;
+  }
 }
 
 .list-wrapper {
@@ -257,6 +269,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 900px) {
+  .github-icon {
+    display: none;
+  }
+}
 /* ****** */
 /* ****** */
 /* ****** */
@@ -276,6 +293,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    border: 1px solid #0F0;
+  }
+}
 
 .capibara {
   height: 800px;
@@ -283,6 +306,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .capibara {
+    width: 100vw;
+  }
 }
 
 .main {
