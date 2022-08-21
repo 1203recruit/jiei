@@ -1,16 +1,26 @@
-import React from "react";
-import PCImage from "./img/PCImage.png";
-import PhoneImage from "./img/PhoneImage.png";
+import React, { useState } from "react";
+import ScrollToTop from "react-scroll-to-top";
+import ModalImage from "./component/ModalImage";
+import Modal from "./Modal";
 import LogoImage from "./img/LogoImage.png";
 import IllustImage from "./img/IllustImage.png";
-import ScrollToTop from "react-scroll-to-top";
 
 const Works = () => {
+  // Modal
+  const [showModal, setShowModal] = useState(false);
+  const ShowModal = () => {
+    setShowModal(true);
+  };
+
   return (
     <div className="container" id="top">
+        <Modal
+          showFlag={showModal}
+          setShowModal={setShowModal}
+          element={<ModalImage />}
+        />
       <div className="main">
         <h1 className="head-line1">Works</h1>
-
         <div className="contents" id="webSite">
           <h2 className="head-line2">Web site :</h2>
           <div className="border-box normal-text">
@@ -18,13 +28,8 @@ const Works = () => {
               <div className="works-title-1">
                 <p>Jiei（当サイト）</p>
               </div>
-              <div className="works-image">
-                <img src={PCImage} alt="pc-site-title" className="pc-image" />
-                <img
-                  src={PhoneImage}
-                  alt="phone-site-title"
-                  className="phone-image"
-                />
+              <div onClick={ShowModal}>
+                <ModalImage />
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
@@ -37,13 +42,8 @@ const Works = () => {
               <div className="works-title-1">
                 <p>Title</p>
               </div>
-              <div className="works-image">
-                <img src={PCImage} alt="pc-site-title" className="pc-image" />
-                <img
-                  src={PhoneImage}
-                  alt="phone-site-title"
-                  className="phone-image"
-                />
+              <div onClick={ShowModal}>
+                <ModalImage />
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
@@ -58,13 +58,8 @@ const Works = () => {
               <div className="works-title-1">
                 <p>Title</p>
               </div>
-              <div className="works-image">
-                <img src={PCImage} alt="pc-site-title" className="pc-image" />
-                <img
-                  src={PhoneImage}
-                  alt="phone-site-title"
-                  className="phone-image"
-                />
+              <div onClick={ShowModal}>
+                <ModalImage />
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
