@@ -32,7 +32,7 @@ function Capibara() {
 const Home = () => {
   return (
     <div className="container">
-      <div className="capibara">
+      <div className="capibara" id="page-wrap">
         <Canvas>
           <Suspense fallback={null}>
             <Stage contactShadow={{ resolution: 1000, scale: 100 }}>

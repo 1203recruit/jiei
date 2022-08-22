@@ -11,5 +11,7 @@
 - ## Objective
 
 - ## Logo and banner images
+  - ![Logo](../src/img/Jiei.svg)
+
 
 - ## Features to be added in the future

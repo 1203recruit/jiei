@@ -8,11 +8,13 @@ import About from "../src/components/pages/About";
 import Works from "../src/components/pages/Works";
 import Contact from "../src/components/pages/Contact";
 import Footer from "../src/components/parts/Footer";
+import { slide as Menu } from "react-burger-menu";
 
 const App = () => {
   const location = useLocation();
   return (
     <>
+      <Menu pageWrapId={ "page-wrap" } right />
       <Header />
       <SlideRoutes location={location} duration={800} effect={"ease-in-out"}>
         <Route path={"/"} element={<Home />} />

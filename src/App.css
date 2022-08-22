@@ -5,7 +5,7 @@
   --TestBorder: 1px solid #000;
 
   --DefaultColor: #222222;
-  --WhiteColor: #FEFEFE;
+  --WhiteColor: #fefefe;
   --ImitationColor: #c8c8c8;
   --AlphaWhiteColor: rgba(254, 254, 254, 0.7);
   --OverlayBlackColor: rgba(3, 4, 4, 0.3);
@@ -119,24 +119,21 @@ body {
   align-items: flex-end;
 }
 
-
-.logo-wrap {
+.logo-wrapper {
   width: 320px;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.logo {
-  color: var(--DefaultColor);
-  font-size: 48px;
-  font-family: Zen Dots;
-  letter-spacing: 32px;
-  text-indent: 32px;
+.logo-item {
+  height: 56px;
+  width: 192px;
+  display: inline-block;
   transition-duration: 0.4s;
 }
-.logo:hover {
+.logo-item:hover {
   transform: scale(1.2);
 }
 
@@ -251,8 +248,9 @@ body {
 /* ************* */
 
 .active li,
-.active j {
+.active .logo-item .logo {
   color: var(--ActiveOrange);
+  fill: var(--ActiveOrange);
 }
 
 .github-icon {
@@ -267,6 +265,75 @@ body {
     display: none;
   }
 }
+
+/* burger-menu */
+
+
+
+
+
+
+/* バーガーボタンの位置とサイズ */
+.bm-burger-button {
+  display: none;
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+@media screen and (max-width: 900px) {
+  .bm-burger-button {
+    display: block;
+  }
+}
+
+/* バーガボタンのバーのスタイル */
+.bm-burger-bars {
+  background: var(--DefaultColor);
+}
+
+/* バーガーボタンのホバー */
+.bm-burger-bars-hover {
+  background: var(--ActiveOrange);
+}
+
+/* サイドバーのラッパースタイル - アニメーションが壊れる可能性があるため触るときは注意 */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* サイドバーのスタイル */
+.bm-menu {
+  background: var(--DefaultColor);
+}
+
+/* メニューリストのラッパースタイル*/
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* 個々のリストのスタイル */
+.bm-item {
+  display: inline-block;
+}
+
+/* オーバーレイ(overlay)のスタイリング */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* *********** */
+
+
+
+
+
+
+
+
+
 /* ****** */
 /* ****** */
 /* ****** */
@@ -279,7 +346,7 @@ body {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -295,7 +362,7 @@ body {
 }
 
 .main {
-  width: 960px;
+  max-width: 960px;
   height: 100%;
   margin: 0 0 120px 0;
 }
@@ -334,7 +401,7 @@ h1 {
 .about-item-L {
   width: 88px;
 }
-.about-item-x ul{
+.about-item-x ul {
   display: flex;
 }
 .about-item-x ul li:nth-child(2n) {
