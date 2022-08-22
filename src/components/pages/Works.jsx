@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ScrollToTop from "react-scroll-to-top";
-import ModalImage from "./component/ModalImage";
-import Modal from "./component/Modal";
-import LogoImage from "./img/LogoImage.png";
-import IllustImage from "./img/IllustImage.png";
+import ModalImage from "../parts/ModalImage";
+import Modal from "../parts/Modal";
+import LogoImage from "../../img/LogoImage.png";
+import IllustImage from "../../img/IllustImage.png";
 import { disableBodyScroll } from "body-scroll-lock";
 
 const Works = () => {

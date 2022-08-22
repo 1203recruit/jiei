@@ -61,15 +61,27 @@ const About = () => {
                 <div className="about-item-L">Tools：</div>
                 <div className="about-item-wrapper">
                   <div className="about-item-x">
-                    <p>Adobe Photoshop/Illustrator/After Effects/XD</p>
-                    <p>
-                      Visual Studio Code　Figma　Miro　CLIP STUDIO
-                      PAINT　MagicaVoxel
-                    </p>
+                    <ul>
+                      <li>Adobe</li>
+                      <li>Photoshop/Illustrator/After Effects/XD</li>
+                    </ul>
+                    <ul>
+                      <li>Visual Studio Code</li>
+                      <li>Figma</li>
+                      <li>Miro</li>
+                      <li>Slack</li>
+                      <li>CLIP STUDIO PAINT</li>
+                      <li>MagicaVoxel</li>
+                    </ul>
                   </div>
                   <div className="about-item-x">
-                    <p>HTML　CSS　Javascript（JQuery/React）</p>
-                    <p>PHP　MySQL</p>
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript(JQuery/React)</li>
+                      <li>PHP(Laravel)</li>
+                      <li>MySQL</li>
+                    </ul>
                   </div>
                 </div>
               </div>

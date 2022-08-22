@@ -1,6 +1,6 @@
 import React from "react";
-import PCImage from "../img//PCImage.png";
-import PhoneImage from "../img/PhoneImage.png";
+import PCImage from "../../img/PCImage.png";
+import PhoneImage from "../../img/PhoneImage.png";
 
 const ModalImage = () => {
   return (

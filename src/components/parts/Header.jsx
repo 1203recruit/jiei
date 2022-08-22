@@ -1,5 +1,5 @@
 import React from "react";
-import GithubIcon from "./img/GitHub-Mark-64px.png";
+import GithubIcon from "../../img/GitHub-Mark-64px.png";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { slide as Menu } from "react-burger-menu";

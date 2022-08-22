@@ -5,9 +5,9 @@
   --TestBorder: 1px solid #000;
 
   --DefaultColor: #222222;
-  --WhiteColor: #f4f5f7;
+  --WhiteColor: #FEFEFE;
   --ImitationColor: #c8c8c8;
-  --AlphaWhiteColor: rgba(244, 245, 247, 0.7);
+  --AlphaWhiteColor: rgba(254, 254, 254, 0.7);
   --OverlayBlackColor: rgba(3, 4, 4, 0.3);
   --ActiveOrange: #faae0b;
   --ErrorColor: #fd6060;
@@ -101,7 +101,7 @@ body {
 .header {
   background: var(--AlphaWhiteColor);
   backdrop-filter: blur(16px);
-  /* position: sticky; */
+  position: sticky;
   top: 0;
   width: 100%;
   height: 100px;
@@ -118,18 +118,11 @@ body {
   justify-content: space-between;
   align-items: flex-end;
 }
-@media screen and (max-width: 900px) {
-  .header-wrapper {
-    border: 1px solid #000;
-    width: 100%;
-  }
-}
 
 
 .logo-wrap {
   width: 320px;
   height: 80px;
-  margin: 0 0 0 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,36 +276,22 @@ body {
 /* ************* */
 .slide-routes {
   flex: 1;
-  height: 100%;
-  border: 1px solid #0F0;
 }
 
 .container {
   width: 1440px;
-  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 900px) {
-  .container {
-    width: 100%;
-    border: 1px solid #F00;
-  }
-}
 
 .capibara {
+  width: 100vw;
   height: 800px;
-  min-height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media screen and (max-width: 900px) {
-  .capibara {
-    width: 100vw;
-  }
 }
 
 .main {
@@ -336,6 +315,13 @@ h1 {
 /* ************* */
 /* ************* */
 
+/* **** */
+/* Home */
+/* **** */
+/* **** */
+/* **** */
+/* **** */
+
 /* ***** */
 /* About */
 /* ***** */
@@ -347,6 +333,12 @@ h1 {
 }
 .about-item-L {
   width: 88px;
+}
+.about-item-x ul{
+  display: flex;
+}
+.about-item-x ul li:nth-child(2n) {
+  margin: 0 16px 0 16px;
 }
 .about-item-wrapper:nth-child(2n) {
   margin: 32px 0 32px 0;
@@ -507,7 +499,7 @@ textarea:focus {
 
 .submit-button {
   width: 720px;
-  height: 24px;
+  height: 32px;
   border-radius: 10px;
 }
 

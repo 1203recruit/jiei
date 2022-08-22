@@ -2,12 +2,12 @@ import "./App.css";
 import React from "react";
 import { Route, useLocation } from "react-router-dom";
 import SlideRoutes from "react-slide-routes";
-import Header from "./Header";
-import Home from "./Home";
-import About from "./About";
-import Works from "./Works";
-import Contact from "./Contact";
-import Footer from "./Footer";
+import Header from "../src/components/parts/Header";
+import Home from "../src/components/pages/Home";
+import About from "../src/components/pages/About";
+import Works from "../src/components/pages/Works";
+import Contact from "../src/components/pages/Contact";
+import Footer from "../src/components/parts/Footer";
 
 const App = () => {
   const location = useLocation();
