@@ -91,6 +91,7 @@ body {
 .non-select {
   user-select: none;
 }
+
 /* *** */
 /* *** */
 /* *** */
@@ -141,6 +142,7 @@ body {
   pointer-events: none;
 }
 
+
 .header .nav {
   width: 100%;
   height: 100px;
@@ -153,22 +155,34 @@ body {
     display: none;
   }
 }
+@media screen and (max-width: 900px) {
+  .nav {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    /* border: 1px solid #F0F; */
+  }
+}
 
 .list-wrapper {
   display: flex;
 }
 @media screen and (max-width: 900px) {
   .list-wrapper {
+    
+    position: relative;
     display: inline-block;
-    height: 100%;
     margin: 24px;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #0F0;
+    flex: 1;
+    /* border: 1px solid #0F0; */
   }
 }
 
-.list-wrapper .li-item {
+.list-item {
   width: 120px;
   height: 100px;
   display: flex;
@@ -176,28 +190,37 @@ body {
   align-items: center;
 }
 @media screen and (max-width: 900px) {
-  .list-wrapper .li-item {
-    color: var(--WhiteColor);
-    max-width: 100%;
+  .list-item {
+    width: 100%;
     height: 100%;
-    border: 1px solid #f00;
+    text-align: left;
   }
-  .list-wrapper a:nth-child(2n-1) .li-item {
-    margin: 32px 0 32px 0;
-  }
-  .list-wrapper a .button-text {
-    justify-content: start;
+  .button-text {
+    color: var(--WhiteColor);
     border-bottom: 2px solid var(--WhiteColor);
   }
-  
 }
 
-.list-wrapper a:nth-child(2n-2) {
+.list-item:nth-child(2n-1) {
   margin: 0 24px 0 24px;
+}
+@media screen and (max-width: 900px) {
+  .list-item:nth-child(2n-1) {
+    margin: 32px 0 32px 0;
+  }
 }
 
 /* under line Animation */
-.list-wrapper .underline::after {
+.list-item .underline {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-item .underline::after {
   position: absolute;
   width: 120px;
   content: "";
@@ -208,17 +231,15 @@ body {
   transform-origin: center top;
   transition: transform 0.2s ease-in-out;
 }
-.list-wrapper .underline:hover::after {
+.underline:hover::after {
   transform: scale(1, 1);
 }
-
 @media screen and (max-width: 900px) {
-  .list-wrapper .underline::after,
-  .list-wrapper .underline:hover::after {
+  .underline::after,
+  .underline:hover::after {
     display: none;
   }
 }
-
 /* ******************** */
 
 /* Dropdown menu */
@@ -228,7 +249,6 @@ body {
   pointer-events: none;
   color: var(--DefaultColor);
   top: 100%;
-  width: 120px;
   margin: 0 auto;
   text-align: center;
   justify-content: center;
@@ -262,19 +282,10 @@ body {
 }
 
 .dropdown-item {
-  z-index: 500;
-  margin: 0 24px 0 24px;
-}
-
-.dropdown-item a {
   display: block;
   width: 100%;
-  padding: 8px 0 8px 0;
-}
-.dropdown-item a:hover {
-  color: var(--WhiteColor);
-  background: var(--ActiveOrange);
-  border-radius: 45px;
+  padding: 8px 24px 8px 24px;
+  z-index: 500;
 }
 
 .dropdown-item:nth-child(1) {
@@ -286,31 +297,64 @@ body {
 .dropdown-item:nth-child(3) {
   margin: 8px 0 8px 0;
 }
+.dropdown-item:nth-child(4) {
+  margin: 0 0 8px 0;
+}
+
+.dropdown-item:hover {
+  background: var(--ActiveOrange);
+  border-radius: 45px;
+}
+.dropdown-item:hover .button-text {
+  color: var(--WhiteColor);
+}
 /* ************* */
 
-.active li,
+.list-item .active,
 .active .logo-item .logo {
   color: var(--ActiveOrange);
   fill: var(--ActiveOrange);
 }
-
-.github-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 @media screen and (max-width: 900px) {
-  .github-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 50%;
+  .active {
+    border-bottom: 2px solid var(--ActiveOrange);
   }
 }
 
-/* burger-menu */
 
-/* バーガーボタンの位置とサイズ */
+
+
+.github-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 900px) {
+  .github-link {
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.github-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .github-color {
+    fill: var(--WhiteColor);
+  }
+}
+
+
+/* burger-menu */
 .bm-burger-button {
   display: none;
   position: fixed;
@@ -325,38 +369,31 @@ body {
   }
 }
 
-/* バーガボタンのバーのスタイル */
 .bm-burger-bars {
   background: var(--DefaultColor);
 }
 
-/* バーガーボタンのホバー */
 .bm-burger-bars-hover {
   background: var(--ActiveOrange);
 }
 
-/* サイドバーのラッパースタイル - アニメーションが壊れる可能性があるため触るときは注意 */
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
 }
 
-/* サイドバーのスタイル */
 .bm-menu {
   background: var(--DefaultColor);
 }
 
-/* メニューリストのラッパースタイル*/
 .bm-item-list {
   overflow-x: hidden;
 }
 
-/* 個々のリストのスタイル */
 .bm-item {
   color: var(--WhiteColor);
 }
 
-/* オーバーレイ(overlay)のスタイリング */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
@@ -365,6 +402,76 @@ body {
 /* ****** */
 /* ****** */
 /* ****** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ************* */
 /* Common Layout */
@@ -379,14 +486,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.capibara {
-  width: 100vw;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 3px solid #000;
 }
 
 .main {
@@ -413,6 +513,13 @@ h1 {
 /* **** */
 /* Home */
 /* **** */
+.capibara {
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* **** */
 /* **** */
 /* **** */

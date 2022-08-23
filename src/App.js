@@ -14,6 +14,7 @@ import { slide as Menu } from "react-burger-menu";
 
 const App = () => {
   const location = useLocation();
+  
   const isMenuOpen = (state) =>{
     if (state.isOpen) {
       document.body.style.overflow = "hidden";

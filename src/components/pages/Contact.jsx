@@ -69,7 +69,7 @@ const Contact = () => {
                 placeholder="Name or Company Name"
                 onChange={(e) => setNameOrCompanyName(e.target.value)}
               />
-            </div>parts
+            </div>
             <div className="input-field form-child">
               <input
                 className="input-form normal-text"
