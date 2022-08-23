@@ -104,7 +104,7 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 100px;
+  max-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,12 +142,11 @@ body {
 }
 
 .header .nav {
-  width: 480px;
-  height: 80px;
+  width: 100%;
+  height: 100px;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin: 0 0 0 auto;
+  justify-content: end;
+  align-items: center;
 }
 @media screen and (max-width: 900px) {
   .header .nav {
@@ -158,16 +157,42 @@ body {
 .list-wrapper {
   display: flex;
 }
+@media screen and (max-width: 900px) {
+  .list-wrapper {
+    display: inline-block;
+    height: 100%;
+    margin: 24px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #0F0;
+  }
+}
 
 .list-wrapper .li-item {
   width: 120px;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 900px) {
+  .list-wrapper .li-item {
+    color: var(--WhiteColor);
+    max-width: 100%;
+    height: 100%;
+    border: 1px solid #f00;
+  }
+  .list-wrapper a:nth-child(2n-1) .li-item {
+    margin: 32px 0 32px 0;
+  }
+  .list-wrapper a .button-text {
+    justify-content: start;
+    border-bottom: 2px solid var(--WhiteColor);
+  }
+  
+}
 
-.list-wrapper a:nth-child(3n-1) {
+.list-wrapper a:nth-child(2n-2) {
   margin: 0 24px 0 24px;
 }
 
@@ -183,10 +208,17 @@ body {
   transform-origin: center top;
   transition: transform 0.2s ease-in-out;
 }
-
 .list-wrapper .underline:hover::after {
   transform: scale(1, 1);
 }
+
+@media screen and (max-width: 900px) {
+  .list-wrapper .underline::after,
+  .list-wrapper .underline:hover::after {
+    display: none;
+  }
+}
+
 /* ******************** */
 
 /* Dropdown menu */
@@ -195,7 +227,7 @@ body {
   position: absolute;
   pointer-events: none;
   color: var(--DefaultColor);
-  top: -200px;
+  top: 100%;
   width: 120px;
   margin: 0 auto;
   text-align: center;
@@ -208,7 +240,7 @@ body {
 .dropdown-list:hover .dropdown-list {
   display: block;
   pointer-events: auto;
-  top: 10vh;
+  top: 100%;
   animation: fadeIn 0.4s ease-in 0s forwards;
 }
 @keyframes fadeIn {
@@ -221,13 +253,22 @@ body {
     opacity: 1;
   }
 }
+@media screen and (max-width: 900px) {
+  .list-wrapper .underline:hover .dropdown-list,
+  .dropdown-menu:hover .dropdown-list,
+  .dropdown-list:hover .dropdown-list {
+    display: none;
+  }
+}
 
 .dropdown-item {
   z-index: 500;
+  margin: 0 24px 0 24px;
 }
 
 .dropdown-item a {
   display: block;
+  width: 100%;
   padding: 8px 0 8px 0;
 }
 .dropdown-item a:hover {
@@ -254,24 +295,20 @@ body {
 }
 
 .github-icon {
-  width: 160px;
-  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media screen and (max-width: 900px) {
   .github-icon {
-    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
   }
 }
 
 /* burger-menu */
-
-
-
-
-
 
 /* バーガーボタンの位置とサイズ */
 .bm-burger-button {
@@ -311,13 +348,12 @@ body {
 
 /* メニューリストのラッパースタイル*/
 .bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
+  overflow-x: hidden;
 }
 
 /* 個々のリストのスタイル */
 .bm-item {
-  display: inline-block;
+  color: var(--WhiteColor);
 }
 
 /* オーバーレイ(overlay)のスタイリング */
@@ -325,14 +361,6 @@ body {
   background: rgba(0, 0, 0, 0.3);
 }
 /* *********** */
-
-
-
-
-
-
-
-
 
 /* ****** */
 /* ****** */
