@@ -61,7 +61,7 @@ body {
 .imitation-text,
 .error-text {
   color: var(--DefaultColor);
-  font-family: "Yu Gothic", "游ゴシック体 ボールド", YuGothic Bold;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "Hiragino Sans", "ヒラギノ角ゴシック", Meiryo, "メイリオ";
   font-weight: bold;
 }
 .head-line1 {
@@ -130,7 +130,7 @@ body {
 @media screen and (max-width: 909px) {
   .logo-wrapper {
     width: 100%;
-    margin: 0 0 0 20%;
+    margin: 0 0 0 10%;
   }
 }
 
