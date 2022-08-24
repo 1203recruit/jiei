@@ -10,24 +10,24 @@ const About = () => {
             <div className="about-item-wrapper">
               <div className="about-item-list">
                 <div className="about-item-L">Name：</div>
-                <div>Jiei</div>
+                <div className="about-item-R">Jiei</div>
               </div>
               <div className="about-item-list">
                 <div className="about-item-L">Address：</div>
-                <div>Tokyo</div>
+                <div className="about-item-R">Tokyo</div>
               </div>
               <div className="about-item-list">
                 <div className="about-item-L">E-mail：</div>
-                <div>sample@sample.com</div>
+                <div className="about-item-R">sample@sample.com</div>
               </div>
             </div>
             <div className="about-item-wrapper">
               <div className="about-item-list">
-                <div className="about-item-L">Bio：</div>
+                <h2 className="about-item-L head-line-2-sp">Bio：</h2>
                 <div className="about-item-wrapper">
                   <div className="about-item-list">
                     <div className="about-item-L">2017年4月</div>
-                    <div>
+                    <div className="about-item-R">
                       <p>
                         新社会人としてアニメ制作会社の撮影部に就職
                         <br />
@@ -37,19 +37,19 @@ const About = () => {
                   </div>
                   <div className="about-item-list">
                     <div className="about-item-L">2021年8月</div>
-                    <div>
+                    <div className="about-item-R">
                       <p>アニメ制作会社を退職</p>
                     </div>
                   </div>
                   <div className="about-item-list">
                     <div className="about-item-L">2021年9月</div>
-                    <div>
+                    <div className="about-item-R">
                       <p>SES事業の会社に就職し、IT業界に足を踏み入れる</p>
                     </div>
                   </div>
                   <div className="about-item-list">
                     <div className="about-item-L">2022年1月</div>
-                    <div>
+                    <div className="about-item-R">
                       <p>SES事業の会社を退職し、フリーランスへ転身（予定）</p>
                     </div>
                   </div>
@@ -58,12 +58,12 @@ const About = () => {
             </div>
             <div className="about-item-wrapper">
               <div className="about-item-list">
-                <div className="about-item-L">Tools：</div>
+                <h2 className="about-item-L head-line-2-sp">Tools：</h2>
                 <div className="about-item-wrapper">
                   <div className="about-item-x">
                     <ul>
                       <li>Adobe</li>
-                      <li>Photoshop/Illustrator/After Effects/XD</li>
+                      <li className="adobe">Photoshop/Illustrator/After Effects/XD</li>
                     </ul>
                     <ul>
                       <li>Visual Studio Code</li>
@@ -88,7 +88,7 @@ const About = () => {
             </div>
             <div className="about-item-wrapper">
               <div className="about-item-list">
-                <div className="about-item-L">I want to：</div>
+                <h2 className="about-item-L head-line-2-sp">I want to：</h2>
                 <div className="about-item-wrapper">
                   <div className="about-item-x">
                     <p>Web Designer & Front End Engineer</p>

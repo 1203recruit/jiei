@@ -61,7 +61,8 @@ body {
 .imitation-text,
 .error-text {
   color: var(--DefaultColor);
-  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "Hiragino Sans", "ヒラギノ角ゴシック", Meiryo, "メイリオ";
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体",
+    "Hiragino Sans", "ヒラギノ角ゴシック", Meiryo, "メイリオ";
   font-weight: bold;
 }
 .head-line1 {
@@ -90,6 +91,30 @@ body {
 
 .non-select {
   user-select: none;
+}
+
+.head-line1 {
+  width: 800px;
+  height: 64px;
+  margin: 0 auto;
+}
+
+.head-line2 {
+  width: 720px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.head-line-2-sp {
+  margin: initial;
+  font-size: initial;
+}
+@media screen and (max-width: 900px) {
+  .head-line-2-sp {
+    font-size: 32px;
+    display: inline-block;
+    margin: 32px 0 0 0;
+  }
 }
 
 /* *** */
@@ -129,25 +154,38 @@ body {
 }
 @media screen and (max-width: 909px) {
   .logo-wrapper {
-    width: 100%;
-    margin: 0 0 0 10%;
+    width: 216px;
+    height: 64px;
+    justify-content: center;
   }
 }
 
-.logo-item {
-  height: 56px;
+.jiei-logo {
   width: 192px;
-  display: inline-block;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition-duration: 0.4s;
 }
-.logo-item:hover {
+@media screen and (max-width: 900px) {
+  .logo-item {
+    max-width: 100%;
+  }
+}
+
+.jiei-logo:hover {
   transform: scale(1.2);
 }
-
-.active.logo-wrapper {
-  pointer-events: none;
+@media screen and (max-width: 900px) {
+  .jiei-logo:hover {
+    transform: none;
+  }
 }
 
+.logo-wrapper .active {
+  pointer-events: none;
+}
 
 .header .nav {
   width: 100%;
@@ -183,7 +221,7 @@ body {
     margin: 24px;
     position: relative;
     flex-direction: column;
-    
+
     display: block;
     text-align: left;
     /* border: 1px solid #00F; */
@@ -330,9 +368,6 @@ body {
   }
 }
 
-
-
-
 .github-link {
   display: flex;
   justify-content: center;
@@ -362,7 +397,6 @@ body {
   }
 }
 
-
 /* burger-menu */
 .bm-burger-button {
   display: none;
@@ -370,8 +404,7 @@ body {
   width: 36px;
   height: 30px;
   right: 36px;
-  top: 36px;
-  border-radius: 40px;
+  top: 16px;
 }
 @media screen and (max-width: 900px) {
   .bm-burger-button {
@@ -381,6 +414,7 @@ body {
 
 .bm-burger-bars {
   background: var(--DefaultColor);
+  border-radius: 40px;
 }
 
 .bm-burger-bars-hover {
@@ -413,76 +447,6 @@ body {
 /* ****** */
 /* ****** */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ************* */
 /* Common Layout */
 /* ************* */
@@ -496,7 +460,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #000;
+}
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100vw;
+    /* border: 3px solid #f00; */
+  }
 }
 
 .main {
@@ -504,17 +473,25 @@ body {
   height: 100%;
   margin: 0 0 120px 0;
 }
-
-h1 {
-  width: 800px;
-  height: 64px;
-  margin: 0 auto;
+@media screen and (max-width: 900px) {
+  .main {
+    width: 90%;
+    margin: 24px 0 24px 0;
+    /* border: 3px solid #0f0; */
+  }
 }
 
 .contents {
   width: 720px;
   height: 100%;
   margin: 0 auto;
+}
+@media screen and (max-width: 900px) {
+  .contents {
+    width: 100%;
+    margin: 16px 0 0 0;
+    /* border: 3px solid #00f; */
+  }
 }
 /* ************* */
 /* ************* */
@@ -537,26 +514,79 @@ h1 {
 /* ***** */
 /* About */
 /* ***** */
-.about-item-list {
-  display: table-row;
-}
-.about-item-list > div {
-  display: table-cell;
-}
-.about-item-L {
-  width: 88px;
-}
-.about-item-x ul {
-  display: flex;
-}
-.about-item-x ul li:nth-child(2n) {
-  margin: 0 16px 0 16px;
-}
 .about-item-wrapper:nth-child(2n) {
   margin: 32px 0 32px 0;
 }
+@media screen and (max-width: 900px) {
+  .about-item-wrapper:nth-child(2n) {
+    margin: 0;
+  }
+}
+
+.about-item-list {
+  display: table-row;
+}
+@media screen and (max-width: 900px) {
+  .about-item-list {
+    display: block;
+  }
+}
+
+.about-item-list > div {
+  display: table-cell;
+}
+@media screen and (max-width: 900px) {
+  .about-item-list > div {
+    display: block;
+  }
+}
+
+.about-item-L {
+  width: 88px;
+}
+@media screen and (max-width: 900px) {
+  .about-item-L {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about-item-R {
+    width: 95%;
+    margin: 0 0 0 5%;
+  }
+}
+
+.about-item-x ul {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  .about-item-x ul {
+    display: block;
+  }
+}
+
+.about-item-x ul li:nth-child(2n) {
+  margin: 0 16px 0 16px;
+}
+@media screen and (max-width: 900px) {
+  .about-item-x ul li:nth-child(2n) {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about-item-x ul li:not(.adobe)::before {
+    content: '・';
+  }
+  .about-item-x ul li.adobe {
+    width: 95%;
+    margin: 0 0 0 5%;
+  }
+}
+
 .about-item-x:nth-child(2n) {
-  padding: 16px 0 0 0;
+  margin: 16px 0 0 0;
 }
 /* ***** */
 /* ***** */
@@ -565,11 +595,6 @@ h1 {
 /* ***** */
 /* Works */
 /* ***** */
-h2 {
-  width: 720px;
-  height: 48px;
-}
-
 .border-box {
   width: 100%;
   height: 100%;
