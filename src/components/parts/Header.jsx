@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavMenu from "./NavMenu";
-
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 
 const Header = () => {
+  // Drawer
+  const [showDrawer, setShowDrawer] = useState(false);
+  const ShowDrawer = () => {
+    setShowDrawer(!showDrawer);
+  };
+
   return (
     <>
       <header className="header">
@@ -55,7 +65,40 @@ const Header = () => {
               </svg>
             </NavLink>
           </div>
-          <NavMenu />
+          <div className="pc-nav">
+            <NavMenu />
+          </div>
+          <div className="sp-nav">
+            <div
+              className="hamburger-menu"
+              onClick={() => {
+                ShowDrawer();
+                disableBodyScroll("NavMenu");
+              }}
+            >
+              <span className="hamburger-menu-bar" />
+              <span className="hamburger-menu-bar" />
+              <span className="hamburger-menu-bar" />
+            </div>
+            <div className={showDrawer ? "show" : ""}>
+              <NavMenu
+                showFlag={showDrawer}
+                setShowDrawer={setShowDrawer}
+                element={"NavMenu"}
+              />
+            </div>
+
+            <div
+              className={showDrawer ? "show" : ""}
+              onClick={() => {
+                ShowDrawer();
+                enableBodyScroll("NavMenu");
+                clearAllBodyScrollLocks("NavMenu");
+              }}
+            >
+              <div className="drawer-overlay" />
+            </div>
+          </div>
         </div>
       </header>
     </>
