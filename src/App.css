@@ -134,7 +134,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 900;
+  z-index: 800;
 }
 
 .header-wrapper {
@@ -172,7 +172,7 @@ body {
 }
 @media screen and (max-width: 900px) {
   .jiei-logo {
-    max-width: 100%;
+    scale: 0.9;
   }
 }
 
@@ -211,6 +211,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 900;
   }
 }
 
@@ -230,7 +231,7 @@ body {
     background: var(--DefaultColor);
 
     transition: all 0.4s ease-in-out;
-    z-index: 950;
+    z-index: 900;
   }
   .sp-nav .show .nav {
     left: 0;
@@ -240,7 +241,7 @@ body {
 
 
 @media screen and (max-width: 900px) {
-  .sp-nav .drawer-overlay {
+  .drawer-overlay {
     display: block;
     position: fixed;
     width: 100vh;
@@ -254,9 +255,9 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.4s ease-in-out;
-    z-index: 900;
+    z-index: 800;
   }
-  .sp-nav .show .drawer-overlay {
+  .show .drawer-overlay {
     opacity: 1;
     pointer-events: auto;
   }
@@ -414,7 +415,7 @@ body {
 /* ************* */
 
 .list-item .active,
-.active .logo-item .logo {
+.active .jiei-logo .logo {
   color: var(--ActiveOrange);
   fill: var(--ActiveOrange);
 }
@@ -464,6 +465,7 @@ body {
     position: relative;
     width: 56px;
     height: 40px;
+    transition: all 0.4s ease-in-out;
   }
 }
 
@@ -471,20 +473,43 @@ body {
   display: block;
   position: absolute;
   width: 56px;
-  height: 8px;
+  height: 7px;
   border-radius: 40px;
   background: var(--DefaultColor);
+  transition: all 0.4s ease-in-out;
 }
 
 .hamburger-menu-bar:nth-of-type(1) {
   top: 0;
 }
 .hamburger-menu-bar:nth-of-type(2) {
-  top: 16px;
+  top: 17px;
 }
 .hamburger-menu-bar:nth-of-type(3) {
   bottom: 0;
 }
+
+.active-toggle .hamburger-menu-bar {
+  background: var(--WhiteColor);
+}
+
+
+/* Burger Animation  */
+.active-toggle  {
+  transform: rotate(360deg);
+}
+.active-toggle .hamburger-menu-bar:nth-of-type(1) {
+  transform: translateY(17px) rotate(-45deg);
+}
+.active-toggle .hamburger-menu-bar:nth-of-type(2) {
+  transform: translateY(0) rotate(45deg);
+}
+.active-toggle .hamburger-menu-bar:nth-of-type(3) {
+  opacity: 0;
+}
+/* ***************** */
+
+
 /* *********** */
 
 /* ****** */

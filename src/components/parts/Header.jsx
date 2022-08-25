@@ -13,10 +13,26 @@ const Header = () => {
   const ShowDrawer = () => {
     setShowDrawer(!showDrawer);
   };
+  // Toggle
+  const [activeToggle, setActiveToggle] = useState(false);
+  const ActiveToggle = () => {
+    setActiveToggle(!activeToggle);
+  };
 
   return (
     <>
       <header className="header">
+        <div
+          className={showDrawer ? "show" : ""}
+          onClick={() => {
+            ShowDrawer();
+            ActiveToggle();
+            enableBodyScroll("Drawer");
+            clearAllBodyScrollLocks("Drawer");
+          }}
+        >
+          <div className="drawer-overlay" />
+        </div>
         <div className="header-wrapper">
           <div className="logo-wrapper">
             <NavLink
@@ -69,34 +85,51 @@ const Header = () => {
             <NavMenu />
           </div>
           <div className="sp-nav">
-            <div
-              className="hamburger-menu"
+            {/* <div
+              className={
+                activeToggle ? "hamburger-menu active-toggle" : "hamburger-menu"
+              }
               onClick={() => {
                 ShowDrawer();
-                disableBodyScroll("NavMenu");
+                ActiveToggle();
+                disableBodyScroll("Drawer");
               }}
-            >
-              <span className="hamburger-menu-bar" />
-              <span className="hamburger-menu-bar" />
-              <span className="hamburger-menu-bar" />
-            </div>
+            > */}
+            {activeToggle ? (
+              <div
+                className="hamburger-menu active-toggle"
+                onClick={() => {
+                  
+                  ShowDrawer();
+                  ActiveToggle();
+                  enableBodyScroll("Drawer");
+                  clearAllBodyScrollLocks("Drawer");
+                }}
+              >
+                <span className="hamburger-menu-bar" />
+                <span className="hamburger-menu-bar" />
+                <span className="hamburger-menu-bar" />
+              </div>
+            ) : (
+              <div
+                className="hamburger-menu"
+                onClick={() => {
+                  ShowDrawer();
+                  ActiveToggle();
+                  disableBodyScroll("Drawer");
+                }}
+              >
+                <span className="hamburger-menu-bar" />
+                <span className="hamburger-menu-bar" />
+                <span className="hamburger-menu-bar" />
+              </div>
+            )}
             <div className={showDrawer ? "show" : ""}>
               <NavMenu
                 showFlag={showDrawer}
                 setShowDrawer={setShowDrawer}
-                element={"NavMenu"}
+                element={"Drawer"}
               />
-            </div>
-
-            <div
-              className={showDrawer ? "show" : ""}
-              onClick={() => {
-                ShowDrawer();
-                enableBodyScroll("NavMenu");
-                clearAllBodyScrollLocks("NavMenu");
-              }}
-            >
-              <div className="drawer-overlay" />
             </div>
           </div>
         </div>

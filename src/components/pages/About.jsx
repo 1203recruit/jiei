@@ -77,7 +77,7 @@ const About = () => {
                   <div className="about-item-x">
                     <ul>
                       <li>HTML</li>
-                      <li>CSS</li>
+                      <li>CSS(Tailwind CSS)</li>
                       <li>JavaScript(JQuery/React)</li>
                       <li>PHP(Laravel)</li>
                       <li>MySQL</li>
