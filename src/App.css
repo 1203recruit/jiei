@@ -168,7 +168,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-duration: 0.4s;
+  transition: 0.4s ease-in-out;
 }
 @media screen and (max-width: 900px) {
   .jiei-logo {
@@ -230,7 +230,8 @@ body {
     left: -100%;
     background: var(--DefaultColor);
 
-    transition: all 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
     z-index: 900;
   }
   .sp-nav .show .nav {
@@ -254,7 +255,8 @@ body {
 
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
     z-index: 800;
   }
   .show .drawer-overlay {
@@ -456,27 +458,28 @@ body {
 
 
 /* hamburger-menu */
-.hamburger-menu {
-  display: block;
-}
 @media screen and (max-width: 900px) {
   .hamburger-menu {
     display: block;
     position: relative;
     width: 56px;
     height: 40px;
-    transition: all 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
 }
 
-.hamburger-menu-bar {
-  display: block;
-  position: absolute;
-  width: 56px;
-  height: 7px;
-  border-radius: 40px;
-  background: var(--DefaultColor);
-  transition: all 0.4s ease-in-out;
+@media screen and (max-width: 900px) {
+  .hamburger-menu-bar {
+    display: block;
+    position: absolute;
+    width: 56px;
+    height: 7px;
+    border-radius: 40px;
+    background: var(--DefaultColor);
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+  }
 }
 
 .hamburger-menu-bar:nth-of-type(1) {
@@ -496,12 +499,15 @@ body {
 
 /* Burger Animation  */
 .active-toggle  {
+  -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 .active-toggle .hamburger-menu-bar:nth-of-type(1) {
+  -webkit-transform: translateY(17px) rotate(-45deg);
   transform: translateY(17px) rotate(-45deg);
 }
 .active-toggle .hamburger-menu-bar:nth-of-type(2) {
+  -webkit-transform: translateY(0) rotate(45deg);
   transform: translateY(0) rotate(45deg);
 }
 .active-toggle .hamburger-menu-bar:nth-of-type(3) {
