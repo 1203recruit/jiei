@@ -8,6 +8,12 @@ import {
 } from "body-scroll-lock";
 
 const Header = () => {
+
+  document.addEventListener('DOMContentLoaded', () =>{
+    document.querySelectorAll('show')
+    .style.height = `${window.outerHeight}px`
+  })
+
   // Drawer
   const [showDrawer, setShowDrawer] = useState(false);
   const ShowDrawer = () => {
