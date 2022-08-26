@@ -142,7 +142,7 @@ body {
   top: 0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .logo-wrapper {
@@ -168,7 +168,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 @media screen and (max-width: 900px) {
   .jiei-logo {
@@ -230,8 +230,8 @@ body {
     left: -100%;
     background: var(--DefaultColor);
 
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     z-index: 900;
   }
   .sp-nav .show .nav {
@@ -243,21 +243,18 @@ body {
 
 @media screen and (max-width: 900px) {
   .drawer-overlay {
-    /* display: block; */
-    display: none;
-    position: fixed;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 100vh;
     min-height: 100vh;
     background: var(--OverlayBlackColor);
 
-    position: absolute;
-    top: 0;
-    right: 0;
-
     opacity: 0;
     pointer-events: none;
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
   .show .drawer-overlay {
     display: block;
@@ -428,6 +425,10 @@ body {
   }
 }
 
+.icon {
+  margin: 0 8px 0 0 ;
+}
+
 .github-link {
   display: flex;
   justify-content: center;
@@ -449,10 +450,10 @@ body {
   width: 64px;
   height: 64px;
   margin: 0 auto;
+  fill: var(--DefaultColor);
 }
-
 @media screen and (max-width: 900px) {
-  .github-color {
+  .github-icon {
     fill: var(--WhiteColor);
   }
 }
@@ -465,8 +466,8 @@ body {
     position: relative;
     width: 48px;
     height: 40px;
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 }
 
@@ -478,8 +479,8 @@ body {
     height: 7px;
     border-radius: 40px;
     background: var(--DefaultColor);
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 }
 
