@@ -33,8 +33,8 @@ const Header = () => {
           onClick={() => {
             ShowDrawer();
             ActiveToggle();
-            enableBodyScroll("Drawer");
-            clearAllBodyScrollLocks("Drawer");
+            // enableBodyScroll("Drawer");
+            // clearAllBodyScrollLocks("Drawer");
           }}
         >
           <div className="drawer-overlay" />
@@ -98,8 +98,8 @@ const Header = () => {
                   
                   ShowDrawer();
                   ActiveToggle();
-                  enableBodyScroll("Drawer");
-                  clearAllBodyScrollLocks("Drawer");
+                  // enableBodyScroll("Drawer");
+                  // clearAllBodyScrollLocks("Drawer");
                 }}
               >
                 <span className="hamburger-menu-bar" />
@@ -112,7 +112,7 @@ const Header = () => {
                 onClick={() => {
                   ShowDrawer();
                   ActiveToggle();
-                  disableBodyScroll("Drawer");
+                  // disableBodyScroll("Drawer");
                 }}
               >
                 <span className="hamburger-menu-bar" />
