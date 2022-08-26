@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { init, send } from "emailjs-com";
+import { MdMail } from "react-icons/md";
+import { FiSend } from "react-icons/fi";
 
 const Contact = () => {
   const [nameOrCompanyName, setNameOrCompanyName] = useState("");
@@ -58,7 +60,7 @@ const Contact = () => {
   return (
     <div className="container" id="contact">
       <div className="main">
-        <h1 className="head-line1">Contact</h1>
+        <h1 className="head-line1"><MdMail className="icon" />Contact</h1>
         <div className="contents imitation-text">
           <form>
             <div className="input-field form-child">
@@ -118,12 +120,12 @@ const Contact = () => {
               <p className="counter normal-text">{length} / 1000</p>
             </div>
             <button
-              className="submit-button form-child"
+              className="submit-button form-child normal-text"
               type="submit"
               onClick={handleClick}
               disabled={disableSend}
             >
-              Submit
+              <FiSend className="icon" />Submit
             </button>
           </form>
         </div>

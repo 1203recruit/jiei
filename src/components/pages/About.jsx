@@ -1,10 +1,11 @@
 import React from "react";
+import { FaUser } from "react-icons/fa";
 
 const About = () => {
   return (
     <div className="container" id="about">
       <div className="main">
-        <h1 className="head-line1">About</h1>
+        <h1 className="head-line1"><FaUser className="icon" />About</h1>
         <div className="contents normal-text">
           <div className="about-item-table">
             <div className="about-item-wrapper">

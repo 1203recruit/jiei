@@ -5,6 +5,10 @@ import Modal from "../parts/Modal";
 import LogoImage from "../../img/LogoImage.png";
 import IllustImage from "../../img/IllustImage.png";
 import { disableBodyScroll } from "body-scroll-lock";
+import { MdWork } from "react-icons/md";
+import { IoDesktop } from "react-icons/io5";
+import { AiFillPicture } from "react-icons/ai";
+import { SiAdobeillustrator, SiAdobeaftereffects } from "react-icons/si";
 
 const Works = () => {
   // Modal
@@ -21,10 +25,10 @@ const Works = () => {
         element={<ModalImage />}
       />
       <div className="main">
-        <h1 className="head-line1">Works</h1>
+        <h1 className="head-line1"><MdWork className="icon" />Works</h1>
         <div className="contents" id="webSite">
-          <h2 className="head-line2">Web site :</h2>
-          <div className="border-box normal-text">
+          <h2 className="head-line2"><IoDesktop className="icon" />Web site :</h2>
+          <div className="works-box normal-text">
             <div className="works-item-1">
               <div className="works-title-1">
                 <p>Jiei（当サイト）</p>
@@ -43,7 +47,7 @@ const Works = () => {
               </div>
             </div>
           </div>
-          <div className="border-box normal-text">
+          <div className="works-box normal-text">
             <div className="works-item-1">
               <div className="works-title-1">
                 <p>Title</p>
@@ -64,7 +68,7 @@ const Works = () => {
               </div>
             </div>
           </div>
-          <div className="border-box normal-text">
+          <div className="works-box normal-text">
             <div className="works-item-1">
               <div className="works-title-1">
                 <p>Title</p>
@@ -90,8 +94,8 @@ const Works = () => {
         <hr className="boundary-line" />
 
         <div className="contents" id="logo">
-          <h2 className="head-line2">Logo :</h2>
-          <div className="border-box normal-text">
+          <h2 className="head-line2"><SiAdobeillustrator className="icon" />Logo :</h2>
+          <div className="works-box normal-text">
             <div className="works-item-2">
               <div className="works-image">
                 <img src={LogoImage} alt="logo-title" className="logo-image" />
@@ -107,7 +111,7 @@ const Works = () => {
               </div>
             </div>
           </div>
-          <div className="border-box normal-text">
+          <div className="works-box normal-text">
             <div className="works-item-2">
               <div className="works-image">
                 <img src={LogoImage} alt="logo-title" className="logo-image" />
@@ -123,7 +127,7 @@ const Works = () => {
               </div>
             </div>
           </div>
-          <div className="border-box normal-text">
+          <div className="works-box normal-text">
             <div className="works-item-2">
               <div className="works-image">
                 <img src={LogoImage} alt="logo-title" className="logo-image" />
@@ -144,8 +148,8 @@ const Works = () => {
         <hr className="boundary-line" />
 
         <div className="contents" id="illust">
-          <h2 className="head-line2">Illust :</h2>
-          <div className="border-box normal-text">
+          <h2 className="head-line2"><AiFillPicture className="icon" />Illust :</h2>
+          <div className="works-box normal-text">
             <div className="works-item-1">
               <div className="works-title-1">
                 <p>Title</p>
@@ -165,7 +169,7 @@ const Works = () => {
               </div>
             </div>
           </div>
-          <div className="border-box normal-text">
+          <div className="works-box normal-text">
             <div className="works-item-1">
               <div className="works-title-1">
                 <p>Title</p>
@@ -185,7 +189,7 @@ const Works = () => {
               </div>
             </div>
           </div>
-          <div className="border-box normal-text">
+          <div className="works-box normal-text">
             <div className="works-item-1">
               <div className="works-title-1">
                 <p>Title</p>
@@ -210,8 +214,8 @@ const Works = () => {
         <hr className="boundary-line" />
 
         <div className="contents" id="lottie">
-          <h2 className="head-line2">Lottie :</h2>
-          <div className="border-box normal-text">
+          <h2 className="head-line2"><SiAdobeaftereffects className="icon" />Lottie :</h2>
+          <div className="works-box normal-text">
             <div className="works-item-2">
               <div className="works-image">
                 <img
@@ -231,7 +235,7 @@ const Works = () => {
               </div>
             </div>
           </div>
-          <div className="border-box normal-text">
+          <div className="works-box normal-text">
             <div className="works-item-2">
               <div className="works-image">
                 <img
