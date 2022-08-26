@@ -9,6 +9,7 @@
   --ImitationColor: #c8c8c8;
   --AlphaWhiteColor: rgba(254, 254, 254, 0.7);
   --OverlayBlackColor: rgba(3, 4, 4, 0.7);
+  --OverlayBlackColorOff: rgba(3, 4, 4, 0);
   --ActiveOrange: #faae0b;
   --ErrorColor: #fd6060;
 }
@@ -168,7 +169,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 @media screen and (max-width: 900px) {
@@ -250,16 +250,15 @@ body {
     right: 0;
     width: 100vh;
     min-height: 100vh;
-    background: var(--OverlayBlackColor);
-
-    opacity: 0;
+    
+    background: var(--OverlayBlackColorOff);
     pointer-events: none;
+
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
   .show .drawer-overlay {
-    display: block;
-    opacity: 1;
+    background: var(--OverlayBlackColor);
     pointer-events: auto;
   }
 }
