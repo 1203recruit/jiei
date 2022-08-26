@@ -85,16 +85,6 @@ const Header = () => {
             <NavMenu />
           </div>
           <div className="sp-nav">
-            {/* <div
-              className={
-                activeToggle ? "hamburger-menu active-toggle" : "hamburger-menu"
-              }
-              onClick={() => {
-                ShowDrawer();
-                ActiveToggle();
-                disableBodyScroll("Drawer");
-              }}
-            > */}
             {activeToggle ? (
               <div
                 className="hamburger-menu active-toggle"

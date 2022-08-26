@@ -257,7 +257,7 @@ body {
     pointer-events: none;
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
-    z-index: 800;
+    border: 1px solid #0F0;
   }
   .show .drawer-overlay {
     opacity: 1;
@@ -462,7 +462,7 @@ body {
   .hamburger-menu {
     display: block;
     position: relative;
-    width: 56px;
+    width: 48px;
     height: 40px;
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
@@ -473,7 +473,7 @@ body {
   .hamburger-menu-bar {
     display: block;
     position: absolute;
-    width: 56px;
+    width: 48px;
     height: 7px;
     border-radius: 40px;
     background: var(--DefaultColor);
@@ -486,7 +486,7 @@ body {
   top: 0;
 }
 .hamburger-menu-bar:nth-of-type(2) {
-  top: 17px;
+  top: 16px;
 }
 .hamburger-menu-bar:nth-of-type(3) {
   bottom: 0;
