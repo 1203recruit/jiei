@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import ScrollToTop from "react-scroll-to-top";
 import ModalImage from "../parts/ModalImage";
 import Modal from "../parts/Modal";
 import LogoImage from "../../img/LogoImage.png";
 import IllustImage from "../../img/IllustImage.png";
-import { disableBodyScroll } from "body-scroll-lock";
 import { MdWork } from "react-icons/md";
 import { IoDesktop } from "react-icons/io5";
 import { AiFillPicture } from "react-icons/ai";
@@ -15,6 +13,10 @@ const Works = () => {
   const [showModal, setShowModal] = useState(false);
   const ShowModal = () => {
     setShowModal(true);
+
+    if (true) {
+      document.body.style.overflow = "hidden";
+    }
   };
 
   return (
@@ -36,7 +38,6 @@ const Works = () => {
               <div
                 onClick={() => {
                   ShowModal();
-                  disableBodyScroll("ModalImag");
                 }}
               >
                 <ModalImage />
@@ -55,7 +56,6 @@ const Works = () => {
               <div
                 onClick={() => {
                   ShowModal();
-                  disableBodyScroll("ModalImag");
                 }}
               >
                 <ModalImage />
@@ -76,7 +76,6 @@ const Works = () => {
               <div
                 onClick={() => {
                   ShowModal();
-                  disableBodyScroll("ModalImag");
                 }}
               >
                 <ModalImage />
@@ -256,7 +255,6 @@ const Works = () => {
             </div>
           </div>
         </div>
-        <ScrollToTop smooth color="#faae0b" />
       </div>
     </div>
   );

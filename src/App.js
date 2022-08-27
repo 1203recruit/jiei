@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import { Route, useLocation } from "react-router-dom";
 import SlideRoutes from "react-slide-routes";
 import Header from "../src/components/parts/Header";
@@ -11,6 +11,7 @@ import Footer from "../src/components/parts/Footer";
 
 const App = () => {
   const location = useLocation();
+
   return (
     <>
       <Header />

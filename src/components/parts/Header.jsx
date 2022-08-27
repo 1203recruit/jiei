@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavMenu from "./NavMenu";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
 
 const Header = () => {
 
@@ -18,7 +13,14 @@ const Header = () => {
   const [showDrawer, setShowDrawer] = useState(false);
   const ShowDrawer = () => {
     setShowDrawer(!showDrawer);
-  };
+    
+      if (!showDrawer) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    };
+
   // Toggle
   const [activeToggle, setActiveToggle] = useState(false);
   const ActiveToggle = () => {
@@ -33,8 +35,6 @@ const Header = () => {
           onClick={() => {
             ShowDrawer();
             ActiveToggle();
-            // enableBodyScroll("Drawer");
-            // clearAllBodyScrollLocks("Drawer");
           }}
         >
           <div className="drawer-overlay" />
@@ -98,8 +98,6 @@ const Header = () => {
                   
                   ShowDrawer();
                   ActiveToggle();
-                  // enableBodyScroll("Drawer");
-                  // clearAllBodyScrollLocks("Drawer");
                 }}
               >
                 <span className="hamburger-menu-bar" />
@@ -112,7 +110,6 @@ const Header = () => {
                 onClick={() => {
                   ShowDrawer();
                   ActiveToggle();
-                  // disableBodyScroll("Drawer");
                 }}
               >
                 <span className="hamburger-menu-bar" />
