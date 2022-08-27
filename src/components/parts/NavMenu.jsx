@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import {
@@ -43,6 +43,7 @@ const NavMenu = () => {
             activeClassName="active"
             to={"/Works/"}
             className="underline button-text non-select"
+            scroll={(el) => scrollWithOffset(el)}
           >
             <FaSuitcase className="icon" />
             Works

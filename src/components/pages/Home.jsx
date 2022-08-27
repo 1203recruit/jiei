@@ -31,35 +31,29 @@ function Capibara() {
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="capibara">
-        <Canvas>
-          <Suspense fallback={null}>
-            <Stage contactShadow={{ resolution: 1000, scale: 100 }}>
-              <Selection>
-                <EffectComposer>
-                  <Outline
-                    visibleEdgeColor="black"
-                    edgeStrength={100}
-                    width={500}
-                  />
-                </EffectComposer>
-                <Select enabled>
-                  <Capibara />
-                </Select>
-                <OrbitControls />
-                <ambientLight intensity={[1]} />
-                <spotLight
-                  position={[100, 100, 100]}
-                  angle={180}
-                  penumbra={1}
+    <div className="container" id="home">
+      <Canvas>
+        <Suspense fallback={null}>
+          <Stage contactShadow={{ resolution: 1000, scale: 100 }}>
+            <Selection>
+              <EffectComposer>
+                <Outline
+                  visibleEdgeColor="black"
+                  edgeStrength={100}
+                  width={500}
                 />
-                <pointLight position={[10, 10, 10]} />
-              </Selection>
-            </Stage>
-          </Suspense>
-        </Canvas>
-      </div>
+              </EffectComposer>
+              <Select enabled>
+                <Capibara />
+              </Select>
+              <OrbitControls />
+              <ambientLight intensity={[1]} />
+              <spotLight position={[100, 100, 100]} angle={180} penumbra={1} />
+              <pointLight position={[10, 10, 10]} />
+            </Selection>
+          </Stage>
+        </Suspense>
+      </Canvas>
     </div>
   );
 };

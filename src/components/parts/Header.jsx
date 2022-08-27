@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import NavMenu from "./NavMenu";
+
+const scrollWithOffset = (el) => {
+  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  const yOffset = -100;
+  window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+};
 
 const Header = () => {
 
@@ -41,10 +47,11 @@ const Header = () => {
         </div>
         <div className="header-wrapper">
           <div className="logo-wrapper">
-            <NavLink
+            <NavHashLink
               smooth
               activeClassName="active"
-              to={"/"}
+              scroll={(el) => scrollWithOffset(el)}
+              to={"/#home"}
               className="non-select"
             >
               <svg className="jiei-logo">
@@ -85,7 +92,7 @@ const Header = () => {
                   />
                 </g>
               </svg>
-            </NavLink>
+            </NavHashLink>
           </div>
           <div className="pc-nav">
             <NavMenu />
