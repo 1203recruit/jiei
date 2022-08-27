@@ -718,12 +718,17 @@ canvas {
 }
 
 .works-image {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .works-image {
+    
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -743,6 +748,7 @@ canvas {
   height: 100%;
   display: flex;
   padding: 40px 0 40px 0;
+  position: relative;
 }
 @media screen and (max-width: 900px) {
   .works-item-2 {
@@ -754,6 +760,10 @@ canvas {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+  position: relative;
+  right: 0;
+  width: 100%;
+  margin: 0 0 0 4%;
 }
 
 .works-title-2 {
@@ -762,6 +772,7 @@ canvas {
 
 .works-comment {
   width: 100%;
+  word-wrap:break-word;
 }
 
 .boundary-line {

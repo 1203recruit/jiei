@@ -69,7 +69,7 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, incidunt?</p>
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi saepe dolorum sit quidem officia quas delectus alias nam velit dolores.</p>
               </div>
             </div>
           </div>
@@ -109,9 +109,10 @@ const Works = () => {
                 <div className="works-title-2">
                   <p>Title</p>
                 </div>
+                <></>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextText</p>
+                  <p>Lorem ipsum dolor sit amet.</p>
                 </div>
               </div>
             </div>
@@ -127,7 +128,7 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextText</p>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
@@ -143,7 +144,7 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextText</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, porro.</p>
                 </div>
               </div>
             </div>
@@ -171,7 +172,7 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
+                <p>Lorem ipsum dolor sit.</p>
               </div>
             </div>
           </div>
@@ -189,7 +190,7 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
               </div>
             </div>
           </div>
@@ -207,7 +208,7 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, delectus eius.</p>
               </div>
             </div>
           </div>
@@ -235,7 +236,7 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextText</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi.</p>
                 </div>
               </div>
             </div>
@@ -255,7 +256,7 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextText</p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nisi quos impedit commodi!</p>
                 </div>
               </div>
             </div>
