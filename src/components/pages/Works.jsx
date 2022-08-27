@@ -26,9 +26,15 @@ const Works = () => {
         element={<ModalImage />}
       />
       <div className="main">
-        <h1 className="head-line1"><FaSuitcase className="icon" />Works</h1>
+        <h1 className="head-line1">
+          <FaSuitcase className="icon" />
+          Works
+        </h1>
         <div className="contents" id="webSite">
-          <h2 className="head-line2"><FaDesktop className="icon" />Web site :</h2>
+          <h2 className="head-line2">
+            <FaDesktop className="icon" />
+            Web site :
+          </h2>
           <div className="works-box normal-text">
             <div className="works-item-1">
               <div className="works-title-1">
@@ -43,26 +49,8 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>できるだけシンプルになるよう使用色を減らした（Reactで作成）</p>
-              </div>
-            </div>
-          </div>
-          <div className="works-box normal-text">
-            <div className="works-item-1">
-              <div className="works-title-1">
-                <p>Title</p>
-              </div>
-              <div
-                onClick={() => {
-                  ShowModal();
-                }}
-              >
-                <ModalImage />
-              </div>
-              <div className="works-comment">
-                <p>Comment:</p>
                 <p>
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                  できるだけシンプルになるよう使用色を減らした（Reactで作成）
                 </p>
               </div>
             </div>
@@ -81,9 +69,25 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                </p>
+                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
+              </div>
+            </div>
+          </div>
+          <div className="works-box normal-text">
+            <div className="works-item-1">
+              <div className="works-title-1">
+                <p>Title</p>
+              </div>
+              <div
+                onClick={() => {
+                  ShowModal();
+                }}
+              >
+                <ModalImage />
+              </div>
+              <div className="works-comment">
+                <p>Comment:</p>
+                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
               </div>
             </div>
           </div>
@@ -92,7 +96,10 @@ const Works = () => {
         <hr className="boundary-line" />
 
         <div className="contents" id="logo">
-          <h2 className="head-line2"><SiAdobeillustrator className="icon" />Logo :</h2>
+          <h2 className="head-line2">
+            <SiAdobeillustrator className="icon" />
+            Logo :
+          </h2>
           <div className="works-box normal-text">
             <div className="works-item-2">
               <div className="works-image">
@@ -104,7 +111,7 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextTextTextTextTex</p>
+                  <p>TextTextTextTextTextTextTextText</p>
                 </div>
               </div>
             </div>
@@ -120,7 +127,7 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextTextTextTextTex</p>
+                  <p>TextTextTextTextTextTextTextText</p>
                 </div>
               </div>
             </div>
@@ -136,7 +143,7 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextTextTextTextTex</p>
+                  <p>TextTextTextTextTextTextTextText</p>
                 </div>
               </div>
             </div>
@@ -146,7 +153,10 @@ const Works = () => {
         <hr className="boundary-line" />
 
         <div className="contents" id="illust">
-          <h2 className="head-line2"><FaPencilAlt className="icon" />Illust :</h2>
+          <h2 className="head-line2">
+            <FaPencilAlt className="icon" />
+            Illust :
+          </h2>
           <div className="works-box normal-text">
             <div className="works-item-1">
               <div className="works-title-1">
@@ -161,9 +171,7 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                </p>
+                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
               </div>
             </div>
           </div>
@@ -181,9 +189,7 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                </p>
+                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
               </div>
             </div>
           </div>
@@ -201,9 +207,7 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                </p>
+                <p>TextTextTextTextTextTextTextTextTextTextTextText</p>
               </div>
             </div>
           </div>
@@ -212,7 +216,10 @@ const Works = () => {
         <hr className="boundary-line" />
 
         <div className="contents" id="lottie">
-          <h2 className="head-line2"><SiAdobeaftereffects className="icon" />Lottie :</h2>
+          <h2 className="head-line2">
+            <SiAdobeaftereffects className="icon" />
+            Lottie :
+          </h2>
           <div className="works-box normal-text">
             <div className="works-item-2">
               <div className="works-image">
@@ -228,7 +235,7 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextTextTextTextTex</p>
+                  <p>TextTextTextTextTextTextTextText</p>
                 </div>
               </div>
             </div>
@@ -248,7 +255,7 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>TextTextTextTextTextTextTextTextTextTextTex</p>
+                  <p>TextTextTextTextTextTextTextText</p>
                 </div>
               </div>
             </div>

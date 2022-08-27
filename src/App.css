@@ -706,6 +706,11 @@ canvas {
   width: 600px;
   height: 100%;
 }
+@media screen and (max-width: 900px) {
+  .works-item-1 {
+    width: 100%;
+  }
+}
 
 .works-title-1 {
   margin: 0 auto;
@@ -720,6 +725,13 @@ canvas {
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 900px) {
+  .pc-image {
+    width: 100%;
+  }
+}
+
 .phone-image {
   position: absolute;
   bottom: 0;
@@ -732,6 +744,11 @@ canvas {
   display: flex;
   padding: 40px 0 40px 0;
 }
+@media screen and (max-width: 900px) {
+  .works-item-2 {
+    width: 100%;
+  }
+}
 
 .works-flex-2 {
   display: flex;
@@ -740,7 +757,11 @@ canvas {
 }
 
 .works-title-2 {
-  width: 360px;
+  width: 100%;
+}
+
+.works-comment {
+  width: 100%;
 }
 
 .boundary-line {
@@ -774,15 +795,30 @@ canvas {
   background: var(--WhiteColor);
   padding: 10px;
   border-radius: 3px;
-  animation: modal-content 0.4s ease-in-out;
   scale: 2;
+  animation: modal-content-pc 0.4s ease-in-out;
 }
-@keyframes modal-content {
+@keyframes modal-content-pc {
   0% {
     scale: 0;
   }
   100% {
     scale: 2;
+  }
+}
+@media screen and (max-width: 900px) {
+  .modal-content {
+    width: 100%;
+    scale: 1;
+    animation: modal-content-sp 0.4s ease-in-out;
+  }
+  @keyframes modal-content-sp {
+    0% {
+      scale: 0;
+    }
+    100% {
+      scale: 1;
+    }
   }
 }
 /*********/
