@@ -591,10 +591,16 @@ body {
 /* **** */
 canvas {
   width: 100vw;
-  max-height: 800px;
+  max-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 3px solid #F0F;
+}
+@media screen and (max-width: 900px) {
+  canvas {
+    border: 3px solid #FF0;
+  }
 }
 /* **** */
 /* **** */
