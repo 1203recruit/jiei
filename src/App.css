@@ -599,6 +599,7 @@ canvas {
 }
 @media screen and (max-width: 900px) {
   canvas {
+    min-height: 400px;
     border: 3px solid #FF0;
   }
 }
