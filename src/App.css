@@ -450,11 +450,11 @@ body {
   width: 64px;
   height: 64px;
   margin: 0 auto;
-  fill: var(--DefaultColor);
+  color: var(--DefaultColor);
 }
 @media screen and (max-width: 900px) {
   .github-icon {
-    fill: var(--WhiteColor);
+    color: var(--WhiteColor);
   }
 }
 
@@ -787,10 +787,23 @@ select {
   width: 360px;
   height: 32px;
 }
+@media screen and (max-width: 900px) {
+  input,
+  select {
+    width: 100%;
+  }
+}
+
 textarea {
   width: 660px;
   height: 240px;
 }
+@media screen and (max-width: 900px) {
+  textarea {
+    width: 100%;
+  }
+}
+
 input::placeholder,
 textarea::placeholder {
   color: var(--ImitationColor);
@@ -815,6 +828,17 @@ textarea:focus {
   width: 720px;
   height: 32px;
   border-radius: 10px;
+  color: var(--WhiteColor);
+  background: var(--DefaultColor);
+}
+.submit-button[disabled] {
+  color: var(--ImitationColor);;
+  background: var(--WhiteColor);
+}
+@media screen and (max-width: 900px) {
+  .submit-button {
+    width: 100%;
+  }
 }
 
 .form-child:nth-child(2n) {
@@ -824,12 +848,14 @@ textarea:focus {
 .textarea-field {
   width: 660px;
 }
-.textarea-field .counter {
-  text-align: right;
+@media screen and (max-width: 900px) {
+  .textarea-field {
+    width: 100%;
+  }
 }
 
-.submit-button[disabled] {
-  color: var(--ImitationColor);;
+.textarea-field .counter {
+  text-align: right;
 }
 
 /* ******* */

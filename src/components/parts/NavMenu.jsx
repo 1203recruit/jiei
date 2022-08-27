@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
-import { FaUser } from "react-icons/fa";
-import { MdWork,  MdMail } from "react-icons/md";
-import { IoDesktop } from "react-icons/io5";
-import { AiFillPicture } from "react-icons/ai";
-import { SiAdobeillustrator, SiAdobeaftereffects, SiGithub } from "react-icons/si";
-
+import {
+  FaUser,
+  FaSuitcase,
+  FaEnvelope,
+  FaDesktop,
+  FaPencilAlt,
+} from "react-icons/fa";
+import {
+  SiAdobeillustrator,
+  SiAdobeaftereffects,
+  SiGithub,
+} from "react-icons/si";
 
 const scrollWithOffset = (el) => {
   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -15,6 +21,7 @@ const scrollWithOffset = (el) => {
 };
 
 const NavMenu = () => {
+
   return (
     <nav className="nav">
       <ul className="list-wrapper">
@@ -26,7 +33,8 @@ const NavMenu = () => {
             className="underline button-text non-select"
             scroll={(el) => scrollWithOffset(el)}
           >
-            <FaUser className="icon" />About
+            <FaUser className="icon" />
+            About
           </NavHashLink>
         </li>
         <li className="list-item dropdown-menu">
@@ -36,7 +44,8 @@ const NavMenu = () => {
             to={"/Works/"}
             className="underline button-text non-select"
           >
-            <MdWork className="icon" />Works
+            <FaSuitcase className="icon" />
+            Works
             <div className="dropdown-list">
               <ul>
                 <li className="dropdown-item">
@@ -46,7 +55,8 @@ const NavMenu = () => {
                     className="button-text non-select"
                     scroll={(el) => scrollWithOffset(el)}
                   >
-                    <IoDesktop className="icon" />Web site
+                    <FaDesktop className="icon" />
+                    Web site
                   </NavHashLink>
                 </li>
                 <li className="dropdown-item">
@@ -56,7 +66,8 @@ const NavMenu = () => {
                     className="button-text non-select"
                     scroll={(el) => scrollWithOffset(el)}
                   >
-                    <SiAdobeillustrator className="icon" />Logo
+                    <SiAdobeillustrator className="icon" />
+                    Logo
                   </NavHashLink>
                 </li>
                 <li className="dropdown-item">
@@ -66,7 +77,8 @@ const NavMenu = () => {
                     className="button-text non-select"
                     scroll={(el) => scrollWithOffset(el)}
                   >
-                    <AiFillPicture className="icon" />Illust
+                    <FaPencilAlt className="icon" />
+                    Illust
                   </NavHashLink>
                 </li>
                 <li className="dropdown-item">
@@ -76,7 +88,8 @@ const NavMenu = () => {
                     className="button-text non-select"
                     scroll={(el) => scrollWithOffset(el)}
                   >
-                    <SiAdobeaftereffects className="icon" />Lottie
+                    <SiAdobeaftereffects className="icon" />
+                    Lottie
                   </NavHashLink>
                 </li>
               </ul>
@@ -91,7 +104,8 @@ const NavMenu = () => {
             className="underline button-text non-select"
             scroll={(el) => scrollWithOffset(el)}
           >
-            <MdMail className="icon" />Contact
+            <FaEnvelope className="icon" />
+            Contact
           </NavHashLink>
         </li>
         <li className="list-item">
@@ -100,7 +114,7 @@ const NavMenu = () => {
             target={"blank"}
             className="github-link"
           >
-            <SiGithub className="github-icon"/>
+            <SiGithub className="github-icon" />
           </a>
         </li>
       </ul>
