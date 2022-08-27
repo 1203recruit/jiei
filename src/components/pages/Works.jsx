@@ -5,6 +5,7 @@ import LogoImage from "../../img/LogoImage.png";
 import IllustImage from "../../img/IllustImage.png";
 import { FaSuitcase, FaDesktop, FaPencilAlt } from "react-icons/fa";
 import { SiAdobeillustrator, SiAdobeaftereffects } from "react-icons/si";
+import ScrollToTop from "react-scroll-to-top";
 
 const Works = () => {
   // Modal
@@ -253,6 +254,7 @@ const Works = () => {
             </div>
           </div>
         </div>
+        <ScrollToTop smooth />
       </div>
     </div>
   );

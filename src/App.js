@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <SlideRoutes location={location} duration={800} effect={"ease-in-out"}>
+      <SlideRoutes location={location} duration={400} effect={"ease-in-out"}>
         <Route path={"/"} element={<Home />} />
         <Route path={"/About/"} element={<About />} />
         <Route path={"/Works/"} element={<Works />} />

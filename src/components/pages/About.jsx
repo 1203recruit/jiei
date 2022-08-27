@@ -1,5 +1,6 @@
 import React from "react";
 import { FaUser } from "react-icons/fa";
+import ScrollToTop from "react-scroll-to-top";
 
 const About = () => {
   return (
@@ -99,6 +100,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        <ScrollToTop smooth />
       </div>
     </div>
   );
