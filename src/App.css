@@ -2,8 +2,6 @@
 /* variable */
 /* ******** */
 :root {
-  --TestBorder: 1px solid #000;
-
   --DefaultColor: #222222;
   --WhiteColor: #fefefe;
   --ImitationColor: #c8c8c8;
@@ -11,7 +9,7 @@
   --OverlayBlackColor: rgba(3, 4, 4, 0.7);
   --OverlayBlackColorOff: rgba(3, 4, 4, 0);
   --ActiveOrange: #faae0b;
-  --CapibaraBG: #fcd09e;
+  --CapybaraBG: #fcd09e;
   --ErrorColor: #fd6060;
 }
 /* ******** */
@@ -49,6 +47,7 @@ body {
   text-size-adjust: 100%;
   overflow: overlay;
 }
+
 .body {
   display: flex;
   flex-flow: column;
@@ -96,13 +95,13 @@ body {
 }
 
 .head-line1 {
-  width: 800px;
+  max-width: 800px;
   height: 64px;
   margin: 0 auto;
 }
 
 .head-line2 {
-  width: 720px;
+  max-width: 720px;
   height: 48px;
   margin: 0 auto;
 }
@@ -202,7 +201,7 @@ body {
   pointer-events: none;
 }
 
-.pc-nav {
+.nav-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -210,15 +209,7 @@ body {
   align-items: center;
 }
 @media screen and (max-width: 900px) {
-  .pc-nav {
-    display: none;
-  }
-}
-.sp-nav {
-  display: none;
-}
-@media screen and (max-width: 900px) {
-  .sp-nav {
+  .nav-wrapper {
     width: 100px;
     height: 64px;
     display: flex;
@@ -229,7 +220,7 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  .sp-nav .nav {
+  .nav-wrapper .nav {
     width: 50vw;
     min-height: 100vh;
     min-height: 100dvh;
@@ -247,7 +238,7 @@ body {
     transition: all 0.4s ease-in-out;
     z-index: 900;
   }
-  .sp-nav .show .nav {
+  .nav-wrapper .show .nav {
     left: 0;
   }
 }
@@ -389,24 +380,11 @@ body {
   }
 }
 
-.dropdown-item {
+.dropdown-item a {
   display: block;
   width: 100%;
   padding: 8px 24px 8px 24px;
   z-index: 500;
-}
-
-.dropdown-item:nth-child(1) {
-  margin: 8px 0 0 0;
-}
-.dropdown-item:nth-child(2) {
-  margin: 8px 0 8px 0;
-}
-.dropdown-item:nth-child(3) {
-  margin: 8px 0 8px 0;
-}
-.dropdown-item:nth-child(4) {
-  margin: 0 0 8px 0;
 }
 
 .dropdown-item:hover {
@@ -528,9 +506,12 @@ body {
 /* ************* */
 /* Common Layout */
 /* ************* */
-.slide-routes {
+/* ちょっとここ問題 */
+.flex-wrapper {
   flex: 1;
-  /* border: 3px solid #AA0; */
+  width: 100%;
+  height: 100%;
+  border: 5px solid #FF0;
 }
 
 .container {
@@ -544,7 +525,7 @@ body {
 }
 @media screen and (max-width: 900px) {
   .container {
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -561,13 +542,13 @@ body {
 }
 
 .contents {
-  max-width: 720px;
+  width: 720px;
   margin: 0 auto;
   border: 3px solid #00f;
 }
 @media screen and (max-width: 900px) {
   .contents {
-    margin: 16px 0 0 0;
+    width: 100%;
   }
 }
 /* ************* */
@@ -577,13 +558,18 @@ body {
 /* **** */
 /* Home */
 /* **** */
-.capibara {
-  width: 100vw;
+.capybara {
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--CapibaraBG);
+  background: var(--CapybaraBG);
+  border: 3px solid #F00;
+}
+canvas {
+  height: 100%;
+  border: 3px solid #0FF;
 }
 /* **** */
 /* **** */
@@ -872,7 +858,7 @@ textarea:focus {
 }
 
 .submit-button {
-  width: 720px;
+  width: 100%;
   height: 32px;
   border-radius: 10px;
   color: var(--WhiteColor);

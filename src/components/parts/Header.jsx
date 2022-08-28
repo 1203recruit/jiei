@@ -1,31 +1,23 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 import NavMenu from "./NavMenu";
 
-const scrollWithOffset = (el) => {
-  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  const yOffset = -100;
-  window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
-};
-
 const Header = () => {
-
-  document.addEventListener('DOMContentLoaded', () =>{
-    document.querySelectorAll('show')
-    .style.height = `${window.outerHeight}px`
-  })
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("show").style.height = `${window.outerHeight}px`;
+  });
 
   // Drawer
   const [showDrawer, setShowDrawer] = useState(false);
   const ShowDrawer = () => {
     setShowDrawer(!showDrawer);
-    
-      if (!showDrawer) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "";
-      }
-    };
+
+    if (!showDrawer) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  };
 
   // Toggle
   const [activeToggle, setActiveToggle] = useState(false);
@@ -47,13 +39,7 @@ const Header = () => {
         </div>
         <div className="header-wrapper">
           <div className="logo-wrapper">
-            <NavLink
-              smooth
-              activeClassName="active"
-              scroll={(el) => scrollWithOffset(el)}
-              to={"/"}
-              className="non-select"
-            >
+            <NavLink to={"/"} activeClassName="active" className="non-select">
               <svg className="jiei-logo">
                 <g id="Jiei_Outline_" data-name="Jiei(Outline)">
                   <path
@@ -94,15 +80,11 @@ const Header = () => {
               </svg>
             </NavLink>
           </div>
-          <div className="pc-nav">
-            <NavMenu />
-          </div>
-          <div className="sp-nav">
+          <div className="nav-wrapper">
             {activeToggle ? (
               <div
                 className="hamburger-menu active-toggle"
                 onClick={() => {
-                  
                   ShowDrawer();
                   ActiveToggle();
                 }}
@@ -125,11 +107,7 @@ const Header = () => {
               </div>
             )}
             <div className={showDrawer ? "show" : ""}>
-              <NavMenu
-                showFlag={showDrawer}
-                setShowDrawer={setShowDrawer}
-                element={"Drawer"}
-              />
+              <NavMenu />
             </div>
           </div>
         </div>

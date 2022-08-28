@@ -4,9 +4,9 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 
-function Capibara() {
-  const materials = useLoader(MTLLoader, "model/Capibara/Capibara.mtl");
-  const obj = useLoader(OBJLoader, "model/Capibara/Capibara.obj", (loader) => {
+function Capybara() {
+  const materials = useLoader(MTLLoader, "model/Capybara/Capybara.mtl");
+  const obj = useLoader(OBJLoader, "model/Capybara/Capybara.obj", (loader) => {
     materials.preload();
     loader.setMaterials(materials);
   });
@@ -25,16 +25,18 @@ function Capibara() {
 
 const Home = () => {
   return (
-    <div className="capibara">
-      <Suspense fallback={<span className="normal-text">loading...</span>} className="aaa">
-        <Canvas>
-          <Stage contactShadow={{ resolution: 1000, scale: 100 }}>
-            <Capibara />
-            <OrbitControls />
-            <ambientLight intensity={[1]} />
-          </Stage>
-        </Canvas>
-      </Suspense>
+    <div className="container">
+      <div className="capybara">
+        <Suspense fallback={<span className="normal-text">loading...</span>}>
+          <Canvas>
+            <Stage contactShadow={{ resolution: 1000, scale: 100 }}>
+              <Capybara />
+              <OrbitControls />
+              <ambientLight intensity={[1]} />
+            </Stage>
+          </Canvas>
+        </Suspense>
+      </div>
     </div>
   );
 };

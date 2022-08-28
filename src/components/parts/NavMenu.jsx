@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import {
   FaUser,
   FaSuitcase,
@@ -26,89 +26,86 @@ const NavMenu = () => {
     <nav className="nav">
       <ul className="list-wrapper">
         <li className="list-item">
-          <NavHashLink
-            smooth
+          <NavLink
+            to="/About"
             activeClassName="active"
-            to={"/About/#about"}
             className="underline button-text non-select"
-            scroll={(el) => scrollWithOffset(el)}
           >
             <FaUser className="icon" />
             About
-          </NavHashLink>
+          </NavLink>
         </li>
+
         <li className="list-item dropdown-menu">
           <NavLink
-            smooth
+            to="/Works"
             activeClassName="active"
-            to={"/Works/"}
             className="underline button-text non-select"
-            scroll={(el) => scrollWithOffset(el)}
           >
             <FaSuitcase className="icon" />
             Works
             <div className="dropdown-list">
               <ul>
                 <li className="dropdown-item">
-                  <NavHashLink
+                  <HashLink
+                    to="/works/#webSite"
                     smooth
-                    to={"/Works/#webSite"}
-                    className="button-text non-select"
                     scroll={(el) => scrollWithOffset(el)}
+                    className="button-text non-select"
                   >
                     <FaDesktop className="icon" />
                     Web site
-                  </NavHashLink>
+                  </HashLink>
                 </li>
                 <li className="dropdown-item">
-                  <NavHashLink
+                  <HashLink
+                    to="/works/#logo"
                     smooth
-                    to={"/Works/#logo"}
-                    className="button-text non-select"
                     scroll={(el) => scrollWithOffset(el)}
+                    className="button-text non-select"
                   >
                     <SiAdobeillustrator className="icon" />
                     Logo
-                  </NavHashLink>
+                  </HashLink>
                 </li>
                 <li className="dropdown-item">
-                  <NavHashLink
+                  <HashLink
+                    to="/works/#illust"
                     smooth
-                    to={"/Works/#illust"}
-                    className="button-text non-select"
                     scroll={(el) => scrollWithOffset(el)}
+                    className="button-text non-select"
                   >
                     <FaPencilAlt className="icon" />
                     Illust
-                  </NavHashLink>
+                  </HashLink>
                 </li>
                 <li className="dropdown-item">
-                  <NavHashLink
+                  <HashLink
+                    to="/works/#lottie"
                     smooth
-                    to={"/Works/#lottie"}
-                    className="button-text non-select"
                     scroll={(el) => scrollWithOffset(el)}
+                    className="button-text non-select"
                   >
                     <SiAdobeaftereffects className="icon" />
                     Lottie
-                  </NavHashLink>
+                  </HashLink>
                 </li>
               </ul>
             </div>
           </NavLink>
         </li>
+
         <li className="list-item">
-          <NavHashLink
-            smooth
+          <NavLink
+            to="/Contact"
             activeClassName="active"
-            to={"/Contact/#contact"}
             className="underline button-text non-select"
-            scroll={(el) => scrollWithOffset(el)}
           >
             <FaEnvelope className="icon" />
             Contact
-          </NavHashLink>
+          </NavLink>
         </li>
+
         <li className="list-item">
           <a
             href="https://github.com/1203recruit"
