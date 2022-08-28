@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom"
 import { NavHashLink } from "react-router-hash-link";
 import NavMenu from "./NavMenu";
 
@@ -47,11 +48,11 @@ const Header = () => {
         </div>
         <div className="header-wrapper">
           <div className="logo-wrapper">
-            <NavHashLink
+            <NavLink
               smooth
               activeClassName="active"
               scroll={(el) => scrollWithOffset(el)}
-              to={"/#home"}
+              to={"/"}
               className="non-select"
             >
               <svg className="jiei-logo">
@@ -92,7 +93,7 @@ const Header = () => {
                   />
                 </g>
               </svg>
-            </NavHashLink>
+            </NavLink>
           </div>
           <div className="pc-nav">
             <NavMenu />
