@@ -1,11 +1,29 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import NavMenu from "./NavMenu";
+import { HashLink } from "react-router-hash-link";
+import {
+  FaUser,
+  FaSuitcase,
+  FaEnvelope,
+  FaDesktop,
+  FaPencilAlt,
+} from "react-icons/fa";
+import {
+  SiAdobeillustrator,
+  SiAdobeaftereffects,
+  SiGithub,
+} from "react-icons/si";
 
 const Header = () => {
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("show").style.height = `${window.outerHeight}px`;
   });
+
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -100;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
 
   // Drawer
   const [showDrawer, setShowDrawer] = useState(false);
@@ -106,8 +124,111 @@ const Header = () => {
                 <span className="hamburger-menu-bar" />
               </div>
             )}
+
             <div className={showDrawer ? "show" : ""}>
-              <NavMenu />
+              <nav className="nav">
+                <ul className="list-wrapper">
+                  <li className="list-item">
+                    <NavLink
+                      to="/About"
+                      activeClassName="active"
+                      className="underline button-text non-select"
+                      onClick={() => {
+                        ShowDrawer();
+                        ActiveToggle();
+                      }}
+                    >
+                      <FaUser className="icon" />
+                      About
+                    </NavLink>
+                  </li>
+                  <li className="list-item dropdown-menu">
+                    <NavLink
+                      to="/Works"
+                      activeClassName="active"
+                      className="underline button-text non-select"
+                      onClick={() => {
+                        ShowDrawer();
+                        ActiveToggle();
+                      }}
+                    >
+                      <FaSuitcase className="icon" />
+                      Works
+                      <div className="dropdown-list">
+                        <ul>
+                          <li className="dropdown-item">
+                            <HashLink
+                              to="/works/#webSite"
+                              smooth
+                              scroll={(el) => scrollWithOffset(el)}
+                              className="button-text non-select"
+                            >
+                              <FaDesktop className="icon" />
+                              Web site
+                            </HashLink>
+                          </li>
+                          <li className="dropdown-item">
+                            <HashLink
+                              to="/works/#logo"
+                              smooth
+                              scroll={(el) => scrollWithOffset(el)}
+                              className="button-text non-select"
+                            >
+                              <SiAdobeillustrator className="icon" />
+                              Logo
+                            </HashLink>
+                          </li>
+                          <li className="dropdown-item">
+                            <HashLink
+                              to="/works/#illust"
+                              smooth
+                              scroll={(el) => scrollWithOffset(el)}
+                              className="button-text non-select"
+                            >
+                              <FaPencilAlt className="icon" />
+                              Illust
+                            </HashLink>
+                          </li>
+                          <li className="dropdown-item">
+                            <HashLink
+                              to="/works/#lottie"
+                              smooth
+                              scroll={(el) => scrollWithOffset(el)}
+                              className="button-text non-select"
+                            >
+                              <SiAdobeaftereffects className="icon" />
+                              Lottie
+                            </HashLink>
+                          </li>
+                        </ul>
+                      </div>
+                    </NavLink>
+                  </li>
+                  <li className="list-item">
+                    <NavLink
+                      to="/Contact"
+                      activeClassName="active"
+                      className="underline button-text non-select"
+                      onClick={() => {
+                        ShowDrawer();
+                        ActiveToggle();
+                      }}
+                    >
+                      <FaEnvelope className="icon" />
+                      Contact
+                    </NavLink>
+                  </li>
+                  <li className="list-item">
+                    <a
+                      href="https://github.com/1203recruit"
+                      target={"blank"}
+                      className="github-link"
+                    >
+                      <SiGithub className="github-icon" />
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>

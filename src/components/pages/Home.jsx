@@ -25,18 +25,16 @@ function Capybara() {
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="capybara">
-        <Suspense fallback={<span className="normal-text">loading...</span>}>
-          <Canvas>
-            <Stage contactShadow={{ resolution: 1000, scale: 100 }}>
-              <Capybara />
-              <OrbitControls />
-              <ambientLight intensity={[1]} />
-            </Stage>
-          </Canvas>
-        </Suspense>
-      </div>
+    <div className="capybara">
+      <Suspense fallback={<span className="normal-text">loading...</span>}>
+        <Canvas>
+          <Stage contactShadow={{ resolution: 1000, scale: 100 }}>
+            <Capybara />
+            <OrbitControls />
+            <ambientLight intensity={[1]} />
+          </Stage>
+        </Canvas>
+      </Suspense>
     </div>
   );
 };
