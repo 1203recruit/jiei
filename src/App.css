@@ -11,6 +11,7 @@
   --OverlayBlackColor: rgba(3, 4, 4, 0.7);
   --OverlayBlackColorOff: rgba(3, 4, 4, 0);
   --ActiveOrange: #faae0b;
+  --CapibaraBG: #fcd09e;
   --ErrorColor: #fd6060;
 }
 /* ******** */
@@ -119,12 +120,12 @@ body {
 }
 
 .scroll-to-top {
-  position: fixed!important;
-  bottom: 2%!important;
-  right: 8%!important;
-  border-radius: 40px!important;
-  width: 56px!important;
-  height: 40px!important;
+  position: fixed !important;
+  bottom: 2% !important;
+  right: 8% !important;
+  border-radius: 40px !important;
+  width: 56px !important;
+  height: 40px !important;
 }
 .scroll-to-top svg {
   fill: var(--ActiveOrange);
@@ -251,8 +252,6 @@ body {
   }
 }
 
-
-
 @media screen and (max-width: 900px) {
   .drawer-overlay {
     display: block;
@@ -261,7 +260,7 @@ body {
     right: 0;
     width: 100vh;
     min-height: 100vh;
-    
+
     background: var(--OverlayBlackColorOff);
     pointer-events: none;
 
@@ -273,12 +272,6 @@ body {
     pointer-events: auto;
   }
 }
-
-
-
-
-
-
 
 .list-wrapper {
   display: flex;
@@ -437,7 +430,7 @@ body {
 }
 
 .icon {
-  margin: 0 8px 0 0 ;
+  margin: 0 8px 0 0;
 }
 
 .github-link {
@@ -468,7 +461,6 @@ body {
     color: var(--WhiteColor);
   }
 }
-
 
 /* hamburger-menu */
 @media screen and (max-width: 900px) {
@@ -509,9 +501,8 @@ body {
   background: var(--WhiteColor);
 }
 
-
 /* Burger Animation  */
-.active-toggle  {
+.active-toggle {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
@@ -528,7 +519,6 @@ body {
 }
 /* ***************** */
 
-
 /* *********** */
 
 /* ****** */
@@ -540,7 +530,7 @@ body {
 /* ************* */
 .slide-routes {
   flex: 1;
-  border: 3px solid #AA0;
+  /* border: 3px solid #AA0; */
 }
 
 .container {
@@ -573,7 +563,7 @@ body {
 .contents {
   max-width: 720px;
   margin: 0 auto;
-    border: 3px solid #00f;
+  border: 3px solid #00f;
 }
 @media screen and (max-width: 900px) {
   .contents {
@@ -591,15 +581,10 @@ body {
   width: 100vw;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border: 3px solid #FF0;
+  justify-content: center;
+  background: var(--CapibaraBG);
 }
-@media screen and (max-width: 900px) {
-  .capibara {
-  }
-}
-
 /* **** */
 /* **** */
 /* **** */
@@ -731,7 +716,6 @@ body {
 }
 @media screen and (max-width: 900px) {
   .works-image {
-    
   }
 }
 
@@ -776,7 +760,7 @@ body {
 
 .works-comment {
   width: 100%;
-  word-wrap:break-word;
+  word-wrap: break-word;
 }
 
 .boundary-line {
@@ -895,7 +879,7 @@ textarea:focus {
   background: var(--DefaultColor);
 }
 .submit-button[disabled] {
-  color: var(--ImitationColor);;
+  color: var(--ImitationColor);
   background: var(--WhiteColor);
 }
 @media screen and (max-width: 900px) {

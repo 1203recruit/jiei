@@ -26,11 +26,11 @@ function Capibara() {
 const Home = () => {
   return (
     <div className="capibara">
-      <Suspense fallback={<span className="normal-text">loading...</span>}>
+      <Suspense fallback={<span className="normal-text">loading...</span>} className="aaa">
         <Canvas>
           <Stage contactShadow={{ resolution: 1000, scale: 100 }}>
             <Capibara />
-            {/* <OrbitControls /> */}
+            <OrbitControls />
             <ambientLight intensity={[1]} />
           </Stage>
         </Canvas>
