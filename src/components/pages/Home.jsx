@@ -26,17 +26,15 @@ function Capibara() {
 const Home = () => {
   return (
     <div className="capibara">
-      <Canvas>
-        <Suspense fallback={null}>
+      <Suspense fallback={<span className="normal-text">loading...</span>}>
+        <Canvas>
           <Stage contactShadow={{ resolution: 1000, scale: 100 }}>
             <Capibara />
-            <OrbitControls />
+            {/* <OrbitControls /> */}
             <ambientLight intensity={[1]} />
-            <spotLight position={[100, 100, 100]} angle={180} penumbra={1} />
-            <pointLight position={[10, 10, 10]} />
           </Stage>
-        </Suspense>
-      </Canvas>
+        </Canvas>
+      </Suspense>
     </div>
   );
 };

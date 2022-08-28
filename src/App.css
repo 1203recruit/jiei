@@ -540,6 +540,7 @@ body {
 /* ************* */
 .slide-routes {
   flex: 1;
+  border: 3px solid #AA0;
 }
 
 .container {
@@ -596,7 +597,6 @@ body {
 }
 @media screen and (max-width: 900px) {
   .capibara {
-    max-height: 400px;
   }
 }
 
