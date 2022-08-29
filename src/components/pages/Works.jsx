@@ -11,7 +11,7 @@ const Works = () => {
   // Modal
   const [showModal, setShowModal] = useState(false);
   const ShowModal = () => {
-    setShowModal(true);
+    setShowModal(!showModal);
 
     if (true) {
       document.body.style.overflow = "hidden";
@@ -20,11 +20,7 @@ const Works = () => {
 
   return (
     <div className="container" id="top">
-      <Modal
-        showFlag={showModal}
-        setShowModal={setShowModal}
-        element={<ModalImage />}
-      />
+      <Modal onClick={ShowModal} />
       <div className="main">
         <h1 className="head-line1">
           <FaSuitcase className="icon" />
@@ -69,7 +65,10 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, incidunt?</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam, incidunt?
+                </p>
               </div>
             </div>
           </div>
@@ -87,7 +86,11 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi saepe dolorum sit quidem officia quas delectus alias nam velit dolores.</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                  saepe dolorum sit quidem officia quas delectus alias nam velit
+                  dolores.
+                </p>
               </div>
             </div>
           </div>
@@ -128,7 +131,9 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  </p>
                 </div>
               </div>
             </div>
@@ -144,7 +149,10 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, porro.</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum, porro.
+                  </p>
                 </div>
               </div>
             </div>
@@ -208,7 +216,10 @@ const Works = () => {
               </div>
               <div className="works-comment">
                 <p>Comment:</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, delectus eius.</p>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, delectus eius.
+                </p>
               </div>
             </div>
           </div>
@@ -236,7 +247,10 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi.</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Modi.
+                  </p>
                 </div>
               </div>
             </div>
@@ -256,7 +270,10 @@ const Works = () => {
                 </div>
                 <div className="works-comment">
                   <p>Comment:</p>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nisi quos impedit commodi!</p>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Qui nisi quos impedit commodi!
+                  </p>
                 </div>
               </div>
             </div>

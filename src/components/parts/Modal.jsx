@@ -1,4 +1,5 @@
 import React from "react";
+import ModalImage from "../parts/ModalImage";
 
 const Modal = (props) => {
   const closeModal = () => {
@@ -11,20 +12,16 @@ const Modal = (props) => {
 
   return (
     <>
-      {props.showFlag ? (
-        <div
-          className="modal-overlay"
-          onClick={() => {
-            closeModal();
-          }}
-        >
-          <div className="modal-content">
-            <>{props.element}</>
-          </div>
+      <div
+        className="modal-overlay"
+        onClick={() => {
+          closeModal();
+        }}
+      >
+        <div className="modal-content">
+          <ModalImage />
         </div>
-      ) : (
-        <></>
-      )}
+      </div>
     </>
   );
 };

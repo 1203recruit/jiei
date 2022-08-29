@@ -244,7 +244,7 @@ const Header = () => {
                     <a
                       href="https://github.com/1203recruit"
                       target={"blank"}
-                      className="github-link"
+                      className="underline github-link"
                     >
                       <SiGithub className="github-icon" />
                     </a>

@@ -147,28 +147,31 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 800;
+  /* border: 3px solid #000; */
 }
 
 .header-wrapper {
   width: 1440px;
+  max-height: 100px;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* border: 2px solid #f00; */
 }
 
 .logo-wrapper {
-  width: 320px;
-  height: 100px;
+  max-width: 320px;
+  max-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 0 0 48px;
+  transition: 0.4s ease-in-out;
+  /* border: 2px solid #ff0; */
 }
 @media screen and (max-width: 909px) {
   .logo-wrapper {
-    width: 216px;
-    height: 64px;
     margin: 0;
     justify-content: center;
   }
@@ -199,6 +202,10 @@ body {
 
 .logo-wrapper .active {
   pointer-events: none;
+}
+
+.nav {
+  width: 100%;
 }
 
 .nav-wrapper {
@@ -266,6 +273,7 @@ body {
 
 .list-wrapper {
   display: flex;
+  /* border: 3px solid #ff0; */
 }
 @media screen and (max-width: 900px) {
   .list-wrapper {
@@ -281,14 +289,18 @@ body {
 }
 
 .list-item {
-  width: 160px;
+  width: 130px;
   height: 100px;
   display: flex;
+  margin: 0 16px 0 16px;
+  /* border: 3px solid #0f0; */
 }
 @media screen and (max-width: 900px) {
   .list-item {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
   }
   .button-text {
     color: var(--WhiteColor);
@@ -297,7 +309,7 @@ body {
 }
 
 .list-item:nth-child(2n-1) {
-  margin: 0 24px 0 24px;
+  /* margin: 0 4% 0 4%; */
 }
 @media screen and (max-width: 900px) {
   .list-item:nth-child(2n-1) {
@@ -321,7 +333,7 @@ body {
 
 .list-item .underline::after {
   position: absolute;
-  width: 120px;
+  width: 130px;
   content: "";
   height: 8px;
   bottom: -1px;
@@ -338,6 +350,11 @@ body {
   .underline:hover::after {
     display: none;
   }
+}
+
+.dropdown-item {
+  width: auto;
+  border: 1px solid #000;
 }
 /* ******************** */
 
@@ -359,7 +376,6 @@ body {
 .dropdown-list:hover .dropdown-list {
   display: block;
   pointer-events: auto;
-  top: 100%;
   animation: fadeIn 0.4s ease-in 0s forwards;
 }
 @keyframes fadeIn {
@@ -383,8 +399,9 @@ body {
 .dropdown-item a {
   display: block;
   width: 100%;
-  padding: 8px 24px 8px 24px;
-  z-index: 500;
+  height: 100%;
+  /* padding: 8px 16px 8px 16px; */
+  border: 3px solid #00f;
 }
 
 .dropdown-item:hover {
@@ -430,25 +447,24 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-@media screen and (max-width: 900px) {
-  .github-link {
-    width: auto;
-    height: auto;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
+  /* border: 3px solid #F00; */
 }
 
 .github-icon {
-  width: 64px;
-  height: 64px;
+  display: block;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   color: var(--DefaultColor);
+  /* border: 3px solid #00f; */
 }
 @media screen and (max-width: 900px) {
   .github-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 72px;
+    height: 72px;
     color: var(--WhiteColor);
   }
 }
@@ -575,11 +591,10 @@ body {
   align-items: center;
   justify-content: center;
   background: var(--CapybaraBG);
-  /* border: 3px solid #F00; */
+  border: 3px solid #f00;
 }
 canvas {
-  height: 100%;
-  /* border: 3px solid #0FF; */
+  border: 3px solid #0ff;
 }
 /* **** */
 /* **** */
@@ -773,49 +788,43 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  animation: modal-overlay 0.4s ease-in-out;
+
+  background: var(--OverlayBlackColorOff);
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
-@keyframes modal-overlay {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.modal-overlay.show {
+  background: var(--OverlayBlackColor);
+  pointer-events: auto;
 }
 
 .modal-content {
+  display: block;
   background: var(--WhiteColor);
   padding: 10px;
   border-radius: 3px;
-  scale: 2;
-  animation: modal-content-pc 0.4s ease-in-out;
-}
-@keyframes modal-content-pc {
-  0% {
-    scale: 0;
-  }
-  100% {
-    scale: 2;
-  }
+
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 @media screen and (max-width: 900px) {
   .modal-content {
-    width: 100%;
-    scale: 1;
-    animation: modal-content-sp 0.4s ease-in-out;
-  }
-  @keyframes modal-content-sp {
-    0% {
-      scale: 0;
-    }
-    100% {
-      scale: 1;
-    }
+    width: 100vw;
   }
 }
+
+.modal-overlay.show .modal-content {
+  transform: scale(2);
+}
+@media screen and (max-width: 900px) {
+  .modal-overlay.show .modal-content {
+    transform: scale(1);
+  }
+}
+
 /*********/
 
 /* ***** */
