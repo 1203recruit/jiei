@@ -354,40 +354,34 @@ body {
 
 .dropdown-item {
   width: auto;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 /* ******************** */
 
 /* Dropdown menu */
 .dropdown-list {
-  display: none;
+  display: block;
   position: absolute;
-  pointer-events: none;
   color: var(--DefaultColor);
   top: 100%;
   margin: 0 auto;
   text-align: center;
   justify-content: center;
   align-items: center;
+  
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .list-wrapper .underline:hover .dropdown-list,
 .dropdown-menu:hover .dropdown-list,
 .dropdown-list:hover .dropdown-list {
-  display: block;
   pointer-events: auto;
-  animation: fadeIn 0.4s ease-in 0s forwards;
+  opacity: 1;
 }
-@keyframes fadeIn {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
+
 @media screen and (max-width: 900px) {
   .list-wrapper .underline:hover .dropdown-list,
   .dropdown-menu:hover .dropdown-list,
@@ -400,8 +394,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  /* padding: 8px 16px 8px 16px; */
-  border: 3px solid #00f;
+  padding: 8px 8px 8px 8px;
+  /* border: 3px solid #00f; */
 }
 
 .dropdown-item:hover {
@@ -779,9 +773,9 @@ canvas {
 }
 
 /* Modal */
-.modal-overlay {
+/* .modal-overlay {
   position: fixed;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   top: 0;
@@ -795,7 +789,7 @@ canvas {
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.modal-overlay.show {
+.modal-overlay .show {
   background: var(--OverlayBlackColor);
   pointer-events: auto;
 }
@@ -816,15 +810,14 @@ canvas {
   }
 }
 
-.modal-overlay.show .modal-content {
+.modal-overlay .show .modal-content {
   transform: scale(2);
 }
 @media screen and (max-width: 900px) {
-  .modal-overlay.show .modal-content {
+  .modal-overlay .show .modal-content {
     transform: scale(1);
   }
-}
-
+} */
 /*********/
 
 /* ***** */
