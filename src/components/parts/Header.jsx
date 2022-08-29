@@ -30,11 +30,6 @@ const Header = () => {
   const ShowDrawer = () => {
     setShowDrawer(!showDrawer);
 
-    if (!showDrawer) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
   };
 
   // Toggle
@@ -42,6 +37,18 @@ const Header = () => {
   const ActiveToggle = () => {
     setActiveToggle(!activeToggle);
   };
+
+  // overflow
+  const [overflowToggle, setOverflowToggle] = useState(false);
+  const OverflowToggle = () => {
+    setOverflowToggle(!overflowToggle);
+    
+    if (!overflowToggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }
 
   return (
     <>
@@ -105,6 +112,7 @@ const Header = () => {
                 onClick={() => {
                   ShowDrawer();
                   ActiveToggle();
+                  OverflowToggle();
                 }}
               >
                 <span className="hamburger-menu-bar" />
@@ -117,6 +125,7 @@ const Header = () => {
                 onClick={() => {
                   ShowDrawer();
                   ActiveToggle();
+                  OverflowToggle();
                 }}
               >
                 <span className="hamburger-menu-bar" />
@@ -138,6 +147,10 @@ const Header = () => {
                         ActiveToggle();
                       }}
                     >
+                      {showDrawer
+                          ? <toggle onClick={OverflowToggle} />
+                          : ""
+                      }
                       <FaUser className="icon" />
                       About
                     </NavLink>
@@ -152,13 +165,19 @@ const Header = () => {
                         ActiveToggle();
                       }}
                     >
+                      {showDrawer
+                          ? <toggle onClick={OverflowToggle} />
+                          : ""
+                      }
                       <FaSuitcase className="icon" />
                       Works
+                      
+                    </NavLink>
                       <div className="dropdown-list">
                         <ul>
                           <li className="dropdown-item">
                             <HashLink
-                              to="/works/#webSite"
+                              to="/Works/#webSite"
                               smooth
                               scroll={(el) => scrollWithOffset(el)}
                               className="button-text non-select"
@@ -169,7 +188,7 @@ const Header = () => {
                           </li>
                           <li className="dropdown-item">
                             <HashLink
-                              to="/works/#logo"
+                              to="/Works/#logo"
                               smooth
                               scroll={(el) => scrollWithOffset(el)}
                               className="button-text non-select"
@@ -180,7 +199,7 @@ const Header = () => {
                           </li>
                           <li className="dropdown-item">
                             <HashLink
-                              to="/works/#illust"
+                              to="/Works/#illust"
                               smooth
                               scroll={(el) => scrollWithOffset(el)}
                               className="button-text non-select"
@@ -191,7 +210,7 @@ const Header = () => {
                           </li>
                           <li className="dropdown-item">
                             <HashLink
-                              to="/works/#lottie"
+                              to="/Works/#lottie"
                               smooth
                               scroll={(el) => scrollWithOffset(el)}
                               className="button-text non-select"
@@ -202,7 +221,6 @@ const Header = () => {
                           </li>
                         </ul>
                       </div>
-                    </NavLink>
                   </li>
                   <li className="list-item">
                     <NavLink
@@ -214,6 +232,10 @@ const Header = () => {
                         ActiveToggle();
                       }}
                     >
+                      {showDrawer
+                          ? <toggle onClick={OverflowToggle} />
+                          : ""
+                      }
                       <FaEnvelope className="icon" />
                       Contact
                     </NavLink>
