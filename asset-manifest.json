@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/jiei/static/css/main.ac714b7a.css",
+    "main.css": "/jiei/static/css/main.0ba802be.css",
     "main.js": "/jiei/static/js/main.dafba346.js",
     "index.html": "/jiei/index.html",
-    "main.ac714b7a.css.map": "/jiei/static/css/main.ac714b7a.css.map",
+    "main.0ba802be.css.map": "/jiei/static/css/main.0ba802be.css.map",
     "main.dafba346.js.map": "/jiei/static/js/main.dafba346.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac714b7a.css",
+    "static/css/main.0ba802be.css",
     "static/js/main.dafba346.js"
   ]
 }
