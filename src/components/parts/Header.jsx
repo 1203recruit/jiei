@@ -15,22 +15,15 @@ import {
 } from "react-icons/si";
 
 const Header = () => {
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("show").style.height = `${window.outerHeight}px`;
-  });
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   document.querySelectorAll("show").style.height = `${window.innerHeight}px`;
+  // });
 
-  const scrollWithOffset = (el) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -100;
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
-  };
-
-  // Drawer
-  const [showDrawer, setShowDrawer] = useState(false);
-  const ShowDrawer = () => {
-    setShowDrawer(!showDrawer);
-
-  };
+  // const scrollOffset = (el) => {
+  //   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  //   const yOffset = -80;
+  //   window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  // };
 
   // Toggle
   const [activeToggle, setActiveToggle] = useState(false);
@@ -38,26 +31,26 @@ const Header = () => {
     setActiveToggle(!activeToggle);
   };
 
-  // overflow
+  // // overflow
   const [overflowToggle, setOverflowToggle] = useState(false);
   const OverflowToggle = () => {
     setOverflowToggle(!overflowToggle);
-    
+
     if (!overflowToggle) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-  }
+  };
 
   return (
     <>
       <header className="header">
         <div
-          className={showDrawer ? "show" : ""}
+          className={activeToggle ? "show" : ""}
           onClick={() => {
-            ShowDrawer();
             ActiveToggle();
+            OverflowToggle();
           }}
         >
           <div className="drawer-overlay" />
@@ -110,7 +103,6 @@ const Header = () => {
               <div
                 className="hamburger-menu active-toggle"
                 onClick={() => {
-                  ShowDrawer();
                   ActiveToggle();
                   OverflowToggle();
                 }}
@@ -123,7 +115,6 @@ const Header = () => {
               <div
                 className="hamburger-menu"
                 onClick={() => {
-                  ShowDrawer();
                   ActiveToggle();
                   OverflowToggle();
                 }}
@@ -134,7 +125,7 @@ const Header = () => {
               </div>
             )}
 
-            <div className={showDrawer ? "show" : ""}>
+            <div className={activeToggle ? "show" : ""}>
               <nav className="nav">
                 <ul className="list-wrapper">
                   <li className="list-item">
@@ -142,15 +133,15 @@ const Header = () => {
                       to="/About"
                       activeClassName="active"
                       className="underline button-text non-select"
-                      onClick={() => {
-                        ShowDrawer();
-                        ActiveToggle();
-                      }}
-                    >
-                      {showDrawer
-                          ? <toggle onClick={OverflowToggle} />
+                      onClick={
+                        activeToggle
+                          ? () => {
+                              ActiveToggle();
+                              OverflowToggle(activeToggle);
+                            }
                           : ""
                       }
+                    >
                       <FaUser className="icon" />
                       About
                     </NavLink>
@@ -160,82 +151,81 @@ const Header = () => {
                       to="/Works"
                       activeClassName="active"
                       className="underline button-text non-select"
-                      onClick={() => {
-                        ShowDrawer();
-                        ActiveToggle();
-                      }}
-                    >
-                      {showDrawer
-                          ? <toggle onClick={OverflowToggle} />
+                      onClick={
+                        activeToggle
+                          ? () => {
+                              ActiveToggle();
+                              OverflowToggle(activeToggle);
+                            }
                           : ""
                       }
+                    >
                       <FaSuitcase className="icon" />
                       Works
-                      
                     </NavLink>
-                      <div className="dropdown-list">
-                        <ul>
-                          <li className="dropdown-item">
-                            <HashLink
-                              to="/Works/#webSite"
-                              smooth
-                              scroll={(el) => scrollWithOffset(el)}
-                              className="button-text non-select"
-                            >
-                              <FaDesktop className="icon" />
-                              Web site
-                            </HashLink>
-                          </li>
-                          <li className="dropdown-item">
-                            <HashLink
-                              to="/Works/#logo"
-                              smooth
-                              scroll={(el) => scrollWithOffset(el)}
-                              className="button-text non-select"
-                            >
-                              <SiAdobeillustrator className="icon" />
-                              Logo
-                            </HashLink>
-                          </li>
-                          <li className="dropdown-item">
-                            <HashLink
-                              to="/Works/#illust"
-                              smooth
-                              scroll={(el) => scrollWithOffset(el)}
-                              className="button-text non-select"
-                            >
-                              <FaPencilAlt className="icon" />
-                              Illust
-                            </HashLink>
-                          </li>
-                          <li className="dropdown-item">
-                            <HashLink
-                              to="/Works/#lottie"
-                              smooth
-                              scroll={(el) => scrollWithOffset(el)}
-                              className="button-text non-select"
-                            >
-                              <SiAdobeaftereffects className="icon" />
-                              Lottie
-                            </HashLink>
-                          </li>
-                        </ul>
-                      </div>
+                    <div className="dropdown-list">
+                      <ul>
+                        <li className="dropdown-item">
+                          <HashLink
+                            to="/Works/#webSite"
+                            smooth
+                            // scroll={el => scrollOffset(el)}
+                            className="button-text non-select"
+                          >
+                            <FaDesktop className="icon" />
+                            Web site
+                          </HashLink>
+                        </li>
+                        <li className="dropdown-item">
+                          <HashLink
+                            to="/Works/#logo"
+                            smooth
+                            // scroll={(el) => scrollOffset(el)}
+                            className="button-text non-select"
+                          >
+                            <SiAdobeillustrator className="icon" />
+                            Logo
+                          </HashLink>
+                        </li>
+                        <li className="dropdown-item">
+                          <HashLink
+                            to="/Works/#illust"
+                            smooth
+                            // scroll={(el) => scrollOffset(el)}
+                            className="button-text non-select"
+                          >
+                            <FaPencilAlt className="icon" />
+                            Illust
+                          </HashLink>
+                        </li>
+                        <li className="dropdown-item">
+                          <HashLink
+                            to="/Works/#lottie"
+                            smooth
+                            // scroll={(el) => scrollOffset(el)}
+                            className="button-text non-select"
+                          >
+                            <SiAdobeaftereffects className="icon" />
+                            Lottie
+                          </HashLink>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                   <li className="list-item">
                     <NavLink
                       to="/Contact"
                       activeClassName="active"
                       className="underline button-text non-select"
-                      onClick={() => {
-                        ShowDrawer();
-                        ActiveToggle();
-                      }}
-                    >
-                      {showDrawer
-                          ? <toggle onClick={OverflowToggle} />
+                      onClick={
+                        activeToggle
+                          ? () => {
+                              ActiveToggle();
+                              OverflowToggle(activeToggle);
+                            }
                           : ""
                       }
+                    >
                       <FaEnvelope className="icon" />
                       Contact
                     </NavLink>
