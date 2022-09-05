@@ -41,11 +41,13 @@
 }
 /* ********* */
 
+html,
 body {
-  background: var(--WhiteColor);
+  height: 100%;
   margin: 0;
   text-size-adjust: 100%;
   overflow: overlay;
+  background: var(--WhiteColor);
 }
 
 .body {
@@ -97,13 +99,11 @@ body {
 .head-line1 {
   max-width: 800px;
   height: 64px;
-  margin: 0 auto;
 }
 
 .head-line2 {
   max-width: 720px;
   height: 48px;
-  margin: 0 auto;
 }
 
 .head-line-2-sp {
@@ -142,14 +142,14 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 100px;
+  height: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 800;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  /* border: 3px solid #000; */
+  /* border: 3px solid #00F; */
 }
 @media screen and (max-width: 900px) {
   .header {
@@ -211,13 +211,6 @@ body {
   pointer-events: none;
 }
 
-.nav {
-  width: 100%;
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  /* border: 3px solid #0F0; */
-}
-
 .nav-wrapper {
   width: 100%;
   height: 100%;
@@ -237,10 +230,9 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  .nav-wrapper .nav {
+  .nav {
     width: 50vw;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100%;
     display: flex;
     flex-flow: column;
     margin: 0 auto;
@@ -254,9 +246,9 @@ body {
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     z-index: 900;
-    /* border: 3px solid #F00; */
+    border: 3px solid #F00;
   }
-  .nav-wrapper .show .nav {
+  .show .nav {
     left: 0;
   }
 }
@@ -283,24 +275,22 @@ body {
 }
 
 .list-wrapper {
+  height: 96px;
   display: flex;
-  height: 100%;
   border: 3px solid #ff0;
 }
 @media screen and (max-width: 900px) {
   .list-wrapper {
-    margin: 24px;
-    position: relative;
-    flex-direction: column;
-
+    height: 100%;
     display: block;
     text-align: left;
+    margin: 24px 24px 24px 24px;
   }
 }
 
 .list-item {
   width: 130px;
-  height: 100px;
+  height: 100%;
   display: flex;
   margin: 0 16px 0 16px;
   border: 3px solid #0f0;

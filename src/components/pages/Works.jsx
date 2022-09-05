@@ -41,11 +41,11 @@ const Works = () => {
             Logo :
           </h2>
           <WorksLogo
-            title="title4"
+            title="Title4"
             comment="Lorem ipsum dolor sit amet consectetur adipisicing."
           />
           <WorksLogo
-            title="title5"
+            title="Title5"
             comment="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit!"
           />
         </div>
@@ -56,15 +56,15 @@ const Works = () => {
             Illust :
           </h2>
           <WorksIllust
-            title="title6"
+            title="Title6"
             comment="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, atque sint."
           />
           <WorksIllust
-            title="title7"
+            title="Title7"
             comment="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, praesentium nesciunt? Cum."
           />
           <WorksIllust
-            title="title8"
+            title="Title8"
             comment="Lorem ipsum dolor sit amet consectetur."
           />
         </div>
@@ -75,11 +75,11 @@ const Works = () => {
             Lottie :
           </h2>
           <WorksLottie
-            title="title9"
+            title="Title9"
             comment="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi."
           />
           <WorksLottie
-            title="title10"
+            title="Title10"
             comment="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur vel recusandae dolorum unde consequuntur ipsa?"
           />
         </div>
