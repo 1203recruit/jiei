@@ -15,15 +15,15 @@ import {
 } from "react-icons/si";
 
 const Header = () => {
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   document.querySelectorAll("show").style.height = `${window.innerHeight}px`;
-  // });
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("show").style.height = `${window.innerHeight}px`;
+  });
 
-  // const scrollOffset = (el) => {
-  //   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  //   const yOffset = -80;
-  //   window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
-  // };
+  const scrollOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -100;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
 
   // Toggle
   const [activeToggle, setActiveToggle] = useState(false);
@@ -169,7 +169,7 @@ const Header = () => {
                           <HashLink
                             to="/Works/#webSite"
                             smooth
-                            // scroll={el => scrollOffset(el)}
+                            scroll={el => scrollOffset(el)}
                             className="button-text non-select"
                           >
                             <FaDesktop className="icon" />
@@ -180,7 +180,7 @@ const Header = () => {
                           <HashLink
                             to="/Works/#logo"
                             smooth
-                            // scroll={(el) => scrollOffset(el)}
+                            scroll={(el) => scrollOffset(el)}
                             className="button-text non-select"
                           >
                             <SiAdobeillustrator className="icon" />
@@ -191,7 +191,7 @@ const Header = () => {
                           <HashLink
                             to="/Works/#illust"
                             smooth
-                            // scroll={(el) => scrollOffset(el)}
+                            scroll={(el) => scrollOffset(el)}
                             className="button-text non-select"
                           >
                             <FaPencilAlt className="icon" />
@@ -202,7 +202,7 @@ const Header = () => {
                           <HashLink
                             to="/Works/#lottie"
                             smooth
-                            // scroll={(el) => scrollOffset(el)}
+                            scroll={(el) => scrollOffset(el)}
                             className="button-text non-select"
                           >
                             <SiAdobeaftereffects className="icon" />
