@@ -1,12 +1,34 @@
-import React from "react";
-import LottieImage from "../../img/LottieImage.png";
+import React, { useState } from "react";
+import Lottie from "lottie-react";
+
+// 文字列を改行コードで分割して改行タグに置換
+const lbToBr = (cmt) => {
+  return (
+      cmt.split(/(\n)/g).map(t => (t === '\n')?<br/>:t)
+  )
+}
 
 const WorksLottie = (props) => {
+  // lottieToggle
+  const [lottieToggle, setLottieToggle] = useState(false);
+  const LottieToggle = () => {
+    setLottieToggle(!lottieToggle);
+  };
+
   return (
     <div className="works-box normal-text">
       <div className="works-item-2">
-        <div className="works-image">
-          <img src={LottieImage} alt="lottie-title" className="logo-image" />
+        <div
+          className="works-image"
+          onClick={() => {
+            LottieToggle();
+          }}
+        >
+          <Lottie
+            loop={true}
+            // autoPlay={lottieToggle ? true : false }
+            animationData={props.lottie}
+          />
         </div>
         <div className="works-flex-2">
           <div className="works-title-2">
@@ -14,7 +36,7 @@ const WorksLottie = (props) => {
           </div>
           <div className="works-comment">
             <p>Comment:</p>
-            <p>{props.comment}</p>
+            <p>{lbToBr(props.comment)}</p>
           </div>
         </div>
       </div>

@@ -231,6 +231,7 @@ body {
 @media screen and (max-width: 900px) {
   .nav {
     width: 50vw;
+    /* min-height: 650px; */
     display: flex;
     flex-flow: column;
     margin: 0 auto;

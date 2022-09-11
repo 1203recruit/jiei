@@ -3,6 +3,9 @@ import WorksWebSite from "../parts/WorksWebSIte";
 import WorksLogo from "../parts/WorksLogo";
 import WorksIllust from "../parts/WorksIllust";
 import WorksLottie from "../parts/WorksLottie";
+import Star from "../../img/Star.json"
+import Rolling from "../../img/Rolling.json"
+
 import { FaSuitcase, FaDesktop, FaPencilAlt } from "react-icons/fa";
 import { SiAdobeillustrator, SiAdobeaftereffects } from "react-icons/si";
 import ScrollToTop from "react-scroll-to-top";
@@ -75,12 +78,14 @@ const Works = () => {
             Lottie :
           </h2>
           <WorksLottie
-            title="Title9"
-            comment="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi."
+            lottie={Star}
+            title="Star!!"
+            comment={"星を塗りつぶすアニメーション。\nCSSでもやろうと思えばできるかもしれないが、そこに工数をかけるよりAEで作った方が綺麗にできるし何より早い。"}
           />
           <WorksLottie
-            title="Title10"
-            comment="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur vel recusandae dolorum unde consequuntur ipsa?"
+            lottie={Rolling}
+            title="Rolling-Ball"
+            comment={"無限に転がり続けるボール。\nCSSでは表現が難しいこのようなアニメーションもLottieなら簡単に実装することができる。"}
           />
         </div>
         <ScrollToTop smooth />
