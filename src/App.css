@@ -231,7 +231,8 @@ body {
 @media screen and (max-width: 900px) {
   .nav {
     width: 50vw;
-    min-height: 100vh;
+    min-height: 100vh; /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
     display: flex;
     flex-flow: column;
     margin: 0 auto;
@@ -246,7 +247,7 @@ body {
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     z-index: 900;
-    /* border: 3px solid #F00; */
+    border: 3px solid #F00;
   }
   .show .nav {
     left: 0;
