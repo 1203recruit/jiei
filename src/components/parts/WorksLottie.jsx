@@ -35,7 +35,6 @@ const WorksLottie = (props) => {
             <p>{props.title}</p>
           </div>
           <div className="works-comment">
-            <p>Comment:</p>
             <p>{lbToBr(props.comment)}</p>
           </div>
         </div>

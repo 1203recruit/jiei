@@ -25,16 +25,16 @@ const Works = () => {
             Web site :
           </h2>
           <WorksWebSite
-            title="Jiei（当サイト）"
-            comment="できるだけシンプルになるよう使用色を減らした（Reactで作成）"
+            title={"Jiei（当サイト）"}
+            comment={"・React+HTML+CSS\nできるだけシンプルになるよう使用色を減らした"}
           />
           <WorksWebSite
-            title="Title2"
-            comment="Lorem ipsum dolor sit amet consectetur adipisicing elit.Quisquam, incidunt?"
+            title={"Title2"}
+            comment={"Lorem ipsum dolor sit amet consectetur adipisicing elit.Quisquam, incidunt?"}
           />
           <WorksWebSite
-            title="Title3"
-            comment="Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem, maxime velit obcaecati deleniti animi!"
+            title={"Title3"}
+            comment={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem, maxime velit obcaecati deleniti animi!"}
           />
         </div>
         <hr className="boundary-line" />
@@ -44,12 +44,12 @@ const Works = () => {
             Logo :
           </h2>
           <WorksLogo
-            title="Title4"
-            comment="Lorem ipsum dolor sit amet consectetur adipisicing."
+            title={"Title4"}
+            comment={"Lorem ipsum dolor sit amet consectetur adipisicing."}
           />
           <WorksLogo
-            title="Title5"
-            comment="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit!"
+            title={"Title5"}
+            comment={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit!"}
           />
         </div>
         <hr className="boundary-line" />
@@ -59,16 +59,16 @@ const Works = () => {
             Illust :
           </h2>
           <WorksIllust
-            title="Title6"
-            comment="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, atque sint."
+            title={"Title6"}
+            comment={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, atque sint."}
           />
           <WorksIllust
-            title="Title7"
-            comment="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, praesentium nesciunt? Cum."
+            title={"Title7"}
+            comment={"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, praesentium nesciunt? Cum."}
           />
           <WorksIllust
-            title="Title8"
-            comment="Lorem ipsum dolor sit amet consectetur."
+            title={"Title8"}
+            comment={"Lorem ipsum dolor sit amet consectetur."}
           />
         </div>
         <hr className="boundary-line" />
@@ -79,12 +79,12 @@ const Works = () => {
           </h2>
           <WorksLottie
             lottie={Star}
-            title="Star!!"
+            title={"Star!!"}
             comment={"星を塗りつぶすアニメーション。\nCSSでもやろうと思えばできるかもしれないが、そこに工数をかけるよりAEで作った方が綺麗にできるし何より早い。"}
           />
           <WorksLottie
             lottie={Rolling}
-            title="Rolling-Ball"
+            title={"Rolling-Ball"}
             comment={"無限に転がり続けるボール。\nCSSでは表現が難しいこのようなアニメーションもLottieなら簡単に実装することができる。"}
           />
         </div>

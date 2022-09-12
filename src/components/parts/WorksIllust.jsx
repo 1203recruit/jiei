@@ -1,6 +1,13 @@
 import React from "react";
 import IllustImage from "../../img/IllustImage.png";
 
+// 文字列を改行コードで分割して改行タグに置換
+const lbToBr = (cmt) => {
+  return (
+      cmt.split(/(\n)/g).map(t => (t === '\n')?<br/>:t)
+  )
+}
+
 const WorksIllust = (props) => {
   return (
     <div className="works-box normal-text">
@@ -12,8 +19,7 @@ const WorksIllust = (props) => {
           <img src={IllustImage} alt="illust-title" className="pc-image" />
         </div>
         <div className="works-comment">
-          <p>Comment:</p>
-          <p>{props.comment}</p>
+          <p>{lbToBr(props.comment)}</p>
         </div>
       </div>
     </div>

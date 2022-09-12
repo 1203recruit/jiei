@@ -1,6 +1,13 @@
 import React from "react";
 import LogoImage from "../../img/LogoImage.png";
 
+// 文字列を改行コードで分割して改行タグに置換
+const lbToBr = (cmt) => {
+  return (
+      cmt.split(/(\n)/g).map(t => (t === '\n')?<br/>:t)
+  )
+}
+
 const WorksLogo = (props) => {
   return (
     <div className="works-box normal-text">
@@ -14,8 +21,7 @@ const WorksLogo = (props) => {
           </div>
           <></>
           <div className="works-comment">
-            <p>Comment:</p>
-            <p>{props.comment}</p>
+            <p>{lbToBr(props.comment)}</p>
           </div>
         </div>
       </div>
