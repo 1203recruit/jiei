@@ -68,10 +68,10 @@ body {
   font-weight: bold;
 }
 .head-line1 {
-  font-size: 40px;
+  font-size: 32px;
 }
 .head-line2 {
-  font-size: 32px;
+  font-size: 24px;
 }
 .button-text {
   font-size: 20px;
@@ -231,13 +231,12 @@ body {
 @media screen and (max-width: 900px) {
   .nav {
     width: 50vw;
-    min-height: 100vh; /* Fallback */
+    min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100);
     display: flex;
     flex-flow: column;
     margin: 0 auto;
     text-align: left;
-    z-index: 100;
 
     position: fixed;
     top: 0;
@@ -262,7 +261,6 @@ body {
     right: 0;
     width: 100%;
     min-height: 100vh;
-    z-index: 99;
 
     background: var(--OverlayBlackColorOff);
     pointer-events: none;
