@@ -1,12 +1,28 @@
 import React from "react";
 import { FaUser } from "react-icons/fa";
+import {
+  SiAdobe,
+  SiVisualstudiocode,
+  SiFigma,
+  SiMiro,
+  SiSlack,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiPhp,
+  SiMysql,
+} from "react-icons/si";
+import { AiOutlinePaperClip } from "react-icons/ai";
 import ScrollToTop from "react-scroll-to-top";
 
 const About = () => {
   return (
     <div className="container" id="about">
       <div className="main">
-        <h1 className="head-line1"><FaUser className="icon" />About</h1>
+        <h1 className="head-line1">
+          <FaUser className="icon" />
+          About
+        </h1>
         <div className="contents normal-text">
           <div className="about-item-table">
             <div className="about-item-wrapper">
@@ -52,7 +68,7 @@ const About = () => {
                   <div className="about-item-list">
                     <div className="about-item-L">2022年1月</div>
                     <div className="about-item-R">
-                      <p>SES事業の会社を退職し、フリーランスへ転身（予定）</p>
+                      <p>SES事業の会社を退職予定</p>
                     </div>
                   </div>
                 </div>
@@ -64,25 +80,61 @@ const About = () => {
                 <div className="about-item-wrapper">
                   <div className="about-item-x">
                     <ul>
-                      <li>Adobe</li>
-                      <li className="adobe">Photoshop/Illustrator/After Effects/XD</li>
+                      <li>
+                        <SiAdobe />
+                        Adobe
+                      </li>
+                      <li className="adobe">
+                        Photoshop/ Illustrator/ After Effects/ XD
+                      </li>
                     </ul>
                     <ul>
-                      <li>Visual Studio Code</li>
-                      <li>Figma</li>
-                      <li>Miro</li>
-                      <li>Slack</li>
-                      <li>CLIP STUDIO PAINT</li>
-                      <li>MagicaVoxel</li>
+                      <li>
+                        <SiVisualstudiocode />
+                        Visual Studio Code
+                      </li>
+                      <li>
+                        <SiFigma />
+                        Figma
+                      </li>
+                      <li>
+                        <SiMiro />
+                        Miro
+                      </li>
+                      <li>
+                        <SiSlack />
+                        Slack
+                      </li>
+                      <li>
+                        <AiOutlinePaperClip />
+                        CLIP STUDIO PAINT
+                      </li>
                     </ul>
                   </div>
                   <div className="about-item-x">
                     <ul>
-                      <li>HTML</li>
-                      <li>CSS(Tailwind CSS)</li>
-                      <li>JavaScript(JQuery/React)</li>
-                      <li>PHP(Laravel)</li>
-                      <li>MySQL</li>
+                      <li>
+                        <SiHtml5 />
+                        HTML
+                      </li>
+                      <li>
+                        <SiCss3 />
+                        CSS(Tailwind CSS)
+                      </li>
+                      <li>
+                        <SiJavascript />
+                        JavaScript(JQuery/ React)
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <SiPhp />
+                        PHP(Laravel)
+                      </li>
+                      <li>
+                        <SiMysql />
+                        MySQL
+                      </li>
                     </ul>
                   </div>
                 </div>

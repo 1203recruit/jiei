@@ -80,12 +80,12 @@ const Works = () => {
           <WorksLottie
             lottie={Star}
             title={"Star!!"}
-            comment={"星を塗りつぶすアニメーション。\nCSSでもやろうと思えばできるかもしれないが、そこに工数をかけるよりAEで作った方が綺麗にできるし何より早い。"}
+            comment={"CSSでもやろうと思えばできるかもしれないが、そこに工数をかけるよりAEで作った方が綺麗にできるし何より早い。"}
           />
           <WorksLottie
             lottie={Rolling}
             title={"Rolling-Ball"}
-            comment={"無限に転がり続けるボール。\nCSSでは表現が難しいこのようなアニメーションもLottieなら簡単に実装することができる。"}
+            comment={"CSSでは表現が難しいこのようなアニメーションもLottieなら簡単に実装することができる。"}
           />
         </div>
         <ScrollToTop smooth />

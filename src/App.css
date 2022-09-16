@@ -11,6 +11,10 @@
   --ActiveOrange: #faae0b;
   --CapybaraBG: #fcd09e;
   --ErrorColor: #fd6060;
+
+  --PCHeaderHeight: 96px;
+  --SPHeaderHeight: 64px;
+  --FooterHeight: 48px;
 }
 /* ******** */
 /* ******** */
@@ -141,7 +145,7 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 96px;
+  height: var(--PCHeaderHeight);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +156,7 @@ body {
 }
 @media screen and (max-width: 900px) {
   .header {
-    height: 64px;
+    height: var(--SPHeaderHeight);
   }
 }
 
@@ -231,8 +235,7 @@ body {
 @media screen and (max-width: 900px) {
   .nav {
     width: 50vw;
-    min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
+    height: calc( var(--vh) * 100 );
     display: flex;
     flex-flow: column;
     margin: 0 auto;
@@ -246,7 +249,7 @@ body {
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     z-index: 900;
-    /* border: 3px solid #F00; */
+    border: 3px solid #F00;
   }
   .show .nav {
     left: 0;
@@ -579,15 +582,16 @@ body {
 /* **** */
 .capybara {
   width: 100%;
-  height: 100%;
+  height: calc( 100vh - var(--PCHeaderHeight) - var(--FooterHeight));
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--CapybaraBG);
-  border: 3px solid #f00;
 }
-canvas {
-  border: 3px solid #0ff;
+@media screen and (max-width: 900px) {
+  .capybara {
+    height: calc( 100vh - var(--SPHeaderHeight) - var(--FooterHeight));
+  }
 }
 /* **** */
 /* **** */
@@ -912,7 +916,7 @@ textarea:focus {
 .footer {
   background: var(--DefaultColor);
   width: 100%;
-  height: 48px;
+  height: var(--FooterHeight);
   display: flex;
   justify-content: center;
   align-items: center;
