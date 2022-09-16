@@ -85,7 +85,7 @@ const About = () => {
                         Adobe
                       </li>
                       <li className="adobe">
-                        Photoshop/ Illustrator/ After Effects/ XD
+                        Photoshop / Illustrator / After Effects / XD
                       </li>
                     </ul>
                     <ul>
@@ -123,7 +123,7 @@ const About = () => {
                       </li>
                       <li>
                         <SiJavascript />
-                        JavaScript(JQuery/ React)
+                        JavaScript(JQuery / React)
                       </li>
                     </ul>
                     <ul>
