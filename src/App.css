@@ -582,7 +582,7 @@ body {
 /* **** */
 .capybara {
   width: 100%;
-  height: calc( 100vh - var(--PCHeaderHeight) - var(--FooterHeight));
+  height: calc( var(--vh) * 100 - var(--PCHeaderHeight) - var(--FooterHeight));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -590,7 +590,7 @@ body {
 }
 @media screen and (max-width: 900px) {
   .capybara {
-    height: calc( 100vh - var(--SPHeaderHeight) - var(--FooterHeight));
+    height: calc( var(--vh) * 100 - var(--SPHeaderHeight) - var(--FooterHeight));
   }
 }
 /* **** */
