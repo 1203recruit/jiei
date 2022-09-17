@@ -18,12 +18,12 @@ import ScrollToTop from "react-scroll-to-top";
 const About = () => {
   return (
     <div className="container" id="about">
-      <div className="main">
+      <main>
         <h1 className="head-line1">
           <FaUser className="icon" />
           About
         </h1>
-        <div className="contents normal-text">
+        <article className="contents normal-text">
           <div className="about-item-table">
             <div className="about-item-wrapper">
               <div className="about-item-list">
@@ -151,9 +151,9 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </article>
         <ScrollToTop smooth />
-      </div>
+      </main>
     </div>
   );
 };

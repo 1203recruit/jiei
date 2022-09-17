@@ -58,9 +58,9 @@ const Contact = () => {
 
   return (
     <div className="container" id="contact">
-      <div className="main">
+      <main>
         <h1 className="head-line1"><FaEnvelope className="icon" />Contact</h1>
-        <div className="contents imitation-text">
+        <article className="contents imitation-text">
           <form>
             <div className="input-field form-child">
               <input
@@ -127,8 +127,8 @@ const Contact = () => {
               <FaPaperPlane className="icon" />Submit
             </button>
           </form>
-        </div>
-      </div>
+        </article>
+      </main>
     </div>
   );
 };

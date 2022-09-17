@@ -235,7 +235,7 @@ body {
 @media screen and (max-width: 900px) {
   .nav {
     width: 50vw;
-    /* height: calc( var(--vh) * 100 ); */
+    height: calc( var(--vh) * 100 );
     display: flex;
     flex-flow: column;
     margin: 0 auto;
@@ -551,13 +551,13 @@ body {
   }
 }
 
-.main {
+main {
   max-width: 960px;
   margin: 0 0 120px 0;
   /* border: 3px solid #0f0; */
 }
 @media screen and (max-width: 900px) {
-  .main {
+  main {
     width: 90%;
     margin: 24px 0 24px 0;
   }

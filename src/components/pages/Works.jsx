@@ -13,13 +13,13 @@ import ScrollToTop from "react-scroll-to-top";
 const Works = () => {
   return (
     <div className="container" id="top">
-      <div className="main">
+      <main>
         <h1 className="head-line1">
           <FaSuitcase className="icon" />
           Works
         </h1>
 
-        <div className="contents" id="webSite">
+        <article className="contents" id="webSite">
           <h2 className="head-line2">
             <FaDesktop className="icon" />
             Web site :
@@ -36,9 +36,9 @@ const Works = () => {
             title={"Title3"}
             comment={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem, maxime velit obcaecati deleniti animi!"}
           />
-        </div>
+        </article>
         <hr className="boundary-line" />
-        <div className="contents" id="logo">
+        <article className="contents" id="logo">
           <h2 className="head-line2">
             <SiAdobeillustrator className="icon" />
             Logo :
@@ -51,9 +51,9 @@ const Works = () => {
             title={"Title5"}
             comment={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit!"}
           />
-        </div>
+        </article>
         <hr className="boundary-line" />
-        <div className="contents" id="illust">
+        <article className="contents" id="illust">
           <h2 className="head-line2">
             <FaPencilAlt className="icon" />
             Illust :
@@ -70,9 +70,9 @@ const Works = () => {
             title={"Title8"}
             comment={"Lorem ipsum dolor sit amet consectetur."}
           />
-        </div>
+        </article>
         <hr className="boundary-line" />
-        <div className="contents" id="lottie">
+        <article className="contents" id="lottie">
           <h2 className="head-line2">
             <SiAdobeaftereffects className="icon" />
             Lottie :
@@ -87,9 +87,9 @@ const Works = () => {
             title={"Rolling-Ball"}
             comment={"CSSでは表現が難しいこのようなアニメーションもLottieなら簡単に実装することができる。"}
           />
-        </div>
+        </article>
         <ScrollToTop smooth />
-      </div>
+      </main>
     </div>
   );
 };
