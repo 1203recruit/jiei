@@ -142,8 +142,7 @@ body {
 .header {
   background: var(--AlphaWhiteColor);
   backdrop-filter: blur(16px);
-  /* position: sticky; */
-  position: relative;
+  position: sticky;
   top: 0;
   width: 100%;
   height: var(--PCHeaderHeight);
