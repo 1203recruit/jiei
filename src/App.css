@@ -727,16 +727,22 @@ main {
   }
 }
 
+.pc-image {
+  max-width: 720px;
+  border: 1px solid #000;
+}
 @media screen and (max-width: 900px) {
   .pc-image {
     width: 100%;
   }
 }
 
+
 .phone-image {
   position: absolute;
   bottom: 0;
   right: 0;
+  border: 1px solid #000;
 }
 
 .works-item-2 {

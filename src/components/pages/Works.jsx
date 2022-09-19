@@ -1,7 +1,10 @@
 import React from "react";
 import WorksWebSite from "../parts/WorksWebSIte";
 import WorksLogo from "../parts/WorksLogo";
+
 import WorksIllust from "../parts/WorksIllust";
+import Animals from "../../img/Animals.png";
+
 import WorksLottie from "../parts/WorksLottie";
 import Star from "../../img/Star.json"
 import Rolling from "../../img/Rolling.json"
@@ -59,16 +62,9 @@ const Works = () => {
             Illust :
           </h2>
           <WorksIllust
-            title={"Title6"}
-            comment={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, atque sint."}
-          />
-          <WorksIllust
-            title={"Title7"}
-            comment={"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, praesentium nesciunt? Cum."}
-          />
-          <WorksIllust
-            title={"Title8"}
-            comment={"Lorem ipsum dolor sit amet consectetur."}
+            title={"Animals"}
+            IllustImage={Animals}
+            comment={"好きな小動物たちを描いた"}
           />
         </article>
         <hr className="boundary-line" />
@@ -78,13 +74,13 @@ const Works = () => {
             Lottie :
           </h2>
           <WorksLottie
-            lottie={Star}
             title={"Star!!"}
+            lottie={Star}
             comment={"CSSでもやろうと思えばできるかもしれないが、そこに工数をかけるよりAEで作った方が綺麗にできるし何より早い。"}
           />
           <WorksLottie
-            lottie={Rolling}
             title={"Rolling-Ball"}
+            lottie={Rolling}
             comment={"CSSでは表現が難しいこのようなアニメーションもLottieなら簡単に実装することができる。"}
           />
         </article>
