@@ -71,11 +71,6 @@ body {
     "Hiragino Sans", "ヒラギノ角ゴシック", Meiryo, "メイリオ";
   font-weight: bold;
 }
-@media screen and (max-width: 900px) {
-  .normal-text {
-    font-weight: normal;
-  }
-}
 .head-line1 {
   font-size: 32px;
 }
