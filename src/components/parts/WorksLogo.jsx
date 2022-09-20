@@ -1,5 +1,4 @@
 import React from "react";
-import LogoImage from "../../img/LogoImage.png";
 
 // 文字列を改行コードで分割して改行タグに置換
 const lbToBr = (cmt) => {
@@ -13,7 +12,7 @@ const WorksLogo = (props) => {
     <div className="works-box normal-text">
       <div className="works-item-2">
         <div className="works-image-box">
-          <img src={LogoImage} alt="logo-title" className="logo-image image-shadow" />
+          <img src={props.LogoImage} alt={props.title} className="logo-image image-shadow" />
         </div>
         <div className="works-flex-2">
           <div className="works-title-2">

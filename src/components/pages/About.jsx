@@ -81,7 +81,7 @@ const About = () => {
                   <div className="about-item-x">
                     <ul>
                       <li>
-                        <SiAdobe />
+                        <SiAdobe className="icon" />
                         Adobe
                       </li>
                       <li className="adobe">
@@ -90,23 +90,23 @@ const About = () => {
                     </ul>
                     <ul>
                       <li>
-                        <SiVisualstudiocode />
+                        <SiVisualstudiocode className="icon" />
                         Visual Studio Code
                       </li>
                       <li>
-                        <SiFigma />
+                        <SiFigma className="icon" />
                         Figma
                       </li>
                       <li>
-                        <SiMiro />
+                        <SiMiro className="icon" />
                         Miro
                       </li>
                       <li>
-                        <SiSlack />
+                        <SiSlack className="icon" />
                         Slack
                       </li>
                       <li>
-                        <AiOutlinePaperClip />
+                        <AiOutlinePaperClip className="icon" />
                         CLIP STUDIO PAINT
                       </li>
                     </ul>
@@ -114,25 +114,25 @@ const About = () => {
                   <div className="about-item-x">
                     <ul>
                       <li>
-                        <SiHtml5 />
+                        <SiHtml5 className="icon" />
                         HTML
                       </li>
                       <li>
-                        <SiCss3 />
+                        <SiCss3 className="icon" />
                         CSS(Tailwind CSS)
                       </li>
                       <li>
-                        <SiJavascript />
+                        <SiJavascript className="icon" />
                         JavaScript(JQuery / React)
                       </li>
                     </ul>
                     <ul>
                       <li>
-                        <SiPhp />
+                        <SiPhp className="icon" />
                         PHP(Laravel)
                       </li>
                       <li>
-                        <SiMysql />
+                        <SiMysql className="icon" />
                         MySQL
                       </li>
                     </ul>

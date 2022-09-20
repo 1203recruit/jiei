@@ -741,6 +741,10 @@ main {
   width: 100%;
 }
 
+.logo-image {
+  max-width: 240px;
+}
+
 .works-item-2 {
   max-width: 600px;
   height: 100%;

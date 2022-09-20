@@ -4,6 +4,7 @@ import JieiPC from "../../img/Jiei-PC.png"
 import JieiSP from "../../img/Jiei-SP.png"
 
 import WorksLogo from "../parts/WorksLogo";
+import Koneko from "../../img/KONEKO.png"
 
 import WorksIllust from "../parts/WorksIllust";
 import Animals from "../../img/Animals.png";
@@ -44,12 +45,9 @@ const Works = () => {
             Logo :
           </h2>
           <WorksLogo
-            title={"Title4"}
-            comment={"Lorem ipsum dolor sit amet consectetur adipisicing."}
-          />
-          <WorksLogo
-            title={"Title5"}
-            comment={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit!"}
+            title={"子猫書店"}
+            LogoImage={Koneko}
+            comment={"「子猫書店」という架空の書店をイメージしてロゴを作成。\n今回は奇抜なデザインを目指さず、ある程度の可読しやすさを求めた。"}
           />
         </article>
         <hr className="boundary-line" />
@@ -61,7 +59,7 @@ const Works = () => {
           <WorksIllust
             title={"Animals"}
             IllustImage={Animals}
-            comment={"好きな小動物たちを描いた"}
+            comment={"好きな小動物たちを描いた。"}
           />
         </article>
         <hr className="boundary-line" />
