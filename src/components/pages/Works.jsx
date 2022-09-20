@@ -47,7 +47,7 @@ const Works = () => {
           <WorksLogo
             title={"子猫書店"}
             LogoImage={Koneko}
-            comment={"「子猫書店」という架空の書店をイメージしてロゴを作成。\n今回は奇抜なデザインを目指さず、ある程度の可読しやすさを求めた。"}
+            comment={"「子猫書店」という架空の書店をイメージしてロゴを作成。\n今回は奇抜なデザインを目指さず、可読性を重視した。"}
           />
         </article>
         <hr className="boundary-line" />
