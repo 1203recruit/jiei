@@ -1,5 +1,8 @@
 import React from "react";
 import WorksWebSite from "../parts/WorksWebSIte";
+import JieiPC from "../../img/Jiei-PC.png"
+import JieiSP from "../../img/Jiei-SP.png"
+
 import WorksLogo from "../parts/WorksLogo";
 
 import WorksIllust from "../parts/WorksIllust";
@@ -29,15 +32,9 @@ const Works = () => {
           </h2>
           <WorksWebSite
             title={"Jiei（当サイト）"}
-            comment={"・React+HTML+CSS\nできるだけシンプルになるよう使用色を減らした"}
-          />
-          <WorksWebSite
-            title={"Title2"}
-            comment={"Lorem ipsum dolor sit amet consectetur adipisicing elit.Quisquam, incidunt?"}
-          />
-          <WorksWebSite
-            title={"Title3"}
-            comment={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem, maxime velit obcaecati deleniti animi!"}
+            PCImage={JieiPC}
+            PhoneImage={JieiSP}
+            comment={"●使用言語：React+HTML+CSS\nReactの勉強のため作成。できるだけシンプルにしたかったため使用色を3色くらいに抑えた。一応レスポンシブにも対応。"}
           />
         </article>
         <hr className="boundary-line" />

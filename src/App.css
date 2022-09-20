@@ -235,7 +235,7 @@ body {
 @media screen and (max-width: 900px) {
   .nav {
     width: 50vw;
-    height: calc( var(--vh) * 100 );
+    height: calc(var(--vh) * 100);
     display: flex;
     flex-flow: column;
     margin: 0 auto;
@@ -321,7 +321,6 @@ body {
   }
 }
 
-
 /* under line Animation */
 .list-item .underline {
   width: 100%;
@@ -373,7 +372,7 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-  
+
   pointer-events: none;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
@@ -582,7 +581,7 @@ main {
 /* **** */
 .capybara {
   width: 100%;
-  height: calc( var(--vh) * 100 - var(--PCHeaderHeight) - var(--FooterHeight));
+  height: calc(var(--vh) * 100 - var(--PCHeaderHeight) - var(--FooterHeight));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -590,7 +589,7 @@ main {
 }
 @media screen and (max-width: 900px) {
   .capybara {
-    height: calc( var(--vh) * 100 - var(--FooterHeight));
+    height: calc(var(--vh) * 100 - var(--FooterHeight));
   }
 }
 /* **** */
@@ -714,7 +713,11 @@ main {
   width: 100%;
 }
 
-.works-image {
+.image-shadow {
+  box-shadow: 3px 5px 7px -3px rgba(0, 0, 0, 0.3);
+}
+
+.works-image-box {
   max-width: 100%;
   height: 100%;
   position: relative;
@@ -722,44 +725,28 @@ main {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 900px) {
-  .works-image {
-  }
-}
 
-@media screen and (max-width: 900px) {
-  .pc-image {
-    width: 100%;
-  }
-}
-
-.illust-image {
-  max-width: 720px;
-  box-shadow: 3px 5px 7px -3px rgba(0, 0, 0, 0.3);
-}
-@media screen and (max-width: 900px) {
-  .illust-image {
-    width: 100%;
-  }
+.pc-image {
+  width: 100%;
 }
 
 .phone-image {
   position: absolute;
   bottom: 0;
   right: 0;
+  width: 20%;
+}
+
+.illust-image {
+  width: 100%;
 }
 
 .works-item-2 {
-  width: 600px;
+  max-width: 600px;
   height: 100%;
   display: flex;
   padding: 40px 0 40px 0;
   position: relative;
-}
-@media screen and (max-width: 900px) {
-  .works-item-2 {
-    width: 100%;
-  }
 }
 
 .works-flex-2 {

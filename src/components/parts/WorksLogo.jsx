@@ -12,8 +12,8 @@ const WorksLogo = (props) => {
   return (
     <div className="works-box normal-text">
       <div className="works-item-2">
-        <div className="works-image">
-          <img src={LogoImage} alt="logo-title" className="logo-image" />
+        <div className="works-image-box">
+          <img src={LogoImage} alt="logo-title" className="logo-image image-shadow" />
         </div>
         <div className="works-flex-2">
           <div className="works-title-2">

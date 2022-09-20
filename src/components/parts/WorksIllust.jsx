@@ -14,8 +14,8 @@ const WorksIllust = (props) => {
         <div className="works-title-1">
           <p>{props.title}</p>
         </div>
-        <div className="works-image">
-          <img src={props.IllustImage} alt={props.title} className="illust-image" />
+        <div className="works-image-box">
+          <img src={props.IllustImage} alt={props.title} className="illust-image image-shadow" />
         </div>
         <div className="works-comment">
           <p>{lbToBr(props.comment)}</p>

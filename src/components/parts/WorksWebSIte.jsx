@@ -1,13 +1,9 @@
 import React from "react";
-import PCImage from "../../img/PCImage.png";
-import PhoneImage from "../../img/PhoneImage.png";
 
 // 文字列を改行コードで分割して改行タグに置換
 const lbToBr = (cmt) => {
-  return (
-      cmt.split(/(\n)/g).map(t => (t === '\n')?<br/>:t)
-  )
-}
+  return cmt.split(/(\n)/g).map((t) => (t === "\n" ? <br /> : t));
+};
 
 const WorksWebSIte = (props) => {
   return (
@@ -17,12 +13,16 @@ const WorksWebSIte = (props) => {
           <p>{props.title}</p>
         </div>
         <div className="works-item-1">
-          <div className="works-image">
-            <img src={PCImage} alt="pc-site-title" className="pc-image" />
+          <div className="works-image-box">
             <img
-              src={PhoneImage}
-              alt="phone-site-title"
-              className="phone-image"
+              src={props.PCImage}
+              alt={props.title}
+              className="pc-image image-shadow"
+            />
+            <img
+              src={props.PhoneImage}
+              alt={props.title}
+              className="phone-image image-shadow"
             />
           </div>
         </div>

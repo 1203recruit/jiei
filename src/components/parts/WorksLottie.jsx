@@ -10,7 +10,7 @@ const WorksLottie = (props) => {
   return (
     <div className="works-box normal-text">
       <div className="works-item-2">
-        <div className="works-image">
+        <div className="works-image-box">
           <Lottie animationData={props.lottie} loop={true} />
         </div>
         <div className="works-flex-2">
