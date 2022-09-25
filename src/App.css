@@ -69,7 +69,9 @@ body {
   color: var(--DefaultColor);
   font-family:
     "Yu Gothic", "游ゴシック",
-    YuGothic, "游ゴシック体";
+    YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴシック",
+    Roboto;
   font-weight: bold;
 }
 .head-line1 {
