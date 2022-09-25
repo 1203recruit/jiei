@@ -67,8 +67,9 @@ body {
 .imitation-text,
 .error-text {
   color: var(--DefaultColor);
-  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体",
-    "Hiragino Sans", "ヒラギノ角ゴシック", Meiryo, "メイリオ";
+  font-family:
+    "Yu Gothic", "游ゴシック",
+    YuGothic, "游ゴシック体";
   font-weight: bold;
 }
 .head-line1 {
@@ -131,6 +132,11 @@ body {
 }
 .scroll-to-top svg {
   fill: var(--ActiveOrange);
+}
+
+.maker-orange {
+  border-left: 4px solid var(--ActiveOrange);
+  padding: 0 0 0 4px;
 }
 /* *** */
 /* *** */
@@ -235,7 +241,7 @@ body {
 @media screen and (max-width: 900px) {
   .nav {
     width: 50vw;
-    /* height: calc(var(--vh) * 100); */
+    height: calc(var(--vh) * 100);
     display: flex;
     flex-flow: column;
     margin: 0 auto;
@@ -531,8 +537,13 @@ body {
 /* Common Layout */
 /* ************* */
 .flex-wrapper {
-  /* flex: 1; */
-  border: 3px solid #F0F;
+  flex: 1;
+  /* border: 3px solid #F0F; */
+}
+@media screen and (max-width: 900px) {
+  .flex-wrapper {
+    flex: none;
+  }
 }
 
 .container {
@@ -542,7 +553,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #f00;
+  /* border: 3px solid #f00; */
 }
 @media screen and (max-width: 900px) {
   .container {
@@ -586,7 +597,7 @@ main {
   align-items: center;
   justify-content: center;
   background: var(--CapybaraBG);
-  border: 3px solid #FF0;
+  /* border: 3px solid #FF0; */
 }
 @media screen and (max-width: 900px) {
   .capybara {
@@ -628,7 +639,7 @@ main {
 }
 
 .about-item-L {
-  width: 88px;
+  width: 96px;
 }
 @media screen and (max-width: 900px) {
   .about-item-L {
