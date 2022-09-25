@@ -532,7 +532,7 @@ body {
 /* ************* */
 .flex-wrapper {
   flex: 1;
-  /* border: 5px solid #FF0; */
+  border: 3px solid #F0F;
 }
 
 .container {
@@ -542,7 +542,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 3px solid #f00; */
+  border: 3px solid #f00;
 }
 @media screen and (max-width: 900px) {
   .container {
@@ -586,6 +586,7 @@ main {
   align-items: center;
   justify-content: center;
   background: var(--CapybaraBG);
+  border: 3px solid #FF0;
 }
 @media screen and (max-width: 900px) {
   .capybara {
