@@ -136,7 +136,7 @@ body {
   fill: var(--ActiveOrange);
 }
 
-.maker-orange {
+.border-orange {
   border-left: 4px solid var(--ActiveOrange);
   padding: 0 0 0 4px;
 }
