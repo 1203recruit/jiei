@@ -1,18 +1,9 @@
 import React from "react";
+import AboutItemsWrapper from "../parts/AboutItemsWrapper";
+import AboutItems from "../parts/AboutItems";
+import AboutItemsList from "../parts/AboutItemsList";
+import AboutTools from "../parts/AboutTools";
 import { FaUser } from "react-icons/fa";
-import {
-  SiAdobe,
-  SiVisualstudiocode,
-  SiFigma,
-  SiMiro,
-  SiSlack,
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiPhp,
-  SiMysql,
-} from "react-icons/si";
-import { AiOutlinePaperClip } from "react-icons/ai";
 import ScrollToTop from "react-scroll-to-top";
 
 const About = () => {
@@ -25,131 +16,52 @@ const About = () => {
         </h1>
         <article className="contents normal-text">
           <div className="about-item-table">
-            <div className="about-item-wrapper">
-              <div className="about-item-list">
-                <div className="about-item-L"><span className="orange-border">Name：</span></div>
-                <div className="about-item-R">Jiei Ikebe</div>
-              </div>
-              <div className="about-item-list">
-                <div className="about-item-L"><span className="orange-border">Address：</span></div>
-                <div className="about-item-R">Tokyo</div>
-              </div>
-              <div className="about-item-list">
-                <div className="about-item-L"><span className="orange-border">E-mail：</span></div>
-                <div className="about-item-R">1203recruit@gmail.com</div>
-              </div>
-            </div>
-            <div className="about-item-wrapper">
-              <div className="about-item-list">
-                <h2 className="about-item-L head-line-2-sp"><span className="orange-border">Bio：</span></h2>
-                <div className="about-item-wrapper">
-                  <div className="about-item-list">
-                    <div className="about-item-L">2017年4月</div>
-                    <div className="about-item-R">
-                      <p>
-                        新社会人としてアニメ制作会社の撮影部に就職
-                        <br />
-                        2年ほどしたときに自社のHPが古臭い事に気づき、空いた時間で高校時代に少しだけ身に着けた程度の知識で改修しようと試みたのがITに興味を持ったきっかけ
-                      </p>
-                    </div>
-                  </div>
-                  <div className="about-item-list">
-                    <div className="about-item-L">2021年8月</div>
-                    <div className="about-item-R">
-                      <p>アニメ制作会社を退職</p>
-                    </div>
-                  </div>
-                  <div className="about-item-list">
-                    <div className="about-item-L">2021年9月</div>
-                    <div className="about-item-R">
-                      <p>SES事業の会社に就職し、IT業界に足を踏み入れる</p>
-                    </div>
-                  </div>
-                  <div className="about-item-list">
-                    <div className="about-item-L">2022年12月</div>
-                    <div className="about-item-R">
-                      <p>SES事業の会社を退職予定</p>
-                    </div>
-                  </div>
+            <AboutItems label={"Bio："}>
+              <AboutItemsList subLabel={"Name"} contents={"Jiei Ikebe"} />
+              <AboutItemsList subLabel={"Address"} contents={"Tokyo"} />
+              <AboutItemsList
+                subLabel={"E-mail"}
+                contents={"1203recruit@gmail.com"}
+              />
+            </AboutItems>
+            <AboutItems label={"History："}>
+              <AboutItemsList
+                subLabel={"2017年4月"}
+                contents={
+                  "新社会人としてアニメ制作会社の撮影部に就職\n2年ほどしたときに自社のHPが古臭い事に気づき、空いた時間で高校時代に少しだけ身に着けた程度の知識で改修しようと試みたのがITに興味を持ったきっかけ"
+                }
+              />
+              <hr />
+              <AboutItemsList
+                subLabel={"2021年8月"}
+                contents={"アニメ制作会社を退職"}
+              />
+              <hr />
+              <AboutItemsList
+                subLabel={"2021年9月"}
+                contents={"SES事業の会社に就職し、IT業界に足を踏み入れる"}
+              />
+              <hr />
+              <AboutItemsList
+                subLabel={"2021年10月\n~\n2022年12月"}
+                contents={"SESとして地方銀行のアプリ開発のプロジェクトに参画。\n最初はQAとして参画したが、2ヵ月後ほどで次プロジェクトのため上流工程に異動。そこから仕様書を書きながら、デザイナーのヘルプ、QAのヘルプとして奮闘。"}
+              />
+              <hr />
+              <AboutItemsList
+                subLabel={"2022年12月"}
+                contents={"SES事業の会社を退職予定"}
+              />
+            </AboutItems>
+            <AboutItems label={"Tools"}>
+              <AboutTools />
+            </AboutItems>
+            <AboutItems label={"I want to："}>
+              <AboutItemsWrapper>
+                <div className="about-item-x">
+                  <p>Web Designer & Front End Engineer</p>
                 </div>
-              </div>
-            </div>
-            <div className="about-item-wrapper">
-              <div className="about-item-list">
-                <h2 className="about-item-L head-line-2-sp"><span className="orange-border">Tools：</span></h2>
-                <div className="about-item-wrapper">
-                  <div className="about-item-x">
-                    <ul>
-                      <li>
-                        <SiAdobe className="icon" />
-                        Adobe
-                      </li>
-                      <li className="adobe">
-                        Photoshop / Illustrator / AfterEffects / XD
-                      </li>
-                    </ul>
-                    <ul>
-                      <li>
-                        <SiVisualstudiocode className="icon" />
-                        Visual Studio Code
-                      </li>
-                      <li>
-                        <SiFigma className="icon" />
-                        Figma
-                      </li>
-                      <li>
-                        <SiMiro className="icon" />
-                        Miro
-                      </li>
-                      <li>
-                        <SiSlack className="icon" />
-                        Slack
-                      </li>
-                      <li>
-                        <AiOutlinePaperClip className="icon" />
-                        CLIP STUDIO PAINT
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="about-item-x">
-                    <ul>
-                      <li>
-                        <SiHtml5 className="icon" />
-                        HTML
-                      </li>
-                      <li>
-                        <SiCss3 className="icon" />
-                        CSS(Tailwind CSS)
-                      </li>
-                      <li>
-                        <SiJavascript className="icon" />
-                        JavaScript(JQuery / React)
-                      </li>
-                    </ul>
-                    <ul>
-                      <li>
-                        <SiPhp className="icon" />
-                        PHP(Laravel)
-                      </li>
-                      <li>
-                        <SiMysql className="icon" />
-                        MySQL
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="about-item-wrapper">
-              <div className="about-item-list">
-                <h2 className="about-item-L head-line-2-sp"><span className="orange-border">I want to：</span></h2>
-                <div className="about-item-wrapper">
-                  <div className="about-item-x">
-                    <p>Web Designer & Front End Engineer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </AboutItemsWrapper>
+            </AboutItems>
           </div>
         </article>
         <ScrollToTop smooth />
