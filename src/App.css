@@ -857,7 +857,7 @@ textarea:focus {
   text-align: right;
 }
 
-/* @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   #contact {
     height: calc(var(--vh) * 100 - var(--SPHeaderHeight) - var(--FooterHeight));
   }
@@ -865,7 +865,7 @@ textarea:focus {
     position: relative;
     top: -94px;
   }
-} */
+}
 
 /* ******* */
 /* ******* */

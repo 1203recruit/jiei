@@ -1,4 +1,5 @@
 import React from "react";
+import { FiExternalLink } from "react-icons/fi";
 
 // 文字列を改行コードで分割して改行タグに置換
 const lbToBr = (cmt) => {
@@ -29,7 +30,10 @@ const WorksWebSIte = (props) => {
         <div className="works-comment">
           <p>
             {lbToBr(props.comment)}
-            <a href={props.href} target="blank" className="orange-link">{props.linkWord}</a>
+            <a href={props.href} target="blank" className="orange-link">
+              {props.linkWord}
+              <FiExternalLink />
+            </a>
           </p>
         </div>
       </div>
