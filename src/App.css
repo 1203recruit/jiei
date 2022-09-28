@@ -813,6 +813,11 @@ textarea {
   width: 100%;
   height: 240px;
 }
+@media screen and (max-width: 900px) {
+  textarea {
+    height: 400px;
+  }
+}
 
 input::placeholder,
 textarea::placeholder {
@@ -847,7 +852,7 @@ textarea:focus {
 }
 @media screen and (max-width: 900px) {
   .submit-button {
-    margin: 160px 0 44px 0;
+    margin: 0 0 44px 0;
   }
 }
 
