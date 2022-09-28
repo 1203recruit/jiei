@@ -71,6 +71,18 @@ body {
     "ヒラギノ角ゴシック", Roboto;
   font-weight: bold;
 }
+@media screen and (max-width: 900px) {
+  .head-line1,
+  .head-line2,
+  .button-text,
+  .normal-text,
+  .footer-text,
+  .imitation-text,
+  .error-text {
+  font-weight: 500;
+}
+}
+
 .head-line1 {
   font-size: 32px;
 }
