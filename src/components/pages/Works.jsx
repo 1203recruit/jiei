@@ -33,9 +33,11 @@ const Works = () => {
           </h2>
           <WorksWebSite
             title={"Jiei（当サイト）"}
-            PCImage={JieiPC}
-            PhoneImage={JieiSP}
-            comment={"●使用言語：React+HTML+CSS\nReactの勉強のため作成。できるだけシンプルにしたかったため使用色を3色くらいに抑えた。一応レスポンシブにも対応。"}
+            pcImage={JieiPC}
+            phoneImage={JieiSP}
+            comment={"●使用言語：HTML+CSS+React\nReactを勉強するため作成。できるだけシンプルにしたかったため使用色を3色ほどに抑えた。レスポンシブにも対応。\n\n当サイトのFigmaは"}
+            href={"https://www.figma.com/file/MdQuBuxTmCuvOE5qgNQw8h/Portfolio?node-id=0%3A1"}
+            linkWord={"こちら"}
           />
         </article>
         <hr className="boundary-line" />
@@ -46,7 +48,7 @@ const Works = () => {
           </h2>
           <WorksLogo
             title={"子猫書店"}
-            LogoImage={Koneko}
+            logoImage={Koneko}
             comment={"「子猫書店」という架空の書店をイメージしてロゴを作成。\n今回は奇抜なデザインを目指さず、可読性を重視した。"}
           />
         </article>
@@ -58,7 +60,7 @@ const Works = () => {
           </h2>
           <WorksIllust
             title={"Animals"}
-            IllustImage={Animals}
+            illustImage={Animals}
             comment={"好きな小動物たちを描いた。"}
           />
         </article>

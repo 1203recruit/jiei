@@ -58,7 +58,7 @@ const Contact = () => {
 
   return (
     <div className="container" id="contact">
-      <main>
+      <main className="contact">
         <h1 className="head-line1"><FaEnvelope className="icon" />Contact</h1>
         <article className="contents imitation-text">
           <form>

@@ -15,19 +15,22 @@ const WorksWebSIte = (props) => {
         <div className="works-item-1">
           <div className="works-image-box">
             <img
-              src={props.PCImage}
+              src={props.pcImage}
               alt={props.title}
               className="pc-image image-shadow"
             />
             <img
-              src={props.PhoneImage}
+              src={props.phoneImage}
               alt={props.title}
               className="phone-image image-shadow"
             />
           </div>
         </div>
         <div className="works-comment">
-          <p>{lbToBr(props.comment)}</p>
+          <p>
+            {lbToBr(props.comment)}
+            <a href={props.href} target="blank" className="orange-link">{props.linkWord}</a>
+          </p>
         </div>
       </div>
     </div>

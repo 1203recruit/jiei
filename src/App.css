@@ -136,9 +136,13 @@ body {
   fill: var(--ActiveOrange);
 }
 
-.border-orange {
+.orange-border {
   border-left: 4px solid var(--ActiveOrange);
   padding: 0 0 0 4px;
+}
+
+.orange-link {
+  color: var(--ActiveOrange);
 }
 /* *** */
 /* *** */
@@ -243,7 +247,7 @@ body {
 @media screen and (max-width: 900px) {
   .nav {
     width: 50vw;
-    height: calc(var(--vh) * 100);
+    /* height: calc(var(--vh) * 100); */
     display: flex;
     flex-flow: column;
     margin: 0 auto;
@@ -795,54 +799,6 @@ main {
   margin: 56px 0 56px 0;
 }
 
-/* Modal */
-/* .modal-overlay {
-  position: fixed;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-
-  background: var(--OverlayBlackColorOff);
-  pointer-events: none;
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.modal-overlay .show {
-  background: var(--OverlayBlackColor);
-  pointer-events: auto;
-}
-
-.modal-content {
-  display: block;
-  background: var(--WhiteColor);
-  padding: 10px;
-  border-radius: 3px;
-
-  transform: scale(0);
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-@media screen and (max-width: 900px) {
-  .modal-content {
-    width: 100vw;
-  }
-}
-
-.modal-overlay .show .modal-content {
-  transform: scale(2);
-}
-@media screen and (max-width: 900px) {
-  .modal-overlay .show .modal-content {
-    transform: scale(1);
-  }
-} */
-/*********/
-
 /* ***** */
 /* ***** */
 /* ***** */
@@ -852,24 +808,13 @@ main {
 /* ******* */
 input,
 select {
-  width: 360px;
+  width: 100%;
   height: 32px;
-}
-@media screen and (max-width: 900px) {
-  input,
-  select {
-    width: 100%;
-  }
 }
 
 textarea {
-  width: 660px;
+  width: 100%;
   height: 240px;
-}
-@media screen and (max-width: 900px) {
-  textarea {
-    width: 100%;
-  }
 }
 
 input::placeholder,
@@ -903,28 +848,24 @@ textarea:focus {
   color: var(--ImitationColor);
   background: var(--WhiteColor);
 }
-@media screen and (max-width: 900px) {
-  .submit-button {
-    width: 100%;
-  }
-}
 
 .form-child:nth-child(2n) {
   margin: 32px 0 32px 0;
 }
 
-.textarea-field {
-  width: 660px;
-}
-@media screen and (max-width: 900px) {
-  .textarea-field {
-    width: 100%;
-  }
-}
-
 .textarea-field .counter {
   text-align: right;
 }
+
+/* @media screen and (max-width: 900px) {
+  #contact {
+    height: calc(var(--vh) * 100 - var(--SPHeaderHeight) - var(--FooterHeight));
+  }
+  .contact {
+    position: relative;
+    top: -94px;
+  }
+} */
 
 /* ******* */
 /* ******* */

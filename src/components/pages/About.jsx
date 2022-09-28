@@ -27,21 +27,21 @@ const About = () => {
           <div className="about-item-table">
             <div className="about-item-wrapper">
               <div className="about-item-list">
-                <div className="about-item-L"><span className="border-orange">Name：</span></div>
-                <div className="about-item-R">Jiei</div>
+                <div className="about-item-L"><span className="orange-border">Name：</span></div>
+                <div className="about-item-R">Jiei Ikebe</div>
               </div>
               <div className="about-item-list">
-                <div className="about-item-L"><span className="border-orange">Address：</span></div>
+                <div className="about-item-L"><span className="orange-border">Address：</span></div>
                 <div className="about-item-R">Tokyo</div>
               </div>
               <div className="about-item-list">
-                <div className="about-item-L"><span className="border-orange">E-mail：</span></div>
-                <div className="about-item-R">sample@sample.com</div>
+                <div className="about-item-L"><span className="orange-border">E-mail：</span></div>
+                <div className="about-item-R">1203recruit@gmail.com</div>
               </div>
             </div>
             <div className="about-item-wrapper">
               <div className="about-item-list">
-                <h2 className="about-item-L head-line-2-sp"><span className="border-orange">Bio：</span></h2>
+                <h2 className="about-item-L head-line-2-sp"><span className="orange-border">Bio：</span></h2>
                 <div className="about-item-wrapper">
                   <div className="about-item-list">
                     <div className="about-item-L">2017年4月</div>
@@ -66,7 +66,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="about-item-list">
-                    <div className="about-item-L">2022年1月</div>
+                    <div className="about-item-L">2022年12月</div>
                     <div className="about-item-R">
                       <p>SES事業の会社を退職予定</p>
                     </div>
@@ -76,7 +76,7 @@ const About = () => {
             </div>
             <div className="about-item-wrapper">
               <div className="about-item-list">
-                <h2 className="about-item-L head-line-2-sp"><span className="border-orange">Tools：</span></h2>
+                <h2 className="about-item-L head-line-2-sp"><span className="orange-border">Tools：</span></h2>
                 <div className="about-item-wrapper">
                   <div className="about-item-x">
                     <ul>
@@ -85,7 +85,7 @@ const About = () => {
                         Adobe
                       </li>
                       <li className="adobe">
-                        Photoshop / Illustrator / After Effects / XD
+                        Photoshop / Illustrator / AfterEffects / XD
                       </li>
                     </ul>
                     <ul>
@@ -142,7 +142,7 @@ const About = () => {
             </div>
             <div className="about-item-wrapper">
               <div className="about-item-list">
-                <h2 className="about-item-L head-line-2-sp"><span className="border-orange">I want to：</span></h2>
+                <h2 className="about-item-L head-line-2-sp"><span className="orange-border">I want to：</span></h2>
                 <div className="about-item-wrapper">
                   <div className="about-item-x">
                     <p>Web Designer & Front End Engineer</p>

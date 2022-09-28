@@ -12,7 +12,7 @@ const WorksLogo = (props) => {
     <div className="works-box normal-text">
       <div className="works-item-2">
         <div className="works-image-box">
-          <img src={props.LogoImage} alt={props.title} className="logo-image image-shadow" />
+          <img src={props.logoImage} alt={props.title} className="logo-image image-shadow" />
         </div>
         <div className="works-flex-2">
           <div className="works-title-2">
