@@ -67,11 +67,8 @@ body {
 .imitation-text,
 .error-text {
   color: var(--DefaultColor);
-  font-family:
-    "Yu Gothic", "游ゴシック",
-    YuGothic, "游ゴシック体",
-    "ヒラギノ角ゴシック",
-    Roboto;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴシック", Roboto;
   font-weight: bold;
 }
 .head-line1 {
@@ -848,6 +845,11 @@ textarea:focus {
   color: var(--ImitationColor);
   background: var(--WhiteColor);
 }
+@media screen and (max-width: 900px) {
+  .submit-button {
+    margin: 160px 0 46px 0;
+  }
+}
 
 .form-child:nth-child(2n) {
   margin: 32px 0 32px 0;
@@ -855,16 +857,6 @@ textarea:focus {
 
 .textarea-field .counter {
   text-align: right;
-}
-
-@media screen and (max-width: 900px) {
-  #contact {
-    height: calc(var(--vh) * 100 - var(--SPHeaderHeight) - var(--FooterHeight));
-  }
-  .contact {
-    position: relative;
-    top: -94px;
-  }
 }
 
 /* ******* */
