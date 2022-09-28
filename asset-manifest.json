@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/jiei/static/css/main.f89bfa19.css",
-    "main.js": "/jiei/static/js/main.a3345893.js",
-    "static/media/Animals.png": "/jiei/static/media/Animals.bff0c3c79fb820d14c8b.png",
+    "main.css": "/jiei/static/css/main.b4d807d3.css",
+    "main.js": "/jiei/static/js/main.2c99fe1e.js",
+    "static/media/Animals.png": "/jiei/static/media/Animals.d2e18b8f13a37e5b2dec.png",
     "static/media/Jiei-PC.png": "/jiei/static/media/Jiei-PC.2f4d92f80a9dbee7994f.png",
     "static/media/Jiei-SP.png": "/jiei/static/media/Jiei-SP.bbdb95512b8fc427a701.png",
     "static/media/KONEKO.png": "/jiei/static/media/KONEKO.b992bf5798131fa5ceb9.png",
     "index.html": "/jiei/index.html",
-    "main.f89bfa19.css.map": "/jiei/static/css/main.f89bfa19.css.map",
-    "main.a3345893.js.map": "/jiei/static/js/main.a3345893.js.map"
+    "main.b4d807d3.css.map": "/jiei/static/css/main.b4d807d3.css.map",
+    "main.2c99fe1e.js.map": "/jiei/static/js/main.2c99fe1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f89bfa19.css",
-    "static/js/main.a3345893.js"
+    "static/css/main.b4d807d3.css",
+    "static/js/main.2c99fe1e.js"
   ]
 }
