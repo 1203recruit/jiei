@@ -549,11 +549,6 @@ body {
   flex: 1;
   /* border: 3px solid #F0F; */
 }
-@media screen and (max-width: 900px) {
-  .flex-wrapper {
-    flex: none;
-  }
-}
 
 .container {
   max-width: 1440px;
@@ -855,11 +850,6 @@ textarea:focus {
 .submit-button[disabled] {
   color: var(--ImitationColor);
   background: var(--WhiteColor);
-}
-@media screen and (max-width: 900px) {
-  .submit-button {
-    margin: 0 0 44px 0;
-  }
 }
 
 .form-child:nth-child(2n) {
