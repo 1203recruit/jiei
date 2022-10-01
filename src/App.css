@@ -57,6 +57,7 @@ body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
+  /* border: 3px solid #0F0; */
 }
 
 .head-line1,
@@ -250,7 +251,7 @@ body {
 @media screen and (max-width: 900px) {
   .nav {
     width: 50vw;
-    height: calc(var(--vh) * 100);
+    /* height: calc(var(--vh) * 100); */
     display: flex;
     flex-flow: column;
     margin: 0 auto;
@@ -600,7 +601,7 @@ main {
   align-items: center;
   justify-content: center;
   background: var(--CapybaraBG);
-  /* border: 3px solid #FF0; */
+  /* border: 3px solid #ff0; */
 }
 @media screen and (max-width: 900px) {
   .capybara {

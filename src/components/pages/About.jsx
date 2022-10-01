@@ -23,6 +23,10 @@ const About = () => {
                 subLabel={"E-mail"}
                 contents={"1203recruit@gmail.com"}
               />
+              <AboutItemsList
+                subLabel={"pastime"}
+                contents={"Listen to Celtic music and drink!!"}
+              />
             </AboutItems>
             <AboutItems label={"History："}>
               <AboutItemsList
