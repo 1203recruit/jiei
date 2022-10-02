@@ -37,7 +37,7 @@ const Works = () => {
               pcImage={JieiPC}
               phoneImage={JieiSP}
               comment={
-                "●使用言語：HTML+CSS+React\nReactを勉強するため作成。できるだけシンプルにしたかったため使用色を3色ほどに抑えた。レスポンシブにも対応。\n\n当サイトのFigmaは"
+                "●使用言語：HTML+CSS+React\nReactを勉強するため作成。できるだけシンプルにしたかったため使用色を3色ほどに抑えた。レスポンシブにも対応。\n当サイトのFigmaは"
               }
               href={
                 "https://www.figma.com/file/MdQuBuxTmCuvOE5qgNQw8h/Portfolio?node-id=0%3A1"
